@@ -1,78 +1,66 @@
-# Jamie's gyms
+# Escape & Explore
 
 
-[//]: <> (UX)
-
+## Introduction
 Welcome to BLANK, PAGE OPENING INTRO
-
-
+<!-- Must include what the project is for, why it exists and who it is intended for -->
+<!-- Describe the projects purpose and the target audience -->
 ![Different sized screens on different devices showing what my website looks like on each](LINK)
 
 
-# UX SECTION
-
-[//]: <> (UX Project goals)
-## Project goals
+## UX
 ---
+- Responsive Design
+- Demographic Based Design
+
+### User Stories
+#### Site Owner Goals
+
 
 The primary goal of NAME is to do BLANK
-[//]: <> (UX User goals)
 
-### User goals
----
+#### User Goals
+
 
 1. As a USER I want a X
 
 [//]: <> (UX Developer and business goals)
 
-### Business goals
----
-
-1. As a company I would like an X to do Y
+## Design
 
 
-[//]: <> (UX User stories)
-### User stories
----
-
-1. As a USER I would like to do X ACTIVITY
-
-[//]: <> (UX Design choices)
-
-### Design
----
-
-- **Color Scheme**
+- #### Color Scheme
 
 ![Description](link)
 
 Description of colors
-- **Typography**
+- #### Typography
 
 
-FONTS
-- **Images**
+<!-- FONTS -->
+- #### Images
 
-[//]: <> (UX Wireframes)
-- **Wireframes**
+- #### Wireframes
 
 
 - [Home page](link) 
 - 
 - 
 
-[//]: <> (FEATURES)
-[//]: <> (FEATURES Existing Features)
-[//]: <> (FEATURES Left to implement)
-[//]: <> (Technologies used)
+## Features
+
+### Existing Features
+
+### Further Possible Implementations
+
 ## Technologies
----
-### Programming Languages
+
+#### Programming Languages
 * [Name](https://link.com/)
 * 
 * 
 
-### Applications used
+#### Applications Used
 
 1. [Name](https://link.com/) - Description
 2. 
@@ -81,20 +69,24 @@ FONTS
 5. 
 6. 
 
-## Testing
----
-### HTML validator
+### Testing
 
-### CSS Validator
+#### HTML Validator
 
-### Lighthouse
+#### CSS Validator
 
-### Notes of errors, bugs, issues and incomplete items
+#### Lighthouse
+
+#### Notes of errors, bugs, issues and incomplete items
 | Activity | Expected |  Actual  |  Action  | Screenshot |
 |----------|----------|----------|----------|------------|
 |          |          |          |          |            |
 |          |          |          |          |            |
-## Deployment
----
+### Deployment
 
-### Acknowledgements
+---
+## Credits
+### Code Used
+### Acknowledgements / Tutorials
+
+- [CI README.md guide](https://www.youtube.com/watch?v=l1DE7L-4eKQ)
