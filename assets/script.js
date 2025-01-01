@@ -1,6 +1,19 @@
 API_KEY = "AIzaSyB4fcJiibwlX8tcRe5dNnllSifqBCKqeqA";
 API_URL = ""
 
+let currentUserLongitude;
+let currentUserLatitude;
+let successCallBack = (position) => {
+  currentUserLongitude = position.coords.longitude;
+  currentUserLatitude = position.coords.latitude;
+  console.log(position);
+  console.log(currentUserLongitude);
+  console.log(currentUserLatitude);
+}
+let errorCallBack = console.log("error")
+let userCurrentLocation = navigator.geolocation.getCurrentPosition(successCallBack, errorCallBack)
+console.log(currentUserLongitude + currentUserLatitude)
+
 // Code to initialise, add and update google maps api 
 // Copy pasted from google official documentation and then tweaked to suit website needs
 let map;
@@ -29,3 +42,7 @@ async function initMap() {
 }
 
 initMap();
+
+// Get user location
+// Use user location to set initial location of map if permission is allowed
+// Display warning if location permissions is denied that this will affect the functionality of the website
