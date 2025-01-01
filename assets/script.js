@@ -10,7 +10,7 @@ let userDetails = {
     currentUserLatitude = position.coords.latitude;
     chosenCityLatitude = currentUserLatitude;
     chosenCityLatitude = currentUserLongitude;
-    
+    initMap();
   },
   errorCallBack: console.log("error"),
 
