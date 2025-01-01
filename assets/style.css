@@ -2,4 +2,21 @@
 
 body {
     font-family: Roboto, Arial;
+    min-height: 100vh;
+
+    /* To push the footer down to the bottom of the page */
+    display: flex;
+    flex-direction: column;
 }   
+
+
+
+/* Footer styles */
+
+#footer {
+    background-color: #212529;
+    color: #FFFFFF;
+    
+        /* To push the footer down to the bottom of the page */
+    margin-top: auto;
+}
