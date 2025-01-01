@@ -29,18 +29,18 @@ The primary goal of NAME is to do BLANK
 ## Design
 
 
-- #### Color Scheme
+- ### Color Scheme
 
 ![Description](link)
 
 Description of colors
-- #### Typography
+- ### Typography
 
 
 <!-- FONTS -->
-- #### Images
+- ### Images
 
-- #### Wireframes
+- ### Wireframes
 
 
 - [Home page](link) 
@@ -69,20 +69,20 @@ Description of colors
 5. 
 6. 
 
-### Testing
+## Testing
 
-#### HTML Validator
+### HTML Validator
 
-#### CSS Validator
+### CSS Validator
 
-#### Lighthouse
+### Lighthouse
 
-#### Notes of errors, bugs, issues and incomplete items
+### Notes of errors, bugs, issues and incomplete items
 | Activity | Expected |  Actual  |  Action  | Screenshot |
 |----------|----------|----------|----------|------------|
 |          |          |          |          |            |
 |          |          |          |          |            |
-### Deployment
+## Deployment
 
 ---
 ## Credits
