@@ -9,6 +9,11 @@ body {
     flex-direction: column;
 }   
 
+/* Google maps API dispayed map*/
+#map {
+    width: 100vw;
+    height: 400px;
+}
 
 
 /* Footer styles */
@@ -16,7 +21,7 @@ body {
 #footer {
     background-color: #212529;
     color: #FFFFFF;
-    
+
         /* To push the footer down to the bottom of the page */
     margin-top: auto;
 }
