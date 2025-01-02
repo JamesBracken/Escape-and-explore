@@ -21,15 +21,13 @@ let chosenCityDetails = {
   chosenCityLatitude: userDetails.currentUserLatitude,
   chosenCityLongitude: userDetails.currentUserLongitude,
 }
-let ;
-}
-document.getElementsByClassName()
 
-// let currentUserLatitude;
-// let successCallBack = (position) => {
-//   currentUserLongitude = position.coords.longitude;
-//   currentUserLatitude = position.coords.latitude;
-//   console.log(currentUserLongitude);
+// CLICK HANDLERS
+let images = document.getElementsByClassName("cityImageButton")
+for(let image of images) {
+  image.addEventListener("click", handleCityClick)
+}
+
 navigator.geolocation.getCurrentPosition(userDetails.successCallBack, userDetails.errorCallBack)
 
 // Code to initialise, add and update google maps api 
@@ -55,6 +53,12 @@ async function initMap() {
 
 initMap();
 
+
+async function handleCityClick() {
+    let cityInformationContainer = document.getElementById("cityInformationContainer");
+    cityInformationContainer.innerHTML = `<h1>The code worked</h1> <br>
+    <p>This would be content about the chosen city</p>`
+}
 // Get user location
 // Use user location to set initial location of map if permission is allowed
 // Display warning if location permissions is denied that this will affect the functionality of the website
