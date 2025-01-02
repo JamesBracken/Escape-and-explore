@@ -76,8 +76,14 @@ async function initMap() {
 
 initMap();
 
-
-async function handleCityClick() {
+// On the click of each city, details such as map location, map marker, city name, city description, city places to visit are updated
+async function handleCityClick(e) {
+  // Dot notation is used across this script code, in this instance however dot notation on its own was not able to make the code work through various
+  // attempts, I have instead used a mix of the two (ONLY in this instance). Understandably bad practice but could not find any other way of making this work
+  console.log(cities[e.target.id].cityLatitude);
+  chosenCityDetails.chosenCityLatitude = cities[e.target.id].cityLatitude;
+  chosenCityDetails.chosenCityLongitude = cities[e.target.id].cityLongitude;
+  initMap();
   let cityInformationContainer = document.getElementById("cityInformationContainer");
   cityInformationContainer.innerHTML = `<h1>The code worked</h1> <br>
     <p>This would be content about the chosen city</p>`
