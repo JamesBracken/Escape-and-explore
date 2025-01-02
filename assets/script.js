@@ -35,7 +35,7 @@ let userDetails = {
   },
   errorCallBack: () => {
     console.log("error")
-    alert("If user location permissions are denied, not all features of this website will be available")
+    alert("If user location permissions are denied, not all features of this website will be available. Please update your location permissions and then resfresh this page")
   }
 }
 // On click of a city or on approval of user location permissions this will update the chosen cities position attributes
