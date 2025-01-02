@@ -9,12 +9,26 @@ body {
     flex-direction: column;
 }   
 
+/* COMPONENT STYLES */
+
+/* City image cards */
+
+div .card {
+    margin: 5px;
+    padding: 0px;
+}
+
+/* City card images */
+
+.cityImageButton {
+    min-width: 100%;
+}
+
 /* Google maps API dispayed map*/
 #map {
     width: 100vw;
     height: 400px;
 }
-
 
 /* Footer styles */
 
@@ -25,3 +39,8 @@ body {
         /* To push the footer down to the bottom of the page */
     margin-top: auto;
 }
+
+
+
+/* Cards */
+/* Grids, margin between cards, images full width  */
