@@ -22,6 +22,7 @@ div .card {
 
 .cityImageButton {
     min-width: 100%;
+    height: 190px;
 }
 
 /* Google maps API dispayed map*/
