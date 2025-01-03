@@ -61,6 +61,10 @@ navigator.geolocation.getCurrentPosition(userDetails.successCallBack, userDetail
 async function initMap() {
   const { Map } = await google.maps.importLibrary("maps");
   const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+  // Custom marker code, not working atm
+  // const userPin = new PinElement({
+  //   background: "#FBBC04",
+  // });
 
   map = new Map(document.getElementById("map"), {
     zoom: 12,
@@ -72,7 +76,7 @@ async function initMap() {
     map: map,
     position: { lat: chosenCityDetails.chosenCityLatitude, lng: chosenCityDetails.chosenCityLongitude },
     title: cityName,
-  })
+  });
 
   // { lat: chosenCityDetails.chosenCityLatitude, lng: chosenCityDetails.chosenCityLongitude }
 
@@ -81,9 +85,9 @@ async function initMap() {
       map: map,
       position: {lat:userDetails.currentUserLatitude, lng:userDetails.currentUserLongitude},
       title: "You :)",
-    })
-    console.log(userDetails.currentUserLatitude)
-    console.log(userDetails.currentUserLongitude)
+      // Custom marker code, not working atm
+      // content: userPin.element,
+    });
   }
 
 };
