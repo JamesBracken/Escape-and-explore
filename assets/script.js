@@ -10,16 +10,33 @@ let cities = {
     cityDescription: "Paris fill content",
     cityLatitude: 48.856566667515224,
     cityLongitude: 2.355958775816939,
+    cityDescription: "This is the fantastic description about the city of paris",
+    cityPlacesToVisit: [{
+      place: "Eiffel tower",
+      image: "./assets/images/paris_eiffel_tower.webp",
+      description: "The lovely eiffel tower, how fantastique",
+
+    },
+    ]
   },
   londonCity: {
     cityName: "London",
     cityDescription: "London fill content",
     cityLatitude: 51.50758961962817,
     cityLongitude: -0.12083456114608788,
+    cityDescription: "This is the fantastic description about the city of london",
+    cityPlacesToVisit: [{
+      place: "Big Ben",
+      image: "./assets/images/london_big_ben.jpg",
+      description: "The lovely big ben, how fantastic",
+
+    },
+    ]
   }
 };
-locationAllowed = false;
+let locationAllowed = false;
 let cityName;
+let cityId;
 let map;
 let userDetails = {
   currentUserLatitude: 20,
@@ -77,8 +94,6 @@ async function initMap() {
     title: cityName,
   });
 
-  // { lat: chosenCityDetails.chosenCityLatitude, lng: chosenCityDetails.chosenCityLongitude }
-
   if(locationAllowed) {
     const marker2 = new AdvancedMarkerElement({
       map: map,
@@ -99,6 +114,7 @@ async function handleCityClick(e) {
   chosenCityDetails.chosenCityLatitude = cities[e.target.id].cityLatitude;
   chosenCityDetails.chosenCityLongitude = cities[e.target.id].cityLongitude;
   cityName = cities[e.target.id].cityName
+  cityId = e.target.id
   initMap();
   let cityInformationContainer = document.getElementById("cityInformationContainer");
   cityInformationContainer.innerHTML = `<h1>The code worked</h1> <br>
@@ -107,7 +123,10 @@ async function handleCityClick(e) {
 
 // -------------------------------------------------------------------
 // TASKS
-// Add a permanent marker for user location, preferrably different to the normal marker, probably by color
+// 
+// Add data to each city for destinations
+// Create routing from user pin to selected city pin
+// 
 
 
 // MAYBE
