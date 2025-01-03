@@ -117,10 +117,30 @@ async function handleCityClick(e) {
   cityId = e.target.id
   initMap();
   let cityInformationContainer = document.getElementById("cityInformationContainer");
-  cityInformationContainer.innerHTML = `<h1>The code worked</h1> <br>
-    <p>This would be content about the chosen city</p>`
-};
+  cityInformationContainer.innerHTML = `<h1>The wonderful ${cityName}</h1> <br>
+      <p>${cities[cityId].cityPlacesToVisit[0].description}</p>`
+      cityInformationContainer.innerHTML += `
+      <div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="${cities[cityId].cityPlacesToVisit[0].image}" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">${cities[cityId].cityPlacesToVisit[0].place}</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+      `
+      // <img src="${cities[cityId].cityPlacesToVisit[0].image}" class="img-fluid rounded-start" alt="...">
 
+      console.log(cities[cityId].cityPlacesToVisit[0].description)
+
+};
+{/* <p>${cities[cityId].cityPlacesToVisit[0].description}</p> */}
 // -------------------------------------------------------------------
 // TASKS
 // 
