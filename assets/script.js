@@ -18,6 +18,7 @@ let cities = {
     cityLongitude: -0.12083456114608788,
   }
 };
+locationAllowed = false;
 let cityName;
 let map;
 let userDetails = {
@@ -29,11 +30,13 @@ let userDetails = {
     userDetails.currentUserLatitude = position.coords.latitude;
     chosenCityDetails.chosenCityLatitude = userDetails.currentUserLatitude;
     chosenCityDetails.chosenCityLongitude = userDetails.currentUserLongitude;
+    locationAllowed = true;
     initMap();
   },
   errorCallBack: () => {
-    console.log("error")
+    locationAllowed = false;
     alert("If user location permissions are denied, not all features of this website will be available. Please update your location permissions and then resfresh this page")
+    initMap();
   }
 };
 // On click of a city or on approval of user location permissions this will update the chosen cities position attributes
@@ -70,6 +73,19 @@ async function initMap() {
     position: { lat: chosenCityDetails.chosenCityLatitude, lng: chosenCityDetails.chosenCityLongitude },
     title: cityName,
   })
+
+  // { lat: chosenCityDetails.chosenCityLatitude, lng: chosenCityDetails.chosenCityLongitude }
+
+  if(locationAllowed) {
+    const marker2 = new AdvancedMarkerElement({
+      map: map,
+      position: {lat:userDetails.currentUserLatitude, lng:userDetails.currentUserLongitude},
+      title: "You :)",
+    })
+    console.log(userDetails.currentUserLatitude)
+    console.log(userDetails.currentUserLongitude)
+  }
+
 };
 
 initMap();
@@ -89,10 +105,10 @@ async function handleCityClick(e) {
 
 // -------------------------------------------------------------------
 // TASKS
-
-// Fix zoom, add data to each city and make this adjust dynamically
 // Add a permanent marker for user location, preferrably different to the normal marker, probably by color
 
 
 // MAYBE
+// Fix zoom, add data to each city and make this adjust dynamically
 // Re prompt the user on warning to enable locations
+// 
