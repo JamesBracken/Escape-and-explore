@@ -60,11 +60,10 @@ navigator.geolocation.getCurrentPosition(userDetails.successCallBack, userDetail
 // Copy pasted from google official documentation and then tweaked to suit the websites needs
 async function initMap() {
   const { Map } = await google.maps.importLibrary("maps");
-  const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
-  // Custom marker code, not working atm
-  // const userPin = new PinElement({
-  //   background: "#FBBC04",
-  // });
+  const { AdvancedMarkerElement, PinElement } = await google.maps.importLibrary("marker");
+  const userPin = new PinElement({
+    background: "#FBBC04",
+  });
 
   map = new Map(document.getElementById("map"), {
     zoom: 12,
@@ -85,8 +84,7 @@ async function initMap() {
       map: map,
       position: {lat:userDetails.currentUserLatitude, lng:userDetails.currentUserLongitude},
       title: "You :)",
-      // Custom marker code, not working atm
-      // content: userPin.element,
+      content: userPin.element,
     });
   }
 
