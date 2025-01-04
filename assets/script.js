@@ -116,7 +116,12 @@ async function handleCityClick(e) {
   chosenCityName = cities[e.target.id].cityName
   cityId = e.target.id
   initMap();
+  
+};
+
+async function displayCityInformation(){
   let cityInformationContainer = document.getElementById("cityInformationContainer");
+  // HTML Displayed content
   cityInformationContainer.innerHTML = `<h1>The wonderful ${chosenCityName}</h1> <br>
       <p>${cities[cityId].cityPlacesToVisit[0].description}</p>`
       cityInformationContainer.innerHTML += `
@@ -135,12 +140,7 @@ async function handleCityClick(e) {
   </div>
 </div>
       `
-      // <img src="${cities[cityId].cityPlacesToVisit[0].image}" class="img-fluid rounded-start" alt="...">
-
-      console.log(cities[cityId].cityPlacesToVisit[0].description)
-
-};
-{/* <p>${cities[cityId].cityPlacesToVisit[0].description}</p> */}
+}
 // -------------------------------------------------------------------
 // TASKS
 // 
