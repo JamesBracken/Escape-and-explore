@@ -21,53 +21,59 @@
 </head>
 
 <body>
+  <!-- Nav bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Escape & Explore</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" href="#">Pricing</a>
+        </div>
+      </div>
+    </div>
+  </nav>
   <!-- Header -->
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Escape & Explore</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-            <a class="nav-link" href="#">Features</a>
-            <a class="nav-link" href="#">Pricing</a>
+      </div>
+
+    </div>
+  </header>
+  <main>
+    <section>
+      <!-- Container to hold BS Cards -->
+      <div id="citySelectionContainer container ">
+        <div class="row justify-content-center ">
+          <!-- BS Cards containing each city image and title -->
+          <div class="card" style="width: 18rem;">
+            <img id="londonCity" class="card-img-top cityImageButton" src="./assets/images/city_london.webp"
+              alt="A picture of the city of london showing iconic building such as the shard and overlooking the rive thames">
+            <div class="card-body">
+              <h5 class="card-title">London</h5>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img id="parisCity" class="card-img-top cityImageButton" src="./assets/images/city_paris.avif"
+              alt="A picture of the city of paris just above a river with the eiffel tower">
+            <div class="card-body">
+              <h5 class="card-title">Paris</h5>
+            </div>
           </div>
         </div>
-      </div>
-    </nav>
-  </header>
-  <section>
-    <h1>This is a heading</h1>
-    <!-- Container to hold BS Cards -->
-    <div id="citySelectionContainer container ">
-      <div class="row justify-content-center ">
-        <!-- BS Cards containing each city image and title -->
-      <div class="card" style="width: 18rem;">
-        <img id="londonCity" class="card-img-top cityImageButton" src="./assets/images/city_london.webp"
-          alt="A picture of the city of london showing iconic building such as the shard and overlooking the rive thames">
-        <div class="card-body">
-          <h5 class="card-title">London</h5>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <img id="parisCity" class="card-img-top cityImageButton" src="./assets/images/city_paris.avif"
-          alt="A picture of the city of paris just above a river with the eiffel tower">
-        <div class="card-body">
-          <h5 class="card-title">Paris</h5>
-        </div>
-      </div>
-      </div>
-      
-    </div>
-    <div id="map"></div>
-  </section>
-  <section id="cityInformationContainer">
 
-  </section>
+      </div>
+      <div id="map"></div>
+    </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
   <!-- Footer -->
   <footer id="footer">
     <div>
