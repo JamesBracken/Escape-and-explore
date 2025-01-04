@@ -94,10 +94,10 @@ async function initMap() {
     title: cityName,
   });
 
-  if(locationAllowed) {
+  if (locationAllowed) {
     const marker2 = new AdvancedMarkerElement({
       map: map,
-      position: {lat:userDetails.currentUserLatitude, lng:userDetails.currentUserLongitude},
+      position: { lat: userDetails.currentUserLatitude, lng: userDetails.currentUserLongitude },
       title: "You :)",
       content: userPin.element,
     });
@@ -115,25 +115,26 @@ async function handleCityClick(e) {
   chosenCityDetails.chosenCityLongitude = cities[e.target.id].cityLongitude;
   chosenCityName = cities[e.target.id].cityName
   cityId = e.target.id
+  displayCityInformation();
   initMap();
-  
+
 };
 
-async function displayCityInformation(){
+async function displayCityInformation() {
   let cityInformationContainer = document.getElementById("cityInformationContainer");
   // HTML Displayed content
   cityInformationContainer.innerHTML = `<h1>The wonderful ${chosenCityName}</h1> <br>
       <p>${cities[cityId].cityPlacesToVisit[0].description}</p>`
-      cityInformationContainer.innerHTML += `
-      <div class="card mb-3" style="max-width: 540px;">
+  cityInformationContainer.innerHTML += `
+      <div class="card mb-3" style="max-width: 740px;">
   <div class="row g-0">
     <div class="col-md-4">
-      <img src="${cities[cityId].cityPlacesToVisit[0].image}" class="img-fluid rounded-start" alt="...">
+      <img src="${cities[cityId].cityPlacesToVisit[0].image}" class="img-fluid rounded-start placesToVisitCardImg" alt="...">
     </div>
     <div class="col-md-8">
       <div class="card-body">
         <h5 class="card-title">${cities[cityId].cityPlacesToVisit[0].place}</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.TestingTestingTestingTestingTestingTestingTestingTestingTestingTestingTestingTestingTestingTestingTesting</p>
         <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
       </div>
     </div>
@@ -143,10 +144,10 @@ async function displayCityInformation(){
 }
 // -------------------------------------------------------------------
 // TASKS
-// 
+//
 // Add data to each city for destinations
 // Create routing from user pin to selected city pin
-// 
+//
 // Add media section to readme
 
 // MAYBE

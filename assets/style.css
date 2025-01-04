@@ -30,6 +30,11 @@ div .card {
     height: 190px;
 }
 
+/* Places to visit cards */
+
+.placesToVisitCardImg {
+    height: 200px;
+}
 /* Google maps API dispayed map*/
 #map {
     width: 100%;
