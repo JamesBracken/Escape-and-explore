@@ -14,7 +14,8 @@ body {
 /* Hero image */
 #heroImg {
     width:100%;
-    height: 60vh;
+    height: 75vh;
+    object-fit: cover;
 }
 /* City image cards */
 
@@ -33,7 +34,9 @@ div .card {
 /* Places to visit cards */
 
 .placesToVisitCardImg {
-    height: 200px;
+    /* height: 200px;
+    width: 247px; */
+    object-fit: cover;
 }
 /* Google maps API dispayed map*/
 #map {

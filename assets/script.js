@@ -29,7 +29,22 @@ let cities = {
       place: "Big Ben",
       image: "./assets/images/london_big_ben.jpg",
       description: "The lovely big ben, how fantastic",
-
+      findOutMore: "https://en.wikipedia.org/wiki/Big_Ben"
+    },{
+      place: "The British Museum",
+      image: "./assets/images/london_big_ben.jpg",
+      description: "A public museum in the Bloomsbury area, dedicated to human history, art, and culture, housing a vast collection of world art and artifacts.",
+      findOutMore: "https://en.wikipedia.org/wiki/British_Museum"
+    },{
+      place: "Tower of London",
+      image: "./assets/images/london_big_ben.jpg",
+      description: "A historic castle on the north bank of the River Thames, known for its rich history as a royal palace, prison, and home to the Crown Jewels.",
+      findOutMore: "https://en.wikipedia.org/wiki/Tower_of_London"
+    },{
+      place: "Covent Garden",
+      image: "./assets/images/london_big_ben.jpg",
+      description: "A district in London, renowned for its vibrant market, street performers, and as a cultural and entertainment hub.",
+      findOutMore: "https://en.wikipedia.org/wiki/Covent_Garden"
     },
     ]
   }
@@ -122,7 +137,6 @@ async function handleCityClick(e) {
 
 async function displayCityInformation() {
   let cityInformationContainer = document.getElementById("cityInformationContainer");
-  // HTML Displayed content
   cityInformationContainer.innerHTML = `<h1>The wonderful ${chosenCityName}</h1> <br>
       <p>${cities[cityId].cityPlacesToVisit[0].description}</p>`
   cityInformationContainer.innerHTML += `
