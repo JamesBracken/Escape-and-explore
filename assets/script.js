@@ -74,7 +74,7 @@ for (image of images) {
 navigator.geolocation.getCurrentPosition(userDetails.successCallBack, userDetails.errorCallBack)
 
 // Code to initialise, add and update google maps API
-// Copy pasted from google official documentation and then tweaked to suit the websites needs
+// Copy pasted from google official documentation and then tweaked to suit the websites needs url https://developers.google.com/maps/documentation/javascript/load-maps-js-api?_gl=1*1u5062j*_up*MQ..*_ga*MTc1NzYyMDgxOC4xNzM2MDA2NjIy*_ga_NRWSTWS78N*MTczNjAwNjYyMi4xLjEuMTczNjAwNjYyMi4wLjAuMA..
 async function initMap() {
   const { Map } = await google.maps.importLibrary("maps");
   const { AdvancedMarkerElement, PinElement } = await google.maps.importLibrary("marker");
@@ -107,17 +107,17 @@ async function initMap() {
 
 initMap();
 
-// On the click of each city, details such as map location, map marker, city name, city description, city places to visit are updated
+// On the click of each city, displayed details such as map location, map marker, city name, city description, city places to visit are updated
 async function handleCityClick(e) {
   // Dot notation is used across this script code, in this instance however dot notation on its own was not able to make the code work through various
   // attempts, I have instead used a mix of the two (ONLY in this instance). Understandably bad practice but could not find any other way of making this work
   chosenCityDetails.chosenCityLatitude = cities[e.target.id].cityLatitude;
   chosenCityDetails.chosenCityLongitude = cities[e.target.id].cityLongitude;
-  cityName = cities[e.target.id].cityName
+  chosenCityName = cities[e.target.id].cityName
   cityId = e.target.id
   initMap();
   let cityInformationContainer = document.getElementById("cityInformationContainer");
-  cityInformationContainer.innerHTML = `<h1>The wonderful ${cityName}</h1> <br>
+  cityInformationContainer.innerHTML = `<h1>The wonderful ${chosenCityName}</h1> <br>
       <p>${cities[cityId].cityPlacesToVisit[0].description}</p>`
       cityInformationContainer.innerHTML += `
       <div class="card mb-3" style="max-width: 540px;">
@@ -147,7 +147,7 @@ async function handleCityClick(e) {
 // Add data to each city for destinations
 // Create routing from user pin to selected city pin
 // 
-
+// Add media section to readme
 
 // MAYBE
 // Fix zoom, add data to each city and make this adjust dynamically
