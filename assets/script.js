@@ -28,22 +28,22 @@ let cities = {
     cityPlacesToVisit: [{
       place: "Big Ben",
       image: "./assets/images/london_big_ben.jpg",
-      description: "The lovely big ben, how fantastic",
+      description: "Big Ben, officially the Elizabeth Tower, is an iconic symbol of London at the Palace of Westminster. Built in 1859, its towering Gothic design and clock face are globally recognized, offering a classic view from Westminster Bridge.",
       findOutMore: "https://en.wikipedia.org/wiki/Big_Ben"
-    },{
+    }, {    
       place: "The British Museum",
       image: "./assets/images/london_big_ben.jpg",
-      description: "A public museum in the Bloomsbury area, dedicated to human history, art, and culture, housing a vast collection of world art and artifacts.",
+      description: "The British Museum, located in Bloomsbury, is one of the world’s largest museums, showcasing human history, art, and culture. Opened in 1753, it houses iconic artifacts like the Rosetta Stone and the Elgin Marbles. With free entry, it offers a fascinating journey through over two million years of history.",
       findOutMore: "https://en.wikipedia.org/wiki/British_Museum"
-    },{
+    }, {
       place: "Tower of London",
       image: "./assets/images/london_big_ben.jpg",
-      description: "A historic castle on the north bank of the River Thames, known for its rich history as a royal palace, prison, and home to the Crown Jewels.",
+      description: "The Tower of London, a historic fortress on the Thames, has been a royal palace, prison, and treasury since 1066. It’s home to the Crown Jewels and guarded by the Yeoman Warders. Visitors can explore its medieval structures and learn about its rich and sometimes eerie past.",
       findOutMore: "https://en.wikipedia.org/wiki/Tower_of_London"
-    },{
+    }, {
       place: "Covent Garden",
       image: "./assets/images/london_big_ben.jpg",
-      description: "A district in London, renowned for its vibrant market, street performers, and as a cultural and entertainment hub.",
+      description: "Covent Garden, in London’s West End, is a lively district famous for its historic market, boutique shops, and vibrant street performances. It’s a hub for entertainment, featuring the Royal Opera House and an array of restaurants and theaters.",
       findOutMore: "https://en.wikipedia.org/wiki/Covent_Garden"
     },
     ]
@@ -138,8 +138,7 @@ async function handleCityClick(e) {
 async function displayCityInformation() {
   let cityCount = 0;
   let cityInformationContainer = document.getElementById("cityInformationContainer");
-  cityInformationContainer.innerHTML = `<h1>The wonderful ${chosenCityName}</h1> <br>
-      <p>${cities[cityId].cityPlacesToVisit[0].description}</p>`
+  cityInformationContainer.innerHTML = `<h2>The wonderful ${chosenCityName}</h2>`
   for (place of cities[cityId].cityPlacesToVisit) {
     cityInformationContainer.innerHTML += `
     <div class="card mb-3" style="max-width: 740px;">
@@ -150,8 +149,8 @@ async function displayCityInformation() {
         <div class="col-md-8">
           <div class="card-body">
             <h5 class="card-title">${cities[cityId].cityPlacesToVisit[cityCount].place}</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.TestingTestingTestingTestingTestingTestingTestingTestingTestingTestingTestingTestingTestingTestingTesting</p>
-            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+            <p class="card-text">${cities[cityId].cityPlacesToVisit[cityCount].description}</p>
+            <p class="card-text"><small class="text-body-secondary">Want to find out more about ${cities[cityId].cityPlacesToVisit[cityCount].place}?<a href="${cities[cityId].cityPlacesToVisit[cityCount].findOutMore}" target="_blank">Click here!</a></small></p>
           </div>
         </div>
       </div>
