@@ -9,6 +9,7 @@ body {
     flex-direction: column;
 }   
 
+
 /* COMPONENT STYLES */
 
 /* Hero image */
@@ -30,6 +31,7 @@ div .card {
     min-width: 100%;
     height: 190px;
 }
+
 
 /* Places to visit cards */
 
