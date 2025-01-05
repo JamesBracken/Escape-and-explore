@@ -126,4 +126,8 @@ async function initMap() {
 initMap();
 ### Acknowledgements / Tutorials
 
+#### Tutorials
 - [CI README.md guide](https://www.youtube.com/watch?v=l1DE7L-4eKQ)
+
+#### Used code
+- [Bootstrap form in booking page](https://getbootstrap.com/docs/5.3/forms/validation/)
