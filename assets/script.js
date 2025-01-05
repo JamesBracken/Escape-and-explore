@@ -18,17 +18,17 @@ let cities = {
       findOutMore: "https://en.wikipedia.org/wiki/Eiffel_Tower"
     },{
       place: "Louvre Museum",
-      image: "./assets/images/paris_eiffel_tower.webp",
+      image: "./assets/images/louvre_museum.jpg",
       description: "Home to thousands of masterpieces, including the Mona Lisa and the Venus de Milo, the Louvre is the world’s largest art museum. Its stunning glass pyramid entrance is a modern architectural landmark in the heart of Paris.",
       findOutMore: "https://en.wikipedia.org/wiki/Louvre"
     },{
       place: "Notre-Dame Cathedral",
-      image: "./assets/images/paris_eiffel_tower.webp",
+      image: "./assets/images/notre_dame_cathedral.jpg",
       description: "This Gothic masterpiece, located on the Île de la Cité, is renowned for its stunning architecture, rose windows, and historic significance. Though under restoration after the 2019 fire, it remains a symbol of Parisian heritage.",
       findOutMore: "https://en.wikipedia.org/wiki/Notre-Dame_de_Paris"
     },{
       place: "Sacré-Cœur Basilica",
-      image: "./assets/images/paris_eiffel_tower.webp",
+      image: "./assets/images/Sacré-Cœur Basilica.webp",
       description: "is a Roman Catholic church on Montmartre hill, known for its striking white domes. Completed in 1914, it features a large mosaic inside and offers panoramic views of Paris from its terrace. It’s a symbol of hope and a popular site for both worship and tourism.",
       findOutMore: "https://en.wikipedia.org/wiki/Sacr%C3%A9-C%C5%93ur,_Paris"
     },
