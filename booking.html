@@ -125,6 +125,15 @@
         <section>
             <div class="container">
                 <form class="row g-3 needs-validation">
+                    <div>
+                        <label for="parisCity"><input type="radio" name="paris" id="parisCity"><span>Paris</span></label>
+                        <label for="londonCity"><input type="radio" name="london" id="londonCity"><span>London</span></label>
+                        <!-- <label for=""><input type="text" name="" id=""></label> -->
+                        <!-- <select name="city" id="citySelection">
+                            <option value="paris">Paris</option>
+                            <option value="london">London</option>
+                        </select> -->
+                    </div>
                     <div class="col-md-4">
                         <label for="validationCustom01" class="form-label">First name</label>
                         <input type="text" class="form-control" id="validationCustom01" required>
@@ -171,7 +180,7 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <label for="validationCustom03" class="form-label">Card number(16 digits)</label>
+                        <label for="validationCustom03" class="form-label">Card number(16+ digits)</label>
                         <input type="text" class="form-control" id="validationCustom03" pattern="[0-9]{16+}" required>
                         <div class="invalid-feedback">
                             Please provide a valid Card number.
