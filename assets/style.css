@@ -102,17 +102,35 @@ div .card {
     margin-top: 5px;
     margin-bottom: 10px;
     background-color: aliceblue;
-    border-radius: 10px;
+    border-radius: 7px;
+}
 
+.packageCardButton:hover {
+    background-color: rgb(173, 173, 173);
 }
 
 .packageCardButtonActive {
-    background-color: green;
+    background-color: #aad6bc;
 }
 
-.card-body {
+.packageCard .card-body {
     min-height: 200px;
 }
+
+/* booking Choose city buttons */
+
+.cityButton{
+    width: 150px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    background-color: aliceblue;
+    border-radius: 7px;
+}
+
+.cityButton:hover {
+    background-color: rgb(173, 173, 173);
+}
+
 /* Footer styles */
 
 #footer {
