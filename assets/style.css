@@ -131,6 +131,9 @@ div .card {
     background-color: rgb(173, 173, 173);
 }
 
+.cityActive {
+    background-color: #aad6bc;
+}
 /* Footer styles */
 
 #footer {

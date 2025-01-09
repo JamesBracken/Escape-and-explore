@@ -193,13 +193,32 @@ for (let button of buttons) {
      } else if (isElementActive === true) {
       targetedElement.classList.remove("packageCardButtonActive")
      }
-     console.log(targetedElement.classList)
 
   })
 
 }
 
-// HTML Displayed content
+// Toggle for selecting a city
+// Copy pasted from code above using function toggleSelectedPackageCardButton
+let cityButtons = document.getElementsByClassName("cityButton")
+for (let button of cityButtons) {
+  button.addEventListener("click", function toggleSelectedCityButton(e) {
+    let targetedElement = e.target;
+    let isElementActive = targetedElement.classList.contains("cityActive")
+    targetedElement.classList.remove("cityActive")
+     if(isElementActive === false) {
+      for(button of cityButtons) {
+        button.classList.remove("cityActive")
+        console.log("removing")
+      }
+      targetedElement.classList += " cityActive"
+     } else if (isElementActive === true) {
+      targetedElement.classList.remove("cityActive")
+     }
+
+  })
+
+}
 
 
 
