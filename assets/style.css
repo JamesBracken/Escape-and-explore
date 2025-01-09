@@ -162,6 +162,17 @@ div .card {
     margin: 0 !important;
 }
 
+#footer i {
+    font-size: 40px;
+    margin: 9px;
+    color: white;
+}
 
 /* Cards */
 /* Grids, margin between cards, images full width  */
+/* 
+fix footer copyright bottom margin
+
+
+
+*/
