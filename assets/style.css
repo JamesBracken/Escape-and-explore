@@ -3,6 +3,7 @@
 body {
     font-family: Roboto, Arial;
     min-height: 100vh;
+    background-color: #fbfaf3;
 
     /* To push the footer down to the bottom of the page */
     display: flex;
@@ -10,17 +11,28 @@ body {
 }   
 
 /* Navbar */
+nav {
+    padding: 0 !important;
+}
 
+.navLogo {
+    color: aliceblue;
+    /* font-size: 35px; */
+}
+.bgNav {
+    background-color: #0F1525;
+} 
 .ctaDiv {
     margin-left: auto;
     float: right;
     font-weight: 700;
-    font-size: 27px;
-    background-color: #817f88;
-    border-radius: 25px;
+    /* font-size: 27px; */
+    background-color: #c23311 ;
+    /* border-radius: 25px; */
     margin-top:7px;
     /* margin-bottom: 4px; */
     padding:0 5px 0 5px;
+    /* height:47px; */
 }
 
 .cta {
