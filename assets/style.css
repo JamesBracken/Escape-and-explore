@@ -13,6 +13,12 @@ body {
 /* Navbar */
 nav {
     padding: 0 !important;
+    /* Keeps the nav constantly visible */
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+
+    z-index: 10;
 }
 
 .navLogo {
