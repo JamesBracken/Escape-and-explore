@@ -98,9 +98,16 @@ div .card {
 .packageCardButton {
     position: absolute;
     bottom: 0;
-    width: 100px;
+    width: 120px;
     margin-top: 5px;
     margin-bottom: 10px;
+    background-color: aliceblue;
+    border-radius: 10px;
+
+}
+
+.packageCardButtonActive {
+    background-color: green;
 }
 
 .card-body {
