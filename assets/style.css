@@ -8,6 +8,9 @@ body {
     /* To push the footer down to the bottom of the page */
     display: flex;
     flex-direction: column;
+
+/* keeps the hero body fully visible, otherwise the nav covers some of it */
+padding-top: 47px;
 }   
 
 /* Navbar */

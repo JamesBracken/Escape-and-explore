@@ -101,6 +101,11 @@ This is the corrected one
 
 ![Code displaying a mix of dot notation and square bracket notation](./assets/images/readme_imgs/mixed-notation-code.PNG)
 
+* When I made my navbar fixed the bootstrap cards were showing on top of it
+
+![Bootstrap cards showing on top of navbar](./assets/images/readme_imgs/bootstrap-cards-nav.PNG)
+
+To resolve this issue I used z index on the navbar to keep it on top of every other element in the webpage
 | Activity | Expected |  Actual  |  Action  | Screenshot |
 |----------|----------|----------|----------|------------|
 |          |          |          |          |            |
