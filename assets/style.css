@@ -156,6 +156,11 @@ div .card {
     margin-top: auto;
 }
 
+.footerCopyright {
+    position: absolute;
+    bottom: 0;
+    margin: 0 !important;
+}
 
 
 /* Cards */
