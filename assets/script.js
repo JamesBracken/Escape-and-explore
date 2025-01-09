@@ -5,7 +5,6 @@ API_URL = "";
 
 // data for every city
 let mapIsPresent = document.getElementById("map")
-console.log(mapIsPresent)
 let cities = {
   parisCity: {
     cityName: "Paris",
@@ -18,17 +17,17 @@ let cities = {
       image: "./assets/images/paris_eiffel_tower.webp",
       description: "The iconic symbol of Paris, the Eiffel Tower offers breathtaking views of the city from its observation decks. Completed in 1889, it stands as a testament to architectural innovation and attracts millions of visitors annually.",
       findOutMore: "https://en.wikipedia.org/wiki/Eiffel_Tower"
-    },{
+    }, {
       place: "Louvre Museum",
       image: "./assets/images/louvre_museum.jpg",
       description: "Home to thousands of masterpieces, including the Mona Lisa and the Venus de Milo, the Louvre is the world’s largest art museum. Its stunning glass pyramid entrance is a modern architectural landmark in the heart of Paris.",
       findOutMore: "https://en.wikipedia.org/wiki/Louvre"
-    },{
+    }, {
       place: "Notre-Dame Cathedral",
       image: "./assets/images/notre_dame_cathedral.jpg",
       description: "This Gothic masterpiece, located on the Île de la Cité, is renowned for its stunning architecture, rose windows, and historic significance. Though under restoration after the 2019 fire, it remains a symbol of Parisian heritage.",
       findOutMore: "https://en.wikipedia.org/wiki/Notre-Dame_de_Paris"
-    },{
+    }, {
       place: "Sacré-Cœur Basilica",
       image: "./assets/images/Sacré-Cœur Basilica.webp",
       description: "is a Roman Catholic church on Montmartre hill, known for its striking white domes. Completed in 1914, it features a large mosaic inside and offers panoramic views of Paris from its terrace. It’s a symbol of hope and a popular site for both worship and tourism.",
@@ -123,12 +122,19 @@ async function initMap() {
 
     const marker = new AdvancedMarkerElement({
       map: map,
-      position: { lat: userDetails.currentUserLatitude, lng: userDetails.currentUserLongitude },
-      title: "You :)",
-      content: userPin.element,
+      position: { lat: chosenCityDetails.chosenCityLatitude, lng: chosenCityDetails.chosenCityLongitude },
+      title: cityName,
     });
-  }
 
+    if (locationAllowed) {
+      const marker2 = new AdvancedMarkerElement({
+        map: map,
+        position: { lat: userDetails.currentUserLatitude, lng: userDetails.currentUserLongitude },
+        title: "You :)",
+        content: userPin.element,
+      });
+    }
+  }
 };
 
 initMap();
@@ -152,27 +158,51 @@ async function displayCityInformation() {
   cityInformationContainer.innerHTML = `<h2>The wonderful ${chosenCityName}</h2>`
   for (place of cities[cityId].cityPlacesToVisit) {
     cityInformationContainer.innerHTML += `
-    <div class="card mb-3" style="max-width: 740px;">
-      <div class="row g-0">
-        <div class="col-md-4">
-          <img src="${cities[cityId].cityPlacesToVisit[cityCount].image}" class="img-fluid rounded-start placesToVisitCardImg h-100" alt="...">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">${cities[cityId].cityPlacesToVisit[cityCount].place}</h5>
-            <p class="card-text">${cities[cityId].cityPlacesToVisit[cityCount].description}</p>
-            <p class="card-text"><small class="text-body-secondary">Want to find out more about ${cities[cityId].cityPlacesToVisit[cityCount].place}?<a href="${cities[cityId].cityPlacesToVisit[cityCount].findOutMore}" target="_blank">Click here!</a></small></p>
+      <div class="card mb-3" style="max-width: 740px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="${cities[cityId].cityPlacesToVisit[cityCount].image}" class="img-fluid rounded-start placesToVisitCardImg h-100" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">${cities[cityId].cityPlacesToVisit[cityCount].place}</h5>
+              <p class="card-text">${cities[cityId].cityPlacesToVisit[cityCount].description}</p>
+              <p class="card-text"><small class="text-body-secondary">Want to find out more about ${cities[cityId].cityPlacesToVisit[cityCount].place}?<a href="${cities[cityId].cityPlacesToVisit[cityCount].findOutMore}" target="_blank">Click here!</a></small></p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    `
+      `
     cityCount++
   }
-  // HTML Displayed content
-
 
 }
+
+// Toggle for package city button 
+let buttons = document.getElementsByClassName("packageCardButton")
+for (let button of buttons) {
+  button.addEventListener("click", function toggleSelectedPackageCardButton(e) {
+    let targetedElement = e.target;
+    let isElementActive = targetedElement.classList.contains("packageCardButtonActive")
+    targetedElement.classList.remove("packageCardButtonActive")
+     if(isElementActive === false) {
+      for(button of buttons) {
+        button.classList.remove("packageCardButtonActive")
+      }
+      targetedElement.classList += " packageCardButtonActive"
+     } else if (isElementActive === true) {
+      targetedElement.classList.remove("packageCardButtonActive")
+     }
+     console.log(targetedElement.classList)
+
+  })
+
+}
+
+// HTML Displayed content
+
+
+
 // -------------------------------------------------------------------
 // TASKS
 //
@@ -180,6 +210,7 @@ async function displayCityInformation() {
 // Create routing from user pin to selected city pin
 //
 // Add media section to readme
+// Add alt tags to all images
 
 // MAYBE
 // Fix zoom, add data to each city and make this adjust dynamically
