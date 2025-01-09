@@ -4,6 +4,8 @@ API_URL = "";
 // GLOBAL VARIABLES
 
 // data for every city
+let mapIsPresent = document.getElementById("map")
+console.log(mapIsPresent)
 let cities = {
   parisCity: {
     cityName: "Paris",
@@ -106,26 +108,20 @@ navigator.geolocation.getCurrentPosition(userDetails.successCallBack, userDetail
 // Code to initialise, add and update google maps API
 // Copy pasted from google official documentation and then tweaked to suit the websites needs url https://developers.google.com/maps/documentation/javascript/load-maps-js-api?_gl=1*1u5062j*_up*MQ..*_ga*MTc1NzYyMDgxOC4xNzM2MDA2NjIy*_ga_NRWSTWS78N*MTczNjAwNjYyMi4xLjEuMTczNjAwNjYyMi4wLjAuMA..
 async function initMap() {
-  const { Map } = await google.maps.importLibrary("maps");
-  const { AdvancedMarkerElement, PinElement } = await google.maps.importLibrary("marker");
-  const userPin = new PinElement({
-    background: "#FBBC04",
-  });
+  if (mapIsPresent !== null) {
+    const { Map } = await google.maps.importLibrary("maps");
+    const { AdvancedMarkerElement, PinElement } = await google.maps.importLibrary("marker");
+    const userPin = new PinElement({
+      background: "#FBBC04",
+    });
 
-  map = new Map(document.getElementById("map"), {
-    zoom: 12,
-    center: { lat: chosenCityDetails.chosenCityLatitude, lng: chosenCityDetails.chosenCityLongitude },
-    mapId: "DEMO_MAP_ID",
-  });
+    map = new Map(document.getElementById("map"), {
+      zoom: 12,
+      center: { lat: chosenCityDetails.chosenCityLatitude, lng: chosenCityDetails.chosenCityLongitude },
+      mapId: "DEMO_MAP_ID",
+    });
 
-  const marker = new AdvancedMarkerElement({
-    map: map,
-    position: { lat: chosenCityDetails.chosenCityLatitude, lng: chosenCityDetails.chosenCityLongitude },
-    title: cityName,
-  });
-
-  if (locationAllowed) {
-    const marker2 = new AdvancedMarkerElement({
+    const marker = new AdvancedMarkerElement({
       map: map,
       position: { lat: userDetails.currentUserLatitude, lng: userDetails.currentUserLongitude },
       title: "You :)",

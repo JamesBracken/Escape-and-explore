@@ -78,6 +78,13 @@ Description of colors
 ### Lighthouse
 
 ### Notes of errors, bugs, issues and incomplete items
+
+* During development of the booking page I noticed an error in the console showing
+![In browser console showing an error due to no map on the booking page](./assets/images/readme_imgs/map-api-null.PNG)
+It appeared as though the issue was revolving around the google maps api trying to initialise the map when the map didnt exist on the new page
+so to resolve the issue I added an if check on the initMap function contents to prevent these running if there is no map in the current page.
+I then proceeded to check that this did not impact the map on the home page and indeed, success!
+
 * As I was implementing the google maps API, the map was refusing to show regardless of any changes I made to the API code. I soon realised I had the incorrect attribute on the script tags in the html file. All was working after changing 
 
 This was the incorrect script attribute
