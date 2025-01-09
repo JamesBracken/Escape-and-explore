@@ -83,6 +83,17 @@ div .card {
     height: 400px;
 }
 
+/* Package deal cards */
+
+.silverCard {
+    background-color: #6D87F0  !important;
+}
+.goldCard {
+    background-color: #4251D8  !important;
+}
+.platinumCard {
+    background-color: #000084  !important;
+}
 /* Footer styles */
 
 #footer {
