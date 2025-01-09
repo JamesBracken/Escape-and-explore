@@ -156,12 +156,16 @@ div .card {
     margin-top: auto;
 }
 
-#footer i {
+.fa-brands {
     font-size: 40px;
     margin: 9px;
     color: white;
 }
 
+.footerContacts {
+    font-size:20px;
+    color:white
+}
 /* Cards */
 /* Grids, margin between cards, images full width  */
 /* 
