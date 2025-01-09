@@ -21,7 +21,7 @@
 </head>
 
 <body>
-   <!-- Navbar taken from Bootstrap website https://getbootstrap.com/docs/5.3/components/navbar/ -->
+  <!-- Navbar taken from Bootstrap website https://getbootstrap.com/docs/5.3/components/navbar/ -->
   <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> -->
   <nav class="navbar navbar-expand-lg bgNav ">
     <div class="container-fluid">
@@ -62,7 +62,7 @@
       <!-- Container to hold BS Cards -->
       <div id="citySelectionContainer container">
         <div class="row justify-content-center ">
-       <!-- City cards code taken from bootstrap https://getbootstrap.com/docs/5.3/components/card/ -->
+          <!-- City cards code taken from bootstrap https://getbootstrap.com/docs/5.3/components/card/ -->
           <!-- BS Cards containing each city image and title -->
           <div class="card" style="width: 18rem;">
             <img id="londonCity" class="card-img-top cityImageButton" src="./assets/images/city_london.webp"
@@ -99,21 +99,35 @@
   <!-- Footer -->
   <!-- Bootstrap footer used and tweaked for website needs-->
   <footer id="footer">
-    <div class="container justify-content-center">
-      <h3>Our socials</h3>
-      <hr>
-      <div>
-        <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram symbol(opens in a new tab)"
-          rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://x.com/" target="_blank" aria-label="Twitter symbol(opens in a new tab)"
-          rel="noopener noreferrer"><i class="fa-brands fa-twitter"></i></a>
-        <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook symbol(opens in a new tab)"
-          rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
-        <a href="https://github.com/" target="_blank" aria-label="Github symbol(opens in a new tab)"
-          rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+    <div class="container">
+      <div class="row">
+        <div class="col-6 mt-3">
+          <h3>Contact us here</h3>
+          <hr>
+          <div class="contactsContainer">
+            <p><i class="footerContacts fa-sharp fa-solid fa-location-pin"></i> 123 location street, london</p>
+            <p><i class="footerContacts fa-solid fa-phone"></i> 0123456789</p>
+            <p><i class="footerContacts fa-solid fa-envelope"></i> escape&explore@mail.com</p>
+          </div>
+        </div>
+        <div class="col-6 mt-3">
+          <h3>Our socials</h3>
+          <hr>
+          <div class="justify-content-between socialsContainer">
+            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram symbol(opens in a new tab)"
+              rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://x.com/" target="_blank" aria-label="Twitter symbol(opens in a new tab)"
+              rel="noopener noreferrer"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook symbol(opens in a new tab)"
+              rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://github.com/" target="_blank" aria-label="Github symbol(opens in a new tab)"
+              rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+        <div class="container">
       </div>
     </div>
-    <div class="container">
+    
 
       <p class="footerCopyright">&#169;Escape and explore. All rights reserved | Developed by James</p>
     </div>
@@ -138,4 +152,5 @@ Add CTA bottom after city descriptions
 Add newsletter or feedback form
 Metadata 
 make the page scroll to the map on click of a city
+Create 404 page / non existent
 -->
