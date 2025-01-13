@@ -106,11 +106,38 @@ This is the corrected one
 ![Bootstrap cards showing on top of navbar](./assets/images/readme_imgs/bootstrap-cards-nav.PNG)
 
 To resolve this issue I used z index on the navbar to keep it on top of every other element in the webpage
-| Activity | Expected |  Actual  |  Action  | Screenshot |
-|----------|----------|----------|----------|------------|
-|          |          |          |          |            |
-|          |          |          |          |            |
+
+
 ## Deployment
+
+<!-- This deployment guide is copy pasted from my own code in the repository Jamie's Gym -->
+This website is deployed on github pages - [Jamie's Gyms](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file)
+
+How to deploy a site using GitHub Pages:
+
+1.Create a github account
+2.Sign in to github
+3.Click on settings
+4.Go to the project repository - [Escape and explore](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file)
+5.Choose *Pages* in the navigation menu on the left side of the screen
+6.In the source dropdown, Make sure you are on *main* branch and then click on save
+
+After you have completed all these the website will start to be constructed by github pages, following this you will be able to open your page from the home page of your repository on the right side within the *Deployments* section
+
+**Forking** 
+To fork this repository follow these steps
+
+1.Setup Git and make sure your git has github authentication
+2.Go to the web page repository [Escape and explore](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file) 
+3.Click on *fork* on the upper right portion of the page.
+4.This has now forked the repository to your own profile. 
+5.Go to your profile and navigate to the forked repository.
+6.Click on *Code* above the list of forked files
+7.Choose the option you need from the dropdown menu. 
+
+Further assistance can be found [HERE](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) on the github Fork a Repo page
+### Environmental variables / scripts
+This webpage does not require any additional environmental variables or scripts, all scripts used in this project are imported within the code itself. 
 
 
 ## Credits
