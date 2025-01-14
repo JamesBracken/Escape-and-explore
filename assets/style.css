@@ -13,6 +13,10 @@ body {
 padding-top: 47px;
 }   
 
+img {
+    object-fit: cover;
+    width: 100%;
+}
 /* Navbar */
 nav {
     padding: 0 !important;
@@ -35,13 +39,9 @@ nav {
     margin-left: auto;
     float: right;
     font-weight: 700;
-    /* font-size: 27px; */
     background-color: #c23311 ;
-    /* border-radius: 25px; */
     margin-top:7px;
-    /* margin-bottom: 4px; */
     padding:0 5px 0 5px;
-    /* height:47px; */
 }
 
 .cta {
@@ -54,7 +54,6 @@ nav {
 #heroImg {
     width:100%;
     height: 75vh;
-    object-fit: cover;
 }
 /* City image cards */
 
@@ -76,16 +75,9 @@ div .card {
 
 /* Places to visit cards */
 
-.placesToVisitCardImg {
-     /* height: 100%; */
-    /* max-width: 247px;   */
-    object-fit: cover;
-}
-
 /* Partners sponsor cards */
 
 .partnerSponsorCardImg {
-    /* object-fit: cover; */
     max-height: 268px;
 }
 
@@ -107,7 +99,7 @@ div .card {
     background-color: #000084  !important;
 }
 
-.packageCardButton {
+/* .packageCardButton {
     position: absolute;
     bottom: 0;
     width: 120px;
@@ -138,7 +130,6 @@ div .card {
     background-color: aliceblue;
     border-radius: 7px;
 }
-
 .cityButton:hover {
     background-color: rgb(173, 173, 173);
 }
@@ -166,6 +157,21 @@ div .card {
     font-size:20px;
     color:white
 }
+
+/* Media devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+    .partnerSponsorCardImg {
+        height: 200px;
+    }
+}
+
+/* Media devices (Laptops, 1024px and up) */
+@media screen and (min-width: 1024px) {
+    .partnerSponsorCardImg {
+        height: 268px;
+    }
+}
+
 /* Cards */
 /* Grids, margin between cards, images full width  */
 /* 
