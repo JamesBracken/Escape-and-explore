@@ -183,7 +183,7 @@
          and tweaked for website needs -->
             <!-- Section containing BS forms -->
             <div class="container">
-                <form class="row g-3 needs-validation">
+                <form id="bookingForm" class="row g-3"> <!--   needs-validation -->
                     <div class="container mt-3">
                         <div class="text-center">
                             <h2>Where shall we be taking you this time?</h2>
@@ -210,21 +210,21 @@
                     </div>
                     <div class="col-md-4">
                         <label for="lastName" class="form-label">Last name</label>
-                        <input type="text" class="form-control" id="lastName" required>
+                        <input type="text" class="form-control" id="lastName" >
                         <div id="lastNameFeedback">
                             <p class="formFeedback"></p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <label for="email" class="form-label">Email Address</label>
-                        <input type="email" class="form-control" id="email" required>
+                        <input type="email" class="form-control" id="email" >
                         <div id="emailFeedback">
                             <p class="formFeedback"></p>
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="invalidCheck" required>
+                            <input class="form-check-input" type="checkbox" id="invalidCheck" >
                             <label class="form-check-label" for="invalidCheck">
                                 Agree to terms and conditions
                             </label>

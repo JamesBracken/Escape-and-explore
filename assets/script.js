@@ -223,7 +223,30 @@ for (let button of cityButtons) {
 }
 
 
-// Form validation
+
+// Form validation 
+const firstName = document.getElementById("firstName");
+const lastName = document.getElementById("lastName");
+const email = document.getElementById("email");
+const bookingForm = document.getElementById("bookingForm")
+bookingForm.addEventListener("submit", (e) => {
+  let errorMessages = []
+  if (firstName.value.length >= 1) {
+    errorMessages.push("This is a test")
+  }
+
+  if (errorMessages.length >= 1) {
+    console.log("working")
+    e.preventDefault()
+  }
+})
+// First name must have data
+// Last name must have data
+
+
+// Email must have data
+// Email must have @ sign
+// Email must have characters after @sign
 
 
 // -------------------------------------------------------------------
