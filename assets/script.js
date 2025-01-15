@@ -239,6 +239,15 @@ const email = document.getElementById("email");
 const emailFeedback = document.getElementById("emailFeedback");
 
 const bookingForm = document.getElementById("bookingForm");
+let bookingFormInputs = [firstName, lastName, email]
+
+for (input of bookingFormInputs) {
+  input.addEventListener("keydown", onBookingFormInput)
+}
+function onBookingFormInput(e) {
+  console.log(`Adding event listener to ${e.target.id + "Feedback"}`)
+}
+
 bookingForm.addEventListener("submit", (e) => {
   let errorMessages = []
   if (firstName.value.length === 0 || firstName.value.length < 1) {
