@@ -179,19 +179,19 @@ async function displayCityInformation() {
 }
 
 // Toggle for package city button 
-let buttons = document.getElementsByClassName("packageCardButton")
+let buttons = document.getElementsByClassName("styleButton")
 for (let button of buttons) {
   button.addEventListener("click", function toggleSelectedPackageCardButton(e) {
     let targetedElement = e.target;
-    let isElementActive = targetedElement.classList.contains("packageCardButtonActive")
-    targetedElement.classList.remove("packageCardButtonActive")
+    let isElementActive = targetedElement.classList.contains("styleButtonActive")
+    targetedElement.classList.remove("styleButtonActive")
      if(isElementActive === false) {
       for(button of buttons) {
-        button.classList.remove("packageCardButtonActive")
+        button.classList.remove("styleButtonActive")
       }
-      targetedElement.classList += " packageCardButtonActive"
+      targetedElement.classList += " styleButtonActive"
      } else if (isElementActive === true) {
-      targetedElement.classList.remove("packageCardButtonActive")
+      targetedElement.classList.remove("styleButtonActive")
      }
 
   })
