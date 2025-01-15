@@ -3,7 +3,7 @@ API_URL = "";
 
 // GLOBAL VARIABLES
 
-// data for every city
+// Data for every city
 let mapIsPresent = document.getElementById("map")
 let cities = {
   parisCity: {
@@ -65,6 +65,7 @@ let cities = {
     ]
   }
 };
+
 let locationAllowed = false;
 let cityName;
 let cityId;
@@ -87,6 +88,7 @@ let userDetails = {
     initMap();
   }
 };
+
 // On click of a city or on approval of user location permissions this will update the chosen cities position attributes
 // On update of these attributes google maps API location is updated 
 let chosenCityDetails = {
@@ -94,13 +96,13 @@ let chosenCityDetails = {
   chosenCityLongitude: userDetails.currentUserLongitude,
 };
 
-// CLICK HANDLERS
+// City selection click handlers
 let images = document.getElementsByClassName("cityImageButton")
 for (image of images) {
   image.addEventListener("click", handleCityClick)
 };
-// USER LOCATION UPDATING
 
+// User Geolocation, gets users current location
 // When website is opened, the below code prompts the user to give the website location permissions
 navigator.geolocation.getCurrentPosition(userDetails.successCallBack, userDetails.errorCallBack)
 
@@ -178,7 +180,7 @@ async function displayCityInformation() {
 
 }
 
-// Toggle for package city button 
+// Toggle for package buttons
 let buttons = document.getElementsByClassName("styleButton")
 for (let button of buttons) {
   button.addEventListener("click", function toggleSelectedPackageCardButton(e) {
@@ -220,6 +222,8 @@ for (let button of cityButtons) {
 
 }
 
+
+// Form validation
 
 
 // -------------------------------------------------------------------

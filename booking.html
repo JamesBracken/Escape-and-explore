@@ -202,62 +202,24 @@
                         <hr>
                     </div>
                     <div class="col-md-4">
-                        <label for="validationCustom01" class="form-label">First name</label>
-                        <input type="text" class="form-control" id="validationCustom01" required>
-                        <div class="valid-feedback">
-                            Looks good!
+                        <label for="firstName" class="form-label">First name</label>
+                        <input type="text" class="form-control" id="firstName" required>
+                        <div id="firstNameFeedback">
+                            <p class="formFeedback"></p>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <label for="validationCustom02" class="form-label">Last name</label>
-                        <input type="text" class="form-control" id="validationCustom02" required>
-                        <div class="valid-feedback">
-                            Looks good!
+                        <label for="lastName" class="form-label">Last name</label>
+                        <input type="text" class="form-control" id="lastName" required>
+                        <div id="lastNameFeedback">
+                            <p class="formFeedback"></p>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <label for="validationCustom02" class="form-label">Email Address</label>
-                        <input type="email" class="form-control" id="validationCustom02" required>
-                        <div class="valid-feedback">
-                            Looks good!
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="validationCustom03" class="form-label">City</label>
-                        <input type="text" class="form-control" id="validationCustom03" required>
-                        <div class="invalid-feedback">
-                            Please provide a valid city.
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <label for="validationCustom04" class="form-label">State</label>
-                        <select class="form-select" id="validationCustom04" required>
-                            <option selected disabled value="">Choose...</option>
-                            <option>...</option>
-                        </select>
-                        <div class="invalid-feedback">
-                            Please select a valid state.
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <label for="validationCustom05" class="form-label">Zip/Post code</label>
-                        <input type="text" class="form-control" id="validationCustom05" required>
-                        <div class="invalid-feedback">
-                            Please provide a valid zip.
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="validationCustom03" class="form-label">Card number(16+ digits)</label>
-                        <input type="text" class="form-control" id="validationCustom03" pattern="[0-9]{16+}" required>
-                        <div class="invalid-feedback">
-                            Please provide a valid Card number.
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="validationCustom03" class="form-label">Sort code</label>
-                        <input type="text" class="form-control" id="validationCustom03" required>
-                        <div class="invalid-feedback">
-                            Please provide a valid Sort code.
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="email" required>
+                        <div id="emailFeedback">
+                            <p class="formFeedback"></p>
                         </div>
                     </div>
                     <div class="col-12">
@@ -266,8 +228,8 @@
                             <label class="form-check-label" for="invalidCheck">
                                 Agree to terms and conditions
                             </label>
-                            <div class="invalid-feedback">
-                                You must agree before submitting.
+                            <div id="conditionsFeedback">
+                                <p class="formFeedback"></p>
                             </div>
                         </div>
                     </div>
