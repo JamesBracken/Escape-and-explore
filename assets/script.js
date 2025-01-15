@@ -225,14 +225,25 @@ for (let button of cityButtons) {
 
 
 // Form validation 
+document
+
+
+
 const firstName = document.getElementById("firstName");
+const firstNameFeedback = document.getElementById("first");
+
 const lastName = document.getElementById("lastName");
+const lastNameFeedback = document.getElementById("lastNameFeedback");
+
 const email = document.getElementById("email");
-const bookingForm = document.getElementById("bookingForm")
+const emailFeedback = document.getElementById("emailFeedback");
+
+const bookingForm = document.getElementById("bookingForm");
 bookingForm.addEventListener("submit", (e) => {
   let errorMessages = []
-  if (firstName.value.length >= 1) {
+  if (firstName.value.length === 0 || firstName.value.length < 1) {
     errorMessages.push("This is a test")
+    firstNameFeedback.innerText = "Please add your first name"
   }
 
   if (errorMessages.length >= 1) {
