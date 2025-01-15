@@ -230,7 +230,7 @@ document
 
 
 const firstName = document.getElementById("firstName");
-const firstNameFeedback = document.getElementById("first");
+const firstNameFeedback = document.getElementById("firstNameFeedback");
 
 const lastName = document.getElementById("lastName");
 const lastNameFeedback = document.getElementById("lastNameFeedback");
@@ -246,6 +246,9 @@ for (input of bookingFormInputs) {
 }
 function onBookingFormInput(e) {
   console.log(`Adding event listener to ${e.target.id + "Feedback"}`)
+  let targetErrorElement = document.getElementById(`${e.target.id + "Feedback"}`)
+  targetErrorElement.innerText += "Testing"
+  console.log(targetErrorElement.innerText)
 }
 
 bookingForm.addEventListener("submit", (e) => {
