@@ -276,7 +276,7 @@ bookingForm.addEventListener("submit", (e) => {
 
 // -------------------------------------------------------------------
 // TASKS
-//
+// 
 // Add data to each city for destinations
 // Create routing from user pin to selected city pin
 //
