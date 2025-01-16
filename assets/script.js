@@ -227,7 +227,7 @@ for (let button of cityButtons) {
 // Form validation 
 document
 
-
+let focusedFormElement = "";
 
 const firstName = document.getElementById("firstName");
 const firstNameFeedback = document.getElementById("firstNameFeedback");
@@ -263,6 +263,8 @@ bookingForm.addEventListener("submit", (e) => {
     e.preventDefault()
   }
 })
+
+
 // First name must have data
 // Last name must have data
 
