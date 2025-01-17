@@ -187,14 +187,14 @@ for (let button of buttons) {
     let targetedElement = e.target;
     let isElementActive = targetedElement.classList.contains("styleButtonActive")
     targetedElement.classList.remove("styleButtonActive")
-     if(isElementActive === false) {
-      for(button of buttons) {
+    if (isElementActive === false) {
+      for (button of buttons) {
         button.classList.remove("styleButtonActive")
       }
       targetedElement.classList += " styleButtonActive"
-     } else if (isElementActive === true) {
+    } else if (isElementActive === true) {
       targetedElement.classList.remove("styleButtonActive")
-     }
+    }
 
   })
 
@@ -208,15 +208,15 @@ for (let button of cityButtons) {
     let targetedElement = e.target;
     let isElementActive = targetedElement.classList.contains("cityActive")
     targetedElement.classList.remove("cityActive")
-     if(isElementActive === false) {
-      for(button of cityButtons) {
+    if (isElementActive === false) {
+      for (button of cityButtons) {
         button.classList.remove("cityActive")
         console.log("removing")
       }
       targetedElement.classList += " cityActive"
-     } else if (isElementActive === true) {
+    } else if (isElementActive === true) {
       targetedElement.classList.remove("cityActive")
-     }
+    }
 
   })
 
@@ -264,15 +264,18 @@ function onBookingFormFocusOut(e) {
 }
 
 // When there are any buttons press or changes made when in focus in the booking input elements, this function is invoked
-function onBookingFormChange (e) {
+function onBookingFormChange(e) {
   let targetErrorElement = document.getElementById(`${e.target.id + "Feedback"}`)
-  if(e.target.value.length > 0) {
+  if (e.target.value.length > 0) {
     console.log("onchange working")
     console.log(e.target.value.length)
-    targetErrorElement.innerText = ""
+    let emptyInputMessage = targetErrorElement.innerText.includes("Please input these details")
+    if (emptyInputMessage) {
+      console.log("Empty input validation checks working")
+      targetErrorElement.innerText.replace("Please input these details", "")
+    }
   }
 }
-
 
 // First name must have data
 // Last name must have data
@@ -285,7 +288,7 @@ function onBookingFormChange (e) {
 
 // -------------------------------------------------------------------
 // TASKS
-// 
+//
 // Add data to each city for destinations
 // Create routing from user pin to selected city pin
 //
@@ -295,7 +298,7 @@ function onBookingFormChange (e) {
 // MAYBE
 // Fix zoom, add data to each city and make this adjust dynamically
 // Re prompt the user on warning to enable locations
-// 
+//
 
 // Basic form validation, leaving out for now if reusable form validation is achieved
 // bookingForm.addEventListener("submit", (e) => {
