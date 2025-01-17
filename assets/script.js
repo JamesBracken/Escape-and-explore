@@ -227,8 +227,6 @@ for (let button of cityButtons) {
 // Form validation 
 document
 
-let focusedFormElement = "";
-
 const firstName = document.getElementById("firstName");
 const firstNameFeedback = document.getElementById("firstNameFeedback");
 
@@ -238,31 +236,42 @@ const lastNameFeedback = document.getElementById("lastNameFeedback");
 const email = document.getElementById("email");
 const emailFeedback = document.getElementById("emailFeedback");
 
+const confirmEmail = document.getElementById("confirmEmail")
+const confirmEmailFeedback = document.getElementById("confirmEmailFeedback")
+
 const bookingForm = document.getElementById("bookingForm");
-let bookingFormInputs = [firstName, lastName, email]
+let bookingFormInputs = [firstName, lastName, email, confirmEmail]
 
+// Adding event listeners for our booking form inputs
 for (input of bookingFormInputs) {
-  input.addEventListener("keydown", onBookingFormInput)
-}
-function onBookingFormInput(e) {
-  console.log(`Adding event listener to ${e.target.id + "Feedback"}`)
-  let targetErrorElement = document.getElementById(`${e.target.id + "Feedback"}`)
-  targetErrorElement.innerText += "Testing"
-  console.log(targetErrorElement.innerText)
+  input.addEventListener("focusout", onBookingFormFocusOut)
+  input.addEventListener("input", onBookingFormChange)
 }
 
-bookingForm.addEventListener("submit", (e) => {
+// When an input loses focus this function is invoked and displays validation errors where needed
+function onBookingFormFocusOut(e) {
   let errorMessages = []
-  if (firstName.value.length === 0 || firstName.value.length < 1) {
-    errorMessages.push("This is a test")
-    firstNameFeedback.innerText = "Please add your first name"
+  let targetedElement = e.target
+  let targetErrorElement = document.getElementById(`${e.target.id + "Feedback"}`)
+  console.log("onfocusout working")
+  if (targetedElement.value.length === 0 || targetedElement.value.length < 1) {
+    targetErrorElement.innerText = "Please input these details"
   }
-
+  // Prevents form submission if there is any validation issues
   if (errorMessages.length >= 1) {
-    console.log("working")
     e.preventDefault()
   }
-})
+}
+
+// When there are any buttons press or changes made when in focus in the booking input elements, this function is invoked
+function onBookingFormChange (e) {
+  let targetErrorElement = document.getElementById(`${e.target.id + "Feedback"}`)
+  if(e.target.value.length > 0) {
+    console.log("onchange working")
+    console.log(e.target.value.length)
+    targetErrorElement.innerText = ""
+  }
+}
 
 
 // First name must have data
@@ -287,3 +296,17 @@ bookingForm.addEventListener("submit", (e) => {
 // Fix zoom, add data to each city and make this adjust dynamically
 // Re prompt the user on warning to enable locations
 // 
+
+// Basic form validation, leaving out for now if reusable form validation is achieved
+// bookingForm.addEventListener("submit", (e) => {
+//   let errorMessages = []
+//   if (firstName.value.length === 0 || firstName.value.length < 1) {
+//     errorMessages.push("This is a test")
+//     firstNameFeedback.innerText = "Please add your first name"
+//   }
+
+//   if (errorMessages.length >= 1) {
+//     console.log("working")
+//     e.preventDefault()
+//   }
+// })
