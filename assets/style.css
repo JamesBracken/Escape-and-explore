@@ -17,6 +17,9 @@ img {
     object-fit: cover;
 }
 
+.redText {
+    color: rgb(255, 0, 0);
+}
 /* Navbar */
 nav {
     padding: 0 !important;
@@ -134,6 +137,12 @@ div .card {
     min-height: 210px;
 }
 
+/* Form styles */
+
+/* This toggles form input errors on and off by making them visible or invisible */
+.inactiveError {
+    visibility: hidden;
+}
 /* Footer styles */
 
 #footer {

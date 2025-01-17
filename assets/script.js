@@ -228,19 +228,21 @@ for (let button of cityButtons) {
 document
 
 const firstName = document.getElementById("firstName");
-const firstNameFeedback = document.getElementById("firstNameFeedback");
 
 const lastName = document.getElementById("lastName");
-const lastNameFeedback = document.getElementById("lastNameFeedback");
 
 const email = document.getElementById("email");
-const emailFeedback = document.getElementById("emailFeedback");
 
 const confirmEmail = document.getElementById("confirmEmail")
-const confirmEmailFeedback = document.getElementById("confirmEmailFeedback")
 
 const bookingForm = document.getElementById("bookingForm");
 let bookingFormInputs = [firstName, lastName, email, confirmEmail]
+
+// Possibly getting rid of variables
+// const confirmEmailFeedback = document.getElementById("confirmEmailFeedback")
+// const emailFeedback = document.getElementById("emailFeedback");
+// const lastNameFeedback = document.getElementById("lastNameFeedback");
+// const firstNameFeedback = document.getElementById("firstNameFeedback");
 
 // Adding event listeners for our booking form inputs
 for (input of bookingFormInputs) {
@@ -248,32 +250,23 @@ for (input of bookingFormInputs) {
   input.addEventListener("input", onBookingFormChange)
 }
 
-// When an input loses focus this function is invoked and displays validation errors where needed
+// When an input loses focus this function is invoked and toggles visibility of validation errors where needed
 function onBookingFormFocusOut(e) {
-  let errorMessages = []
   let targetedElement = e.target
-  let targetErrorElement = document.getElementById(`${e.target.id + "Feedback"}`)
-  console.log("onfocusout working")
+  console.log(targetedElement)
+  let targetErrorElement = document.getElementById(`${e.target.id + "EmptyFeedback"}`)
   if (targetedElement.value.length === 0 || targetedElement.value.length < 1) {
-    targetErrorElement.innerText = "Please input these details"
+    targetErrorElement.classList.remove("inactiveError")
   }
-  // Prevents form submission if there is any validation issues
-  if (errorMessages.length >= 1) {
-    e.preventDefault()
-  }
+
 }
 
 // When there are any buttons press or changes made when in focus in the booking input elements, this function is invoked
 function onBookingFormChange(e) {
-  let targetErrorElement = document.getElementById(`${e.target.id + "Feedback"}`)
-  if (e.target.value.length > 0) {
-    console.log("onchange working")
-    console.log(e.target.value.length)
-    let emptyInputMessage = targetErrorElement.innerText.includes("Please input these details")
-    if (emptyInputMessage) {
-      console.log("Empty input validation checks working")
-      targetErrorElement.innerText.replace("Please input these details", "")
-    }
+  let targetErrorElement = document.getElementById(`${e.target.id + "EmptyFeedback"}`)
+  
+  if(e.target.value.length > 0) {
+    targetErrorElement.classList.add("inactiveError")
   }
 }
 
