@@ -227,16 +227,18 @@ for (let button of cityButtons) {
 // Form validation 
 document
 
-const firstName = document.getElementById("firstName");
+const firstNameInput = document.getElementById("firstName");
 
-const lastName = document.getElementById("lastName");
+const lastNameInput = document.getElementById("lastName");
 
-const email = document.getElementById("email");
+const emailInput = document.getElementById("email");
 
-const confirmEmail = document.getElementById("confirmEmail")
+const confirmEmailInput = document.getElementById("confirmEmail")
+
+const termsAndConditionsCheck = document.getElementById("termsAndConditionsCheck")
 
 const bookingForm = document.getElementById("bookingForm");
-let bookingFormInputs = [firstName, lastName, email, confirmEmail]
+let bookingFormInputs = [firstNameInput, lastNameInput, emailInput, confirmEmailInput, termsAndConditionsCheck]
 
 // Possibly getting rid of variables
 // const confirmEmailFeedback = document.getElementById("confirmEmailFeedback")
@@ -248,25 +250,37 @@ let bookingFormInputs = [firstName, lastName, email, confirmEmail]
 for (input of bookingFormInputs) {
   input.addEventListener("focusout", onBookingFormFocusOut)
   input.addEventListener("input", onBookingFormChange)
+  input.addEventListener("invalid", (e) => {
+    // e.setCustomValidity = "Message"
+    e.preventDefault()
+    // console.log("Working")
+    // console.log(e)
+  })
+  // input.setCustomValidity = "Message"
+  // console.log()
 }
 
 // When an input loses focus this function is invoked and toggles visibility of validation errors where needed
 function onBookingFormFocusOut(e) {
   let targetedElement = e.target
-  console.log(targetedElement)
   let targetErrorElement = document.getElementById(`${e.target.id + "EmptyFeedback"}`)
   if (targetedElement.value.length === 0 || targetedElement.value.length < 1) {
     targetErrorElement.classList.remove("inactiveError")
+    targetedElement.classList.add("redBorder")
+    console.log(targetErrorElement)
   }
 
 }
 
 // When there are any buttons press or changes made when in focus in the booking input elements, this function is invoked
-function onBookingFormChange(e) {
+function onBookingFormChange(e)  {
   let targetErrorElement = document.getElementById(`${e.target.id + "EmptyFeedback"}`)
-  
+  let targetedElement = e.target
+
+
   if(e.target.value.length > 0) {
     targetErrorElement.classList.add("inactiveError")
+    targetedElement.classList.remove("redBorder")
   }
 }
 

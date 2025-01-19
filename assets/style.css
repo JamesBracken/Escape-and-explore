@@ -20,6 +20,10 @@ img {
 .redText {
     color: rgb(255, 0, 0);
 }
+
+.redBorder {
+    border: red 1px solid;
+}
 /* Navbar */
 nav {
     padding: 0 !important;
