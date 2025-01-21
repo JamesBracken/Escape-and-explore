@@ -233,29 +233,32 @@ for (let button of cityButtons) {
 
 
 // Form matching emails validation 
-const emailInput = document.getElementById("email");
-const confirmEmailInput = document.getElementById("confirmEmail")
-const confirmEmailFeedback = document.getElementById("confirmEmailFeedback")
-const emailFeedback = document.getElementById("emailFeedback");
-let isEmailMatching = emailInput.value === confirmEmailInput.value
-const bookingForm = document.getElementById("bookingForm");
-const bookingFormEmailInputs = [confirmEmailInput, emailInput]
-const bookingFormEmailFeedbacks = [confirmEmailFeedback, emailFeedback]
-bookingForm.addEventListener("submit", onBookingFormSubmit)
-for(let input of bookingFormEmailInputs){
-  input.addEventListener("input", onBookingFormInput)
-}
 
+const emailFeedback = document.getElementById("emailFeedback");
+const confirmEmailFeedback = document.getElementById("confirmEmailFeedback")
+const emailInput = document.getElementById("email");
+const bookingFormEmailFeedbacks = [confirmEmailFeedback, emailFeedback]
+
+const confirmEmailInput = document.getElementById("confirmEmail")
+const bookingFormEmailInputs = [confirmEmailInput, emailInput]
+let isBookingPage = document.querySelector("main").classList.contains("bookingPage")
+if (isBookingPage) {
+  let isEmailMatching = emailInput.value === confirmEmailInput.value
+  const bookingForm = document.getElementById("bookingForm");
+
+  for (let input of bookingFormEmailInputs) {
+    input.addEventListener("input", onBookingFormInput)
+  }
+  bookingForm.addEventListener("submit", onBookingFormSubmit)
+}
 // On submit of the form validation checks within this function are performed
 function onBookingFormSubmit(e) {
-  if(!isEmailMatching){
-    console.log("Emails are not matching")
+  if (!isEmailMatching) {
     e.preventDefault()
-    for(let input of bookingFormEmailInputs) {
+    for (let input of bookingFormEmailInputs) {
       input.classList.add("redBorder")
-      console.log("Adding border to" + input)
     }
-    for(let feedback of bookingFormEmailFeedbacks) {
+    for (let feedback of bookingFormEmailFeedbacks) {
       feedback.classList.remove("inactiveError")
     }
   }
@@ -263,23 +266,18 @@ function onBookingFormSubmit(e) {
 
 function onBookingFormInput() {
   isEmailMatching = emailInput.value === confirmEmailInput.value
-  console.log("Input data event listener working")
-  if(isEmailMatching) {
-    console.log("Email is matching, if statement invoked")
-    for(let input of bookingFormEmailInputs) {
+  if (isEmailMatching) {
+    for (let input of bookingFormEmailInputs) {
       input.classList.remove("redBorder")
-      console.log("removing border from" + input)
     }
-    for(let feedback of bookingFormEmailFeedbacks) {
+    for (let feedback of bookingFormEmailFeedbacks) {
       feedback.classList.add("inactiveError")
-      console.log("Adding error to" + feedback)
     }
   }
 }
 
 let cityCards = document.getElementsByClassName("cityCard")
 
-// console.log(cityCards)
 for (card of cityCards) {
   card.addEventListener("click", toggleCityOutline)
 }
