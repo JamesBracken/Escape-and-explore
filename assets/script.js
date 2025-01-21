@@ -283,13 +283,12 @@ let cityCards = document.getElementsByClassName("cityCard")
 for (card of cityCards) {
   card.addEventListener("click", toggleCityOutline)
 }
+// console.log(cityCards)
 
 function toggleCityOutline(e) {
   let selectedCityCard = e.target.parentNode
   let cardOutlinedBoolean = selectedCityCard.classList.contains("cityCardOutlined")
-  if (cardOutlinedBoolean) {
-    selectedCityCard.classList.remove("cityCardOutlined")
-  } else {
+  if (!cardOutlinedBoolean) {
     for (card of cityCards) {
       card.classList.remove("cityCardOutlined")
       selectedCityCard.classList.add("cityCardOutlined")
