@@ -211,7 +211,6 @@ for (let button of cityButtons) {
     if (isElementActive === false) {
       for (button of cityButtons) {
         button.classList.remove("cityActive")
-        console.log("removing")
       }
       targetedElement.classList += " cityActive"
     } else if (isElementActive === true) {
@@ -249,17 +248,26 @@ let bookingFormInputs = [firstNameInput, lastNameInput, emailInput, confirmEmail
 // Adding event listeners for our booking form inputs
 for (input of bookingFormInputs) {
   input.addEventListener("focusout", onBookingFormFocusOut)
+  input.addEventListener("submit", onBookingFormFocusSubmit)
   input.addEventListener("input", onBookingFormChange)
+  // This is to prevent the html validation messages from showing, we instead want our own validation messages showing
   input.addEventListener("invalid", (e) => {
-    // e.setCustomValidity = "Message"
-    e.preventDefault()
-    // console.log("Working")
-    // console.log(e)
+    // e.preventDefault()
   })
-  // input.setCustomValidity = "Message"
-  // console.log()
 }
 
+// On submit of the form validation checks within this function are performed
+function onBookingFormFocusSubmit() {
+  // Cycle through with a for loop the elements if an input has been placed, if no input display the correllating error messages below the input
+  // let inputs = bookingFormInputs
+  for (let input of bookingFormInputs) {
+    if (input.value.length === 0 || input.value.length < 1) {
+      targetErrorElement.classList.remove("inactiveError")
+      input.classList.add("redBorder")
+      console.log("Cycle working")  
+    }
+  }
+}
 // When an input loses focus this function is invoked and toggles visibility of validation errors where needed
 function onBookingFormFocusOut(e) {
   let targetedElement = e.target
@@ -267,7 +275,6 @@ function onBookingFormFocusOut(e) {
   if (targetedElement.value.length === 0 || targetedElement.value.length < 1) {
     targetErrorElement.classList.remove("inactiveError")
     targetedElement.classList.add("redBorder")
-    console.log(targetErrorElement)
   }
 
 }
@@ -316,7 +323,6 @@ function onBookingFormChange(e)  {
 //   }
 
 //   if (errorMessages.length >= 1) {
-//     console.log("working")
 //     e.preventDefault()
 //   }
 // })
