@@ -237,42 +237,71 @@ const emailInput = document.getElementById("email");
 const confirmEmailInput = document.getElementById("confirmEmail")
 const confirmEmailFeedback = document.getElementById("confirmEmailFeedback")
 const emailFeedback = document.getElementById("emailFeedback");
+let isEmailMatching = emailInput.value === confirmEmailInput.value
 
 const bookingForm = document.getElementById("bookingForm");
-let bookingFormInputs = [confirmEmailInput, termsAndConditionsCheck]
-
+const bookingFormEmailInputs = [confirmEmailInput, emailInput]
+const bookingFormEmailFeedbacks = [confirmEmailFeedback, emailFeedback]
+console.log(confirmEmailFeedback)
 // Adding event listeners for our booking form email inputs
-for (input of bookingFormInputs) {
-  input.addEventListener("submit", onBookingFormFocusSubmit)
+// for (input of bookingFormInputs) {
+//   input.addEventListener("submit", onBookingFormSubmit)
+// }
+bookingForm.addEventListener("submit", onBookingFormSubmit)
+for(let input of bookingFormEmailInputs){
+  input.addEventListener("input", onBookingFormInput)
+  console.log("Adding event listener for " + input)
 }
-
 // On submit of the form validation checks within this function are performed
-function onBookingFormFocusSubmit() {
+function onBookingFormSubmit(e) {
   // Cycle through with a for loop the elements if an input has been placed, if no input display the correllating error messages below the input
-  for (let input of bookingFormInputs) {
-    if (input.value.length === 0 || input.value.length < 1) {
-      console.log("Cycle working")
-    }
-  }
+  // for (let input of bookingFormInputs) {
+  //   if (input.value.length === 0 || input.value.length < 1) {
+  //     console.log("Cycle working")
+  //   }
+  // }
   // input.classList.add("redBorder")
   // targetErrorElement.classList.remove("inactiveError")
-  console.log(emailInput.value)
-  console.log(confirmEmailInput.value)
-  const isEmailMatching = ""
-  // if()
-}
 
-// When there are any buttons press or changes made when in focus in the booking input elements, this function is invoked
-function onBookingFormChange(e) {
-  let targetErrorElement = document.getElementById(`${e.target.id + "EmptyFeedback"}`)
-  let targetedElement = e.target
-
-
-  if (e.target.value.length > 0) {
-    targetErrorElement.classList.add("inactiveError")
-    targetedElement.classList.remove("redBorder")
+  if(!isEmailMatching){
+    console.log("Emails are not matching")
+    e.preventDefault()
+    for(let input of bookingFormEmailInputs) {
+      input.classList.add("redBorder")
+      console.log("Adding border to" + input)
+    }
+    for(let feedback of bookingFormEmailFeedbacks) {
+      feedback.classList.remove("inactiveError")
+    }
   }
 }
+
+function onBookingFormInput() {
+  isEmailMatching = emailInput.value === confirmEmailInput.value
+  console.log("Input data event listener working")
+  if(isEmailMatching) {
+    console.log("Email is matching, if statement invoked")
+    for(let input of bookingFormEmailInputs) {
+      input.classList.remove("redBorder")
+      console.log("removing border from" + input)
+    }
+    for(let feedback of bookingFormEmailFeedbacks) {
+      feedback.classList.add("inactiveError")
+      console.log("Adding error to" + feedback)
+    }
+  }
+}
+// When there are any buttons press or changes made when in focus in the booking input elements, this function is invoked
+// function onBookingFormChange(e) {
+//   let targetErrorElement = document.getElementById(`${e.target.id + "EmptyFeedback"}`)
+//   let targetedElement = e.target
+
+
+//   if (e.target.value.length > 0) {
+//     targetErrorElement.classList.add("inactiveError")
+//     targetedElement.classList.remove("redBorder")
+//   }
+// }
 
 let cityCards = document.getElementsByClassName("cityCard")
 
