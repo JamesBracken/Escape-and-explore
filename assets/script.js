@@ -94,7 +94,12 @@ let userDetails = {
   },
   errorCallBack: () => {
     locationAllowed = false;
-    alert("If user location permissions are denied, not all features of this website will be available. Please update your location permissions and then resfresh this page")
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "If user location permissions are denied you will not be able to see your current location marker on the map."
+    });
+    // alert("If user location permissions are denied, not all features of this website will be available. Please update your location permissions and then resfresh this page")
     initMap();
   }
 };
