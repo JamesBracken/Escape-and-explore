@@ -238,31 +238,16 @@ const confirmEmailInput = document.getElementById("confirmEmail")
 const confirmEmailFeedback = document.getElementById("confirmEmailFeedback")
 const emailFeedback = document.getElementById("emailFeedback");
 let isEmailMatching = emailInput.value === confirmEmailInput.value
-
 const bookingForm = document.getElementById("bookingForm");
 const bookingFormEmailInputs = [confirmEmailInput, emailInput]
 const bookingFormEmailFeedbacks = [confirmEmailFeedback, emailFeedback]
-console.log(confirmEmailFeedback)
-// Adding event listeners for our booking form email inputs
-// for (input of bookingFormInputs) {
-//   input.addEventListener("submit", onBookingFormSubmit)
-// }
 bookingForm.addEventListener("submit", onBookingFormSubmit)
 for(let input of bookingFormEmailInputs){
   input.addEventListener("input", onBookingFormInput)
-  console.log("Adding event listener for " + input)
 }
+
 // On submit of the form validation checks within this function are performed
 function onBookingFormSubmit(e) {
-  // Cycle through with a for loop the elements if an input has been placed, if no input display the correllating error messages below the input
-  // for (let input of bookingFormInputs) {
-  //   if (input.value.length === 0 || input.value.length < 1) {
-  //     console.log("Cycle working")
-  //   }
-  // }
-  // input.classList.add("redBorder")
-  // targetErrorElement.classList.remove("inactiveError")
-
   if(!isEmailMatching){
     console.log("Emails are not matching")
     e.preventDefault()
@@ -291,20 +276,10 @@ function onBookingFormInput() {
     }
   }
 }
-// When there are any buttons press or changes made when in focus in the booking input elements, this function is invoked
-// function onBookingFormChange(e) {
-//   let targetErrorElement = document.getElementById(`${e.target.id + "EmptyFeedback"}`)
-//   let targetedElement = e.target
-
-
-//   if (e.target.value.length > 0) {
-//     targetErrorElement.classList.add("inactiveError")
-//     targetedElement.classList.remove("redBorder")
-//   }
-// }
 
 let cityCards = document.getElementsByClassName("cityCard")
 
+// console.log(cityCards)
 for (card of cityCards) {
   card.addEventListener("click", toggleCityOutline)
 }
