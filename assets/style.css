@@ -141,8 +141,23 @@ div .card {
     min-height: 210px;
 }
 
+/*  */
 /* Form styles */
 
+/* Button style for choosing a city */
+
+.cityButton {
+    border-radius: 300px;
+    width: 150px;
+    height: 50px;
+    /* padding: 10px 15px 10px 15px; */
+    font-weight: bold;
+}
+
+.cityActive {
+    background-color: grey;
+    color: white;
+}
 /* This toggles form input errors on and off by making them visible or invisible */
 .inactiveError {
     visibility: hidden;
