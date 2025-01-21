@@ -232,60 +232,34 @@ for (let button of cityButtons) {
 
 
 
-// Form validation 
-document
-
-const firstNameInput = document.getElementById("firstName");
-
-const lastNameInput = document.getElementById("lastName");
-
+// Form matching emails validation 
 const emailInput = document.getElementById("email");
-
 const confirmEmailInput = document.getElementById("confirmEmail")
-
-const termsAndConditionsCheck = document.getElementById("termsAndConditionsCheck")
+const confirmEmailFeedback = document.getElementById("confirmEmailFeedback")
+const emailFeedback = document.getElementById("emailFeedback");
 
 const bookingForm = document.getElementById("bookingForm");
-let bookingFormInputs = [firstNameInput, lastNameInput, emailInput, confirmEmailInput, termsAndConditionsCheck]
+let bookingFormInputs = [confirmEmailInput, termsAndConditionsCheck]
 
-// Possibly getting rid of variables
-// const confirmEmailFeedback = document.getElementById("confirmEmailFeedback")
-// const emailFeedback = document.getElementById("emailFeedback");
-// const lastNameFeedback = document.getElementById("lastNameFeedback");
-// const firstNameFeedback = document.getElementById("firstNameFeedback");
-
-// Adding event listeners for our booking form inputs
-// for (input of bookingFormInputs) {
-// input.addEventListener("focusout", onBookingFormFocusOut)
-// input.addEventListener("submit", onBookingFormFocusSubmit)
-// input.addEventListener("input", onBookingFormChange)
-// This is to prevent the html validation messages from showing, we instead want our own validation messages showing
-// input.addEventListener("invalid", (e) => {
-// e.preventDefault()
-//   })
-// }
+// Adding event listeners for our booking form email inputs
+for (input of bookingFormInputs) {
+  input.addEventListener("submit", onBookingFormFocusSubmit)
+}
 
 // On submit of the form validation checks within this function are performed
 function onBookingFormFocusSubmit() {
   // Cycle through with a for loop the elements if an input has been placed, if no input display the correllating error messages below the input
-  // let inputs = bookingFormInputs
   for (let input of bookingFormInputs) {
     if (input.value.length === 0 || input.value.length < 1) {
-      targetErrorElement.classList.remove("inactiveError")
-      input.classList.add("redBorder")
       console.log("Cycle working")
     }
   }
-}
-// When an input loses focus this function is invoked and toggles visibility of validation errors where needed
-function onBookingFormFocusOut(e) {
-  let targetedElement = e.target
-  let targetErrorElement = document.getElementById(`${e.target.id + "EmptyFeedback"}`)
-  if (targetedElement.value.length === 0 || targetedElement.value.length < 1) {
-    targetErrorElement.classList.remove("inactiveError")
-    targetedElement.classList.add("redBorder")
-  }
-
+  // input.classList.add("redBorder")
+  // targetErrorElement.classList.remove("inactiveError")
+  console.log(emailInput.value)
+  console.log(confirmEmailInput.value)
+  const isEmailMatching = ""
+  // if()
 }
 
 // When there are any buttons press or changes made when in focus in the booking input elements, this function is invoked
@@ -318,38 +292,19 @@ function toggleCityOutline(e) {
     }
   }
 }
-// First name must have data
-// Last name must have data
-
-
-// Email must have data
-// Email must have @ sign
-// Email must have characters after @sign
+// Email must match
 
 
 // -------------------------------------------------------------------
 // TASKS
 //
-// Add data to each city for destinations
-// Create routing from user pin to selected city pin
 //
 // Add media section to readme
-// Add alt tags to all images
 
 // MAYBE
 // Fix zoom, add data to each city and make this adjust dynamically
 // Re prompt the user on warning to enable locations
+// Create routing from user pin to selected city pin
 //
 
 // Basic form validation, leaving out for now if reusable form validation is achieved
-// bookingForm.addEventListener("submit", (e) => {
-//   let errorMessages = []
-//   if (firstName.value.length === 0 || firstName.value.length < 1) {
-//     errorMessages.push("This is a test")
-//     firstNameFeedback.innerText = "Please add your first name"
-//   }
-
-//   if (errorMessages.length >= 1) {
-//     e.preventDefault()
-//   }
-// })
