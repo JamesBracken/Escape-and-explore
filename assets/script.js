@@ -1,3 +1,4 @@
+// Sensitive information such as API keys tend not to be on display, this one however would be visible even in the HTML code so I am aware of this .
 API_KEY = "AIzaSyB4fcJiibwlX8tcRe5dNnllSifqBCKqeqA";
 API_URL = "";
 
