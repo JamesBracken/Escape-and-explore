@@ -189,11 +189,13 @@ async function displayCityInformation() {
 
 }
 
-// Toggle for package buttons
+// Toggle for package buttons in the booking page
 let buttons = document.getElementsByClassName("styleButton")
 for (let button of buttons) {
   button.addEventListener("click", function toggleSelectedPackageCardButton(e) {
+    let chosenPackage = e.target.id
     let targetedElement = e.target;
+    let packageInput = document.getElementById("packageInput")
     let isElementActive = targetedElement.classList.contains("styleButtonActive")
     targetedElement.classList.remove("styleButtonActive")
     if (isElementActive === false) {
@@ -204,12 +206,13 @@ for (let button of buttons) {
     } else if (isElementActive === true) {
       targetedElement.classList.remove("styleButtonActive")
     }
-
+    // Setting hidden input data to propagate chosen package to backend 
+    packageInput.setAttribute("value", chosenPackage)
   })
 
 }
 
-// Toggle for selecting a city
+// Toggle for selecting a city in the booking page
 // Copy pasted from code above using function toggleSelectedPackageCardButton
 let cityButtons = document.getElementsByClassName("cityButton")
 for (let button of cityButtons) {
@@ -293,13 +296,8 @@ function toggleCityOutline(e) {
     }
   }
 }
-// Email must match
-
-
 // -------------------------------------------------------------------
 // TASKS
-//
-//
 // Add media section to readme
 
 // MAYBE

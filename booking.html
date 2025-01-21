@@ -144,7 +144,7 @@
                                 <li>Complementary accommodation fridge items </li>
                             </ul>
                             <div class="row justify-content-center ">
-                                <input class="styleButton packageButton" type="button" value="Select">
+                                <input id="silver" class="styleButton packageButton" type="button" value="Select">
                             </div>
                         </div>
                     </div>
@@ -159,7 +159,7 @@
                                 <li>Transport to and from the airport</li>
                             </ul>
                             <div class="row justify-content-center ">
-                                <input class="styleButton packageButton" type="button" value="Select">
+                                <input id="gold" class="styleButton packageButton" type="button" value="Select">
                             </div>
                         </div>
                     </div>
@@ -174,7 +174,7 @@
                                 <li>Private limo to escort you anywhere and everywhere</li>
                             </ul>
                             <div class="row justify-content-center ">
-                                <input class="styleButton packageButton" type="button" value="Select">
+                                <input id="platinum" class="styleButton packageButton" type="button" value="Select">
                             </div>
                         </div>
                     </div>
@@ -185,6 +185,9 @@
             <!-- Section containing BS forms -->
             <div class="container">
                 <form id="bookingForm" class="row g-3" method="GET" action="success.html"> <!--   needs-validation -->
+                    <!-- Hidden input placed to take data from which package is selected -->
+                     <!-- Value is initialy set to most basic package as a fallback -->
+                    <input type="hidden" id="packageInput" value="silver">
                     <div class="container mt-3">
                         <div class="text-center">
                             <h2>Where shall we be taking you this time?</h2>
