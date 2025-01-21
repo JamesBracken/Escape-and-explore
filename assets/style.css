@@ -154,6 +154,10 @@ div .card {
     font-weight: bold;
 }
 
+.cityButton:hover {
+    background-color:rgb(213, 213, 213);
+}
+
 .cityActive {
     background-color: grey;
     color: white;
