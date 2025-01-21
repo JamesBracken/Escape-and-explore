@@ -4,8 +4,9 @@ API_URL = "";
 
 // GLOBAL VARIABLES
 
-// Data for every city
+let isDefaultDataSet = false;
 let mapIsPresent = document.getElementById("map")
+// Data for every city
 let cities = {
   parisCity: {
     cityName: "Paris",
@@ -40,7 +41,7 @@ let cities = {
     },
     ]
   },
-  londonCity: {
+  londonCity: { 
     cityName: "London",
     cityDescription: "London fill content",
     cityLatitude: 51.50758961962817,
@@ -149,7 +150,13 @@ async function initMap() {
 };
 
 initMap();
-
+// Set the map initially to london incase the user declines permission, in this way the map is not placed in the middle of nowhere
+if(!isDefaultDataSet) {
+  isDefaultDataSet = true;
+  chosenCityDetails.chosenCityLatitude = cities.londonCity.cityLatitude
+  chosenCityDetails.chosenCityLongitude = cities.londonCity.cityLongitude
+  initMap()
+}
 // On the click of each city, displayed details such as map location, map marker, city name, city description, city places to visit are updated
 async function handleCityClick(e) {
   // Dot notation is used across this script code, in this instance however dot notation on its own was not able to make the code work through various
