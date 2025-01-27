@@ -35,8 +35,8 @@ nav {
     z-index: 10;
 }
 
-.navLogo {
-    color: aliceblue;
+.nav-logo {
+    color: aliceblue !important;
     /* font-size: 35px; */
 }
 
