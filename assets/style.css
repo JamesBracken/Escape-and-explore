@@ -24,6 +24,23 @@ img {
 .redBorder {
     border: red 1px solid;
 }
+
+.button{
+    width: 120px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    background-color: #c23311;
+    color: aliceblue;
+    border: none;
+    padding: 5px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color:#ff3300;
+}
+
 /* Navbar */
 nav {
     padding: 0 !important;
@@ -51,6 +68,8 @@ nav {
     background-color: #c23311;
     margin-top: 7px;
     padding: 0 5px 0 5px;
+    border-radius: 5px;
+    margin-bottom: 5px;
 }
 
 .cta {
@@ -115,8 +134,11 @@ div .card {
     background-color: #000084 !important;
 }
 
+    /* To be deleted to make code more reusable */
+
 .styleButton {  
-    width: 120px;
+    text-underline-offset: none;
+    /* width: 120px;
     margin-top: 5px;
     margin-bottom: 10px;
     background-color: #c23311;
@@ -124,12 +146,8 @@ div .card {
     border: none;
     padding: 5px;
     font-weight: bold;
+    border-radius: 5px; */
 }
-
-.styleButton:hover {
-    background-color: #f67858;
-}
-
 .packageButton {
     position: absolute;
     bottom: 0;
@@ -137,7 +155,7 @@ div .card {
 }
 
 .styleButtonActive {
-    background-color: #ee6948;
+    background-color: #ff3300;
     border: 1px solid black;
 }
 
@@ -150,20 +168,28 @@ div .card {
 
 /* Button style for choosing a city */
 
-.cityButton {
-    border-radius: 300px;
-    width: 150px;
-    height: 50px;
-    font-weight: bold;
-}
+/* Old city button styles 
+ border-radius: 300px;
+width: 150px;
+height: 50px; */
 
-.cityButton:hover {
-    background-color:rgb(213, 213, 213);
+/* To be deleted to make code more reusable */
+.cityButton {
+    text-underline-offset: none;
+    /* width: 120px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    background-color: #c23311;
+    color: aliceblue;
+    border: none;
+    padding: 5px;
+    font-weight: bold;
+    border-radius: 5px; */
 }
 
 .cityActive {
-    background-color: grey;
-    color: white;
+    background-color: #ff3300;
+    border: 1px black solid;
 }
 /* This toggles form input errors on and off by making them visible or invisible */
 .inactiveError {
