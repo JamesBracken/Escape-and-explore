@@ -41,6 +41,12 @@ img {
     background-color:#ff3300;
 }
 
+div .card:hover {
+    box-shadow: 1px 1px rgba(104, 95, 95, 0.37), -1px 0 rgba(104, 95, 95, 0.37);
+    /* box-shadow: 1px 1px 1px 1px rgba(29, 27, 27, 0.37);
+    box-shadow: 3px 3px 3px 3px rgba(29, 27, 27, 0.37); */
+    transition: box-shadow 0.4s ease-in-out;
+}
 /* Navbar */
 nav {
     padding: 0 !important;
@@ -103,7 +109,7 @@ div .card {
 }
 
 .cityCardOutlined {
-    outline: #0F1525 solid 3px;
+    outline: #0F1525 solid 2px;
 }
 
 /* Places to visit cards */
