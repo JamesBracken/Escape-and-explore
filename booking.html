@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description"
+        content="Escape & Explore booking page, create your holiday booking now! Choose from our amazing varied selection.">
     <!-- Font awesome -->
     <script src="https://kit.fontawesome.com/d51c017cc6.js" crossorigin="anonymous"></script>
     <!-- Google Fonts -->
@@ -18,6 +19,7 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- CSS stylesheet -->
     <link rel="stylesheet" href="./assets/style.css">
+    <title>Escape & Explore | Booking page</title>
 </head>
 
 <body>
@@ -186,7 +188,7 @@
             <div class="container">
                 <form id="bookingForm" class="row g-3" method="GET" action="success.html"> <!--   needs-validation -->
                     <!-- Hidden input placed to take data from which package is selected -->
-                     <!-- Value is initialy set to most basic package as a fallback -->
+                    <!-- Value is initialy set to most basic package as a fallback -->
                     <input type="hidden" id="packageInput" value="silver" name="chosenPackage">
                     <div class="container mt-3">
                         <div class="text-center">
@@ -209,28 +211,32 @@
                         <label for="firstName" class="form-label">First name</label>
                         <input type="text" class="form-control" id="firstName" required>
                         <div>
-                            <p id="firstNameEmptyFeedback" class="formFeedback redText inactiveError">Please add a first name</p>
+                            <p id="firstNameEmptyFeedback" class="formFeedback redText inactiveError">Please add a first
+                                name</p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <label for="lastName" class="form-label">Last name</label>
                         <input type="text" class="form-control" id="lastName" required>
                         <div>
-                            <p id="lastNameEmptyFeedback" class="formFeedback redText inactiveError">Please add a last name</p>
+                            <p id="lastNameEmptyFeedback" class="formFeedback redText inactiveError">Please add a last
+                                name</p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <label for="email" class="form-label">Email Address</label>
                         <input type="email" class="form-control" id="email" required>
                         <div>
-                            <p id="emailFeedback" class="formFeedback redText inactiveError">Please input matching emails</p>
+                            <p id="emailFeedback" class="formFeedback redText inactiveError">Please input matching
+                                emails</p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <label for="email" class="form-label">Confirm Email Address</label>
                         <input type="email" class="form-control" id="confirmEmail" required>
                         <div>
-                            <p id="confirmEmailFeedback" class="formFeedback redText inactiveError">Please input matching emails</p>
+                            <p id="confirmEmailFeedback" class="formFeedback redText inactiveError">Please input
+                                matching emails</p>
                         </div>
                     </div>
                     <div class="col-12">
