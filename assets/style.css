@@ -10,7 +10,7 @@ body {
     flex-direction: column;
 
     /* keeps the hero body fully visible, otherwise the nav covers some of it */
-    padding-top: 47px;
+    padding-top: 58px;
 }
 
 img {
@@ -50,7 +50,7 @@ div .card:hover {
 }
 /* Navbar */
 nav {
-    padding: 0 !important;
+    padding: 3px 0 3px 0 !important;
     /* Keeps the nav constantly visible */
     position: fixed !important;
     top: 0;
@@ -64,11 +64,11 @@ nav {
     /* font-size: 35px; */
 }
 
-.bgNav {
+.bg-nav {
     background-color: #0F1525;
 }
 
-.ctaDiv {
+.cta-div {
     margin-left: auto;
     float: right;
     font-weight: 700;
