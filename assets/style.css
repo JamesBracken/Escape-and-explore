@@ -252,6 +252,30 @@ height: 50px; */
     color: white
 }
 
+/* Media devices (Mobile, 576px and below) */
+@media screen and (max-width:576px) {
+    #success-page {
+        top: 37%;
+    }
+    .success-checkmark {
+        font-size: 40px;
+        padding-bottom: 0;
+        color: lightgreen;
+    }
+    .success-home-btn {
+        background-color: #c23311;
+        height: 37px;
+        width: 190px;
+        padding-top: 0;
+    }
+    #success-main {
+        position: absolute;
+        top: 52px;
+        bottom: 327px;
+        width: 100%;
+    }
+}
+
 /* Media devices (tablets, 768px and up) */
 @media screen and (min-width: 768px) {
     .partnerSponsorCardImg {
