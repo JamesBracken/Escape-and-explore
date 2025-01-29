@@ -35,6 +35,7 @@ img {
     padding: 5px;
     font-weight: bold;
     border-radius: 5px;
+    text-decoration: none;
 }
 
 .button:hover {
@@ -200,6 +201,35 @@ height: 50px; */
 /* This toggles form input errors on and off by making them visible or invisible */
 .inactiveError {
     visibility: hidden;
+}
+
+/* Success page */
+#success-main {
+    position: absolute;
+    top: 52px;
+    bottom: 252.59px;
+    width: 100%;
+}
+#success-page {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    /* height: 20em; */
+}
+
+.success-checkmark {
+    font-size: 100px;
+    padding-bottom: 10px;
+    color: lightgreen;
+}
+
+.success-home-btn {
+    background-color: #c23311;
+    height: 37px;
+    width: 190px;
+    padding-top: 4px;
 }
 /* Footer styles */
 
