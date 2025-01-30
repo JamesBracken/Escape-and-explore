@@ -19,7 +19,6 @@ const packageInput = document.getElementById("packageInput")
 
 // User Geolocation, gets users current location
 // When website is opened, the below code prompts the user to give the website location permissions
-navigator.geolocation.getCurrentPosition(userDetails.successCallBack, userDetails.errorCallBack)
 
 // Let variables
 let isBookingPage = document.querySelector("main").classList.contains("bookingPage")
@@ -128,12 +127,16 @@ let chosenCityDetails = {
   chosenCityLatitude: userDetails.currentUserLatitude,
   chosenCityLongitude: userDetails.currentUserLongitude,
 };
-// City selection click handlers
+
+// EVENT LISTENERS 
+document.addEventListener("DOMContentLoaded", (event) => {
+  navigator.geolocation.getCurrentPosition(userDetails.successCallBack, userDetails.errorCallBack)
+});
 for (image of images) {
   image.addEventListener("click", handleCityClick)
 };
 
-// EVENT LISTENERS 
+
 for (let button of styleButtons) {
   button.addEventListener("click", toggleSelectedPackageCardButton)
 }
@@ -312,7 +315,7 @@ function toggleCityOutline(e) {
 // NAKED CODE, no specific organisation for this code and does not fit into other categories
 // Set the map initially to london incase the user declines permission, in this way the map is not placed in the middle of nowhere
 // May have to place this code into a function which will only be invoked once, on page open //////////////////////////////
-initMap();
+
 
 if(!isDefaultDataSet) {
   isDefaultDataSet = true;
