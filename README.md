@@ -71,6 +71,117 @@ Description of colors
 
 ## Testing
 
+
+Navbar
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+|---------|-------------------|-------------------|--------|-----------|
+|Navbar is fully responsive|Navbar adjusts well for different device sizes|Adjust screen size|||
+|Company logo|On click this leads you to the home page|Logo is clicked|||
+|CTA button|On click this leads you to the booking page|Booking button clicked|||
+
+Home page
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+|---------|-------------------|-------------------|--------|-----------|
+|Hero image|On screen resize the image still displays well|Screen resize|||
+|Map|On allow of location permission the map displays the users location with a gold marker|Location permissions are allowed|||
+|Alert|On decline of location permission a modal is displayed displaying a message|Location permissions denied|||
+
+City selection(Home page)
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+|---------|-------------------|-------------------|--------|-----------|
+|Map|On selection of a city the map is moved to be centred to that city and previous city marker is removed|City selected|||
+|Map|On page load the map is loaded and displayed|Page reload|||
+|Map|On page load the map is set to a default city which is London|Page reload|||
+|City cards|On screen resize the city cards display well |Screen resize|||
+|City cards|On hover of each city card a shadow appears surrounding the card|Mouse hover over city card|||
+|City cards|On page load the London city card is set as the default city displayed and is outlined|Page reload|||
+|City cards|The selected city title is responsively displayed under the map||||
+|City selecardsction|On selection of a different city a previously selected city outline must be removed|Different city is selected|||
+|City cards|On Selection of a city the city is outlined|City is selected|||
+|Places to visit|On selection of a city, places within the chosen city are displayed|City is selected|||
+|Places to visit|When cards are rendered the image displays correctly|Select different cities and check image rendering|||
+|Places to visit|On selection of a city, each cards title is displayed correcty and is accurate|Check each displayed place title|||
+|Places to visit|On selection of a city, each cards description is displayed correctly and is accurate|Check each displayed description|||
+|Places to visit|On selection of a city, each card displays a link so that the user can find out more information about each place|Check each card is displaying a link|||
+|Places to visit|On click of a places anchor link, a new tab is opened which will give the user more information about the chosen place|Click all links|||
+|Places to visit|Each card is displayed responsively so that users on different devices can see this properly|Screen resize|||
+|CTA at the bottom of the home page|CTA is additionally displayed at the bottom of the page under the displayed places to visit|Scroll to bottom of the home page|||
+|CTA at the bottom of the home page|On click the user is brought to our booking page|Button clicked|||
+
+Partner sponsorships(Booking page)
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+|---------|-------------------|-------------------|--------|-----------|
+|Cards responsiveness|On screen resize the cards are displayed well|Screen resize|||
+|Cards image|Each cards image displays well, and on most screen sizes|Screen resize|||
+|Cards links|Links of each cards opens a new tab leading to the correct partner websites|Links clicked|||
+
+Package deals
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+|---------|-------------------|-------------------|--------|-----------|
+|Select buttons |On hover the buttons change color|Button hover|||
+|Select buttons|If not selected a clicked button will change color|Button clicked|||
+|Select buttons|On select of any button the hidden input found in the booking form reflects the selected package deal||||
+|Select buttons|On deselect of a button the color reverts back to the original color|Deselect button|||
+|Select buttons|On deselect of a button the value of the hidden input reverts back to the default value of silver|Deselect button|||
+|Select buttons|If a package was selected and another is clicked, the initially selected button reverts back to the original color|Select one package, then select another|||
+|Package deal input|By default the hidden input in the booking form for package deals value is set to silver|Reload page and check hidden input value|||
+
+City selection
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+|---------|-------------------|-------------------|--------|-----------|
+|Select buttons|On select of a city, the button changes color|Button clicked|||
+|Select buttons|On select of a city, the hidden city input found in the booking form |Click a city|||
+|Select buttons|On deselect of a city the color of the city reverts back to the original|Deselect button|||
+|Select buttons|On deselect of a city the hidden input value of this city in the booking form is removed|Deselect city|||
+|Select buttons|If a city is selected and another city button is clicked, the previously selected city color reverts back to the original|Select a city then select a different one|||
+|Select buttons|If a city is selected and another city button is clicked, the hidden input value in the booking form changes to this new value|Select a city then select another|||
+
+Booking form
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+|---------|-------------------|-------------------|--------|-----------|
+|HTML validation|If any of the visible form inputs are incorrectly filled and the form is submitted HTML validation displays errors|Incorrectly fill out the form or leave blank and submit|||
+|JS validation|If the emails input do not match, custom JS validation kicks in and displays a red error||||
+|JS validation|If the emails input do not match, the form inputs turn red|Input different emails and submit|||
+|JS validation|If the emails input did not match and then the emails are corrected to match, the error messages displayed are removed|Input different emails, submit the form, then make the emails match|||
+|JS validation|If the emails input did not match and then the emails are corrected to match, the red borders around the email inputs revert back to normal|Input different emails, submit the form, then make the emails match|||
+|Form submit|If the form is correctly filled out and submitted, the success page opens and the user is given a message informing them they have successfully booked their holiday|Form filled out and submitted|||
+|Form responsiveness|Form is responsive across multiple screen sizes|Screen resize|||
+
+Footer
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+|---------|-------------------|-------------------|--------|-----------|
+|Footer contacts|Contacts displays responsively so that it is properly visible for different devices|Screen resize|||
+|Footer socials|Contacts displays responsively so that it is properly visible for different devices|Screen resize|||
+|Footer socials|On hover of each icon it changes color|Hover over icon|||
+|Footer socials|On click of each icon it opens a new tab which is the corresponds to the icon clicked||||
+
+
+
+Success page
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+|---------|-------------------|-------------------|--------|-----------|
+|Success page responsiveness|The success page displays well across different screen sizes|Screen resize|||
+|Success page|The page is displayed on correctly filling out the booking form and submitting|Correctly fill out the form and submit|||
+|Home button|The user is able to easily locate the home button, which redirects the user back to the home page without using the browser back buttons|Click the home button|||
+
+
+404 page
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+|---------|-------------------|-------------------|--------|-----------|
+|404 page|On type of an non-existent/incorrect link, click of an incorrect link, the user is led to the 404 page|Type in an incorrect link|||
+|Home button|Without using the browser back buttons, the user is able to navigate back to the home page of the website using the home button displayed|Click home button|||
+
+
 ### HTML Validator
 
 ### CSS Validator
