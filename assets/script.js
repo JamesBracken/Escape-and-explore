@@ -1,12 +1,34 @@
-// Sensitive information such as API keys tend not to be on display, this one however would be visible even in the HTML code so I am aware of this .
+// I am aware that sensitive information such as API keys should not be on display, this one however would be visible even in the HTML.
 API_KEY = "AIzaSyB4fcJiibwlX8tcRe5dNnllSifqBCKqeqA";
 API_URL = "";
 
 // GLOBAL VARIABLES
+// Constant variable
+const emailFeedback = document.getElementById("emailFeedback");
+const confirmEmailFeedback = document.getElementById("confirmEmailFeedback")
+const emailInput = document.getElementById("email");
+const bookingFormEmailFeedbacks = [confirmEmailFeedback, emailFeedback]
+const bookingForm = document.getElementById("bookingForm");
+const confirmEmailInput = document.getElementById("confirmEmail")
+const mapIsPresent = document.getElementById("map")
+const cityButtons = document.getElementsByClassName("cityButton")
+const cityCards = document.getElementsByClassName("cityCard")
+const bookingFormEmailInputs = [confirmEmailInput, emailInput]
+const images = document.getElementsByClassName("cityImageButton")
 
+// User Geolocation, gets users current location
+// When website is opened, the below code prompts the user to give the website location permissions
+navigator.geolocation.getCurrentPosition(userDetails.successCallBack, userDetails.errorCallBack)
+
+// Let variables
+let isBookingPage = document.querySelector("main").classList.contains("bookingPage")
 let isDefaultDataSet = false;
-let mapIsPresent = document.getElementById("map")
-// Data for every city
+let styleButtons = document.getElementsByClassName("styleButton")
+let locationAllowed = false;
+let cityName;
+let cityId;
+let map;
+// Data for each city
 let cities = {
   parisCity: {
     cityName: "Paris",
@@ -75,11 +97,7 @@ let cities = {
     ]
   }
 };
-
-let locationAllowed = false;
-let cityName;
-let cityId;
-let map;
+// Full user details
 let userDetails = {
   currentUserLatitude: 20,
   currentUserLongitude: 20,
@@ -103,24 +121,29 @@ let userDetails = {
     initMap();
   }
 };
-
 // On click of a city or on approval of user location permissions this will update the chosen cities position attributes
 // On update of these attributes google maps API location is updated 
 let chosenCityDetails = {
   chosenCityLatitude: userDetails.currentUserLatitude,
   chosenCityLongitude: userDetails.currentUserLongitude,
 };
-
 // City selection click handlers
-let images = document.getElementsByClassName("cityImageButton")
 for (image of images) {
   image.addEventListener("click", handleCityClick)
 };
 
-// User Geolocation, gets users current location
-// When website is opened, the below code prompts the user to give the website location permissions
-navigator.geolocation.getCurrentPosition(userDetails.successCallBack, userDetails.errorCallBack)
+// EVENT LISTENERS 
+for (let button of styleButtons) {
+  button.addEventListener("click", toggleSelectedPackageCardButton)
+}
 
+for (let button of cityButtons) {
+  button.addEventListener("click", toggleSelectedCityButton)
+}
+
+for (card of cityCards) {
+  card.addEventListener("click", toggleCityOutline)
+}
 // Code to initialise, add and update google maps API
 // Copy pasted from google official documentation and then tweaked to suit the websites needs url https://developers.google.com/maps/documentation/javascript/load-maps-js-api?_gl=1*1u5062j*_up*MQ..*_ga*MTc1NzYyMDgxOC4xNzM2MDA2NjIy*_ga_NRWSTWS78N*MTczNjAwNjYyMi4xLjEuMTczNjAwNjYyMi4wLjAuMA..
 async function initMap() {
@@ -154,14 +177,6 @@ async function initMap() {
   }
 };
 
-initMap();
-// Set the map initially to london incase the user declines permission, in this way the map is not placed in the middle of nowhere
-if(!isDefaultDataSet) {
-  isDefaultDataSet = true;
-  chosenCityDetails.chosenCityLatitude = cities.londonCity.cityLatitude
-  chosenCityDetails.chosenCityLongitude = cities.londonCity.cityLongitude
-  initMap()
-}
 // On the click of each city, displayed details such as map location, map marker, city name, city description, city places to visit are updated
 async function handleCityClick(e) {
   // Dot notation is used across this script code, in this instance however dot notation on its own was not able to make the code work through various
@@ -199,69 +214,47 @@ async function displayCityInformation() {
       `
     cityCount++
   }
-
 }
 
 // Toggle for package buttons in the booking page
-let buttons = document.getElementsByClassName("styleButton")
-for (let button of buttons) {
-  button.addEventListener("click", function toggleSelectedPackageCardButton(e) {
-    let chosenPackage = e.target.id
-    let targetedElement = e.target;
-    let packageInput = document.getElementById("packageInput")
-    let isElementActive = targetedElement.classList.contains("styleButtonActive")
-    targetedElement.classList.remove("styleButtonActive")
-    if (isElementActive === false) {
-      for (button of buttons) {
-        button.classList.remove("styleButtonActive")
-      }
-      targetedElement.classList += " styleButtonActive"
-    } else if (isElementActive === true) {
-      targetedElement.classList.remove("styleButtonActive")
-    }
-    // Setting hidden input data to propagate chosen package to backend 
-    packageInput.setAttribute("value", chosenPackage)
-  })
 
+function toggleSelectedPackageCardButton(e) {
+  let chosenPackage = e.target.id
+  let targetedElement = e.target;
+  let packageInput = document.getElementById("packageInput")
+  let isElementActive = targetedElement.classList.contains("styleButtonActive")
+  targetedElement.classList.remove("styleButtonActive")
+  if (isElementActive === false) {
+    for (button of styleButtons) {
+      button.classList.remove("styleButtonActive")
+    }
+    targetedElement.classList += " styleButtonActive"
+  } else if (isElementActive === true) {
+    targetedElement.classList.remove("styleButtonActive")
+  }
+  // Setting hidden input data to propagate chosen package to backend 
+  packageInput.setAttribute("value", chosenPackage)
 }
 
 // Toggle for selecting a city in the booking page
 // Copy pasted from code above using function toggleSelectedPackageCardButton
-let cityButtons = document.getElementsByClassName("cityButton")
-for (let button of cityButtons) {
-  button.addEventListener("click", function toggleSelectedCityButton(e) {
-    let targetedElement = e.target;
-    let isElementActive = targetedElement.classList.contains("cityActive")
-    targetedElement.classList.remove("cityActive")
-    if (isElementActive === false) {
-      for (button of cityButtons) {
-        button.classList.remove("cityActive")
-      }
-      targetedElement.classList += " cityActive"
-    } else if (isElementActive === true) {
-      targetedElement.classList.remove("cityActive")
+function toggleSelectedCityButton(e) {
+  let targetedElement = e.target;
+  let isElementActive = targetedElement.classList.contains("cityActive")
+  targetedElement.classList.remove("cityActive")
+  if (isElementActive === false) {
+    for (button of cityButtons) {
+      button.classList.remove("cityActive")
     }
-
-  })
-
+    targetedElement.classList += " cityActive"
+  } else if (isElementActive === true) {
+    targetedElement.classList.remove("cityActive")
+  }
 }
 
-
-
 // Form matching emails validation 
-
-const emailFeedback = document.getElementById("emailFeedback");
-const confirmEmailFeedback = document.getElementById("confirmEmailFeedback")
-const emailInput = document.getElementById("email");
-const bookingFormEmailFeedbacks = [confirmEmailFeedback, emailFeedback]
-
-const confirmEmailInput = document.getElementById("confirmEmail")
-const bookingFormEmailInputs = [confirmEmailInput, emailInput]
-let isBookingPage = document.querySelector("main").classList.contains("bookingPage")
 if (isBookingPage) {
   let isEmailMatching = emailInput.value === confirmEmailInput.value
-  const bookingForm = document.getElementById("bookingForm");
-
   for (let input of bookingFormEmailInputs) {
     input.addEventListener("input", onBookingFormInput)
   }
@@ -292,13 +285,6 @@ function onBookingFormInput() {
   }
 }
 
-let cityCards = document.getElementsByClassName("cityCard")
-
-for (card of cityCards) {
-  card.addEventListener("click", toggleCityOutline)
-}
-// console.log(cityCards)
-
 function toggleCityOutline(e) {
   let selectedCityCard = e.target.parentNode
   let cardOutlinedBoolean = selectedCityCard.classList.contains("cityCardOutlined")
@@ -309,14 +295,15 @@ function toggleCityOutline(e) {
     }
   }
 }
-// -------------------------------------------------------------------
-// TASKS
-// Add media section to readme
 
-// MAYBE
-// Fix zoom, add data to each city and make this adjust dynamically
-// Re prompt the user on warning to enable locations
-// Create routing from user pin to selected city pin
-//
+// NAKED CODE, NOT 
+// Set the map initially to london incase the user declines permission, in this way the map is not placed in the middle of nowhere
+// May have to place this code into a function which will only be invoked once, on page open //////////////////////////////
+initMap();
 
-// Basic form validation, leaving out for now if reusable form validation is achieved
+if(!isDefaultDataSet) {
+  isDefaultDataSet = true;
+  chosenCityDetails.chosenCityLatitude = cities.londonCity.cityLatitude
+  chosenCityDetails.chosenCityLongitude = cities.londonCity.cityLongitude
+  initMap()
+}
