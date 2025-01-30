@@ -15,6 +15,7 @@ const cityButtons = document.getElementsByClassName("cityButton")
 const cityCards = document.getElementsByClassName("cityCard")
 const bookingFormEmailInputs = [confirmEmailInput, emailInput]
 const images = document.getElementsByClassName("cityImageButton")
+const packageInput = document.getElementById("packageInput")
 
 // User Geolocation, gets users current location
 // When website is opened, the below code prompts the user to give the website location permissions
@@ -144,6 +145,14 @@ for (let button of cityButtons) {
 for (card of cityCards) {
   card.addEventListener("click", toggleCityOutline)
 }
+
+if (isBookingPage) {
+  let isEmailMatching = emailInput.value === confirmEmailInput.value
+  for (let input of bookingFormEmailInputs) {
+    input.addEventListener("input", onBookingFormInput)
+  }
+  bookingForm.addEventListener("submit", onBookingFormSubmit)
+}
 // Code to initialise, add and update google maps API
 // Copy pasted from google official documentation and then tweaked to suit the websites needs url https://developers.google.com/maps/documentation/javascript/load-maps-js-api?_gl=1*1u5062j*_up*MQ..*_ga*MTc1NzYyMDgxOC4xNzM2MDA2NjIy*_ga_NRWSTWS78N*MTczNjAwNjYyMi4xLjEuMTczNjAwNjYyMi4wLjAuMA..
 async function initMap() {
@@ -216,12 +225,14 @@ async function displayCityInformation() {
   }
 }
 
-// Toggle for package buttons in the booking page
+/** Adds the styleButtonActive class 
+ * 
+ * @param {Click} e - This is information of the event that triggers the function 
+ */
 
 function toggleSelectedPackageCardButton(e) {
   let chosenPackage = e.target.id
   let targetedElement = e.target;
-  let packageInput = document.getElementById("packageInput")
   let isElementActive = targetedElement.classList.contains("styleButtonActive")
   targetedElement.classList.remove("styleButtonActive")
   if (isElementActive === false) {
@@ -236,8 +247,10 @@ function toggleSelectedPackageCardButton(e) {
   packageInput.setAttribute("value", chosenPackage)
 }
 
-// Toggle for selecting a city in the booking page
-// Copy pasted from code above using function toggleSelectedPackageCardButton
+/** Adds the cityActive class if it is not present, removes it if it is present and removes the class from elements other than the selected one, if it is found.
+ * 
+ *@param {Click} e - This is information of the event that triggers the function 
+ */
 function toggleSelectedCityButton(e) {
   let targetedElement = e.target;
   let isElementActive = targetedElement.classList.contains("cityActive")
@@ -252,17 +265,9 @@ function toggleSelectedCityButton(e) {
   }
 }
 
-// Form matching emails validation 
-if (isBookingPage) {
-  let isEmailMatching = emailInput.value === confirmEmailInput.value
-  for (let input of bookingFormEmailInputs) {
-    input.addEventListener("input", onBookingFormInput)
-  }
-  bookingForm.addEventListener("submit", onBookingFormSubmit)
-}
-/** This function is invoked when the booking form email and confirm email does not match.
- * It adds a red border to the inputs and an error message below each of these
+/** Adds a red border to the email and confirm email inputs and adds an error below each
  * 
+ * @param {Submit} e - This is information of the event that triggers the function 
  */
 function onBookingFormSubmit(e) {
   if (!isEmailMatching) {
@@ -275,7 +280,9 @@ function onBookingFormSubmit(e) {
     }
   }
 }
-/** This function removes the red border and error message once email and confirm email inputs are matching  */
+/** Removes the red border and error message once email and confirm email inputs are matching  
+ * 
+*/
 function onBookingFormInput() {
   isEmailMatching = emailInput.value === confirmEmailInput.value
   if (isEmailMatching) {
@@ -288,8 +295,7 @@ function onBookingFormInput() {
   }
 }
 
-/** This function is invoked when the page is invoked when a city is selected, it places an outline on the selected city card.
- * The function is also called on when home page loads, this is because we set a default city
+/** Places an outline on the selected city card and removes previously selected city card outlines.
  * @param {ClickEvent} e - This is information of the event that triggers the function 
 */
 function toggleCityOutline(e) {
