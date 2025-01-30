@@ -219,10 +219,14 @@ This is the corrected one
 To resolve this issue I used z index on the navbar to keep it on top of every other element in the webpage
 
 
-## Deployment
+## Deployment & Development
+
+### Deployment
 
 <!-- This deployment guide is copy pasted from my own code in the repository Jamie's Gym -->
-This website is deployed on github pages - [Jamie's Gyms](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file)
+This website is deployed on github pages - [Escape & Explore](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file)
+
+**Deploying**
 
 How to deploy a site using GitHub Pages:
 
@@ -235,7 +239,36 @@ How to deploy a site using GitHub Pages:
 
 After you have completed all these the website will start to be constructed by github pages, following this you will be able to open your page from the home page of your repository on the right side within the *Deployments* section
 
-**Forking** 
+### Local Development
+
+**Cloning**
+To clone a repository follow these steps
+
+1.Login in to Github or create an account if you haven't already
+
+2.Go to this project repository [Escape & Explore](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file)
+
+3.Click on the *Code* button and select whether you would like to cline with HTTPS, SSH or the Github CLI and then copy the link shown
+
+4.Open your terminal in your IDE/code editor of choice then change the current working directory to the location you would like to use for the cloned directory
+
+5.type "git clone" into the terminal and paste the link you copied in the third step the press Enter
+
+**Commiting and Pushing Changes**
+
+1.Open the termin in the directory of your cloned repository
+
+2.Using "git status" check to see your changes are correct
+
+3.If you are ready to commit  type "git add ." to stage all saved changes to be commited, you can alternatively use "git add YOUR_FILENAME" to stage specific files for commit
+
+4.Using "git commit -m "Write your commit message here" commit your changes with a descriptive message, give a good amount of detail but try not to go over 50 characters
+
+5.Finally use "git push origin main" to push your changes to the main branch of your github repository
+
+
+**Forking**
+
 To fork this repository follow these steps
 
 1.Setup Git and make sure your git has github authentication
@@ -247,6 +280,7 @@ To fork this repository follow these steps
 7.Choose the option you need from the dropdown menu. 
 
 Further assistance can be found [HERE](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) on the github Fork a Repo page
+
 ### Environmental variables / scripts
 This webpage does not require any additional environmental variables or scripts, all scripts used in this project are imported within the code itself. 
 
