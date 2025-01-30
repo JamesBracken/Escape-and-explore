@@ -260,7 +260,10 @@ if (isBookingPage) {
   }
   bookingForm.addEventListener("submit", onBookingFormSubmit)
 }
-// On submit of the form validation checks within this function are performed
+/** This function is invoked when the booking form email and confirm email does not match.
+ * It adds a red border to the inputs and an error message below each of these
+ * 
+ */
 function onBookingFormSubmit(e) {
   if (!isEmailMatching) {
     e.preventDefault()
@@ -272,7 +275,7 @@ function onBookingFormSubmit(e) {
     }
   }
 }
-
+/** This function removes the red border and error message once email and confirm email inputs are matching  */
 function onBookingFormInput() {
   isEmailMatching = emailInput.value === confirmEmailInput.value
   if (isEmailMatching) {
@@ -285,6 +288,10 @@ function onBookingFormInput() {
   }
 }
 
+/** This function is invoked when the page is invoked when a city is selected, it places an outline on the selected city card.
+ * The function is also called on when home page loads, this is because we set a default city
+ * @param {ClickEvent} e - This is information of the event that triggers the function 
+*/
 function toggleCityOutline(e) {
   let selectedCityCard = e.target.parentNode
   let cardOutlinedBoolean = selectedCityCard.classList.contains("cityCardOutlined")
@@ -296,7 +303,7 @@ function toggleCityOutline(e) {
   }
 }
 
-// NAKED CODE, NOT 
+// NAKED CODE, no specific organisation for this code and does not fit into other categories
 // Set the map initially to london incase the user declines permission, in this way the map is not placed in the middle of nowhere
 // May have to place this code into a function which will only be invoked once, on page open //////////////////////////////
 initMap();
