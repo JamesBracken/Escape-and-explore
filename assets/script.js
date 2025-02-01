@@ -19,7 +19,8 @@ const packageInput = document.getElementById("packageInput")
 // When website is opened, the below code prompts the user to give the website location permissions
 
 // Let variables
-let isBookingPage = document.querySelector("main").classList.contains("bookingPage")
+let isHomePage = document.querySelector("main").id == "home-page"
+let isBookingPage = document.querySelector("main").id == "booking-page"
 let isDefaultDataSet = false;
 let styleButtons = document.getElementsByClassName("styleButton")
 let locationAllowed = false;
@@ -61,7 +62,7 @@ let cities = {
     },
     ]
   },
-  londonCity: { 
+  londonCity: {
     cityName: "London",
     cityDescription: "London fill content",
     cityLatitude: 51.50758961962817,
@@ -109,12 +110,17 @@ let userDetails = {
     initMap();
   },
   errorCallBack: () => {
+
     locationAllowed = false;
-    Swal.fire({
-      icon: "error",
-      title: "Oops...",
-      text: "If user location permissions are denied you will not be able to see your current location marker on the map."
-    });
+    // If check is added to prevent alert on other pages
+    if (isHomePage) {
+      console.log("This is the home page: " + isHomePage)
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "If user location permissions are denied you will not be able to see your current location marker on the map."
+      });
+    }
     // alert("If user location permissions are denied, not all features of this website will be available. Please update your location permissions and then resfresh this page")
     initMap();
   }
@@ -316,7 +322,7 @@ function toggleCityOutline(e) {
 // May have to place this code into a function which will only be invoked once, on page open //////////////////////////////
 
 
-if(!isDefaultDataSet) {
+if (!isDefaultDataSet) {
   isDefaultDataSet = true;
   chosenCityDetails.chosenCityLatitude = cities.londonCity.cityLatitude
   chosenCityDetails.chosenCityLongitude = cities.londonCity.cityLongitude
