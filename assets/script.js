@@ -14,9 +14,7 @@ const mapIsPresent = document.getElementById("map")
 const cityButtons = document.getElementsByClassName("cityButton")
 const cityCards = document.getElementsByClassName("cityCard")
 const bookingFormEmailInputs = [confirmEmailInput, emailInput]
-const images = document.getElementsByClassName("cityImageButton")
 const packageInput = document.getElementById("packageInput")
-
 // User Geolocation, gets users current location
 // When website is opened, the below code prompts the user to give the website location permissions
 
@@ -132,8 +130,8 @@ let chosenCityDetails = {
 document.addEventListener("DOMContentLoaded", (event) => {
   navigator.geolocation.getCurrentPosition(userDetails.successCallBack, userDetails.errorCallBack)
 });
-for (image of images) {
-  image.addEventListener("click", handleCityClick)
+for (card of cityCards) {
+  card.addEventListener("click", handleCityClick)
 };
 
 
@@ -193,10 +191,10 @@ async function initMap() {
 async function handleCityClick(e) {
   // Dot notation is used across this script code, in this instance however dot notation on its own was not able to make the code work through various
   // attempts, I have instead used a mix of the two (ONLY in this instance). Understandably bad practice but could not find any other way of making this work
-  chosenCityDetails.chosenCityLatitude = cities[e.target.id].cityLatitude;
-  chosenCityDetails.chosenCityLongitude = cities[e.target.id].cityLongitude;
-  chosenCityName = cities[e.target.id].cityName
-  cityId = e.target.id
+  chosenCityDetails.chosenCityLatitude = cities[e.target.parentNode.id].cityLatitude;
+  chosenCityDetails.chosenCityLongitude = cities[e.target.parentNode.id].cityLongitude;
+  chosenCityName = cities[e.target.parentNode.id].cityName
+  cityId = e.target.parentNode.id
   displayCityInformation();
   initMap();
 
