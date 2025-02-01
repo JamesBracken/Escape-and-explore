@@ -191,10 +191,10 @@ async function initMap() {
 async function handleCityClick(e) {
   // Dot notation is used across this script code, in this instance however dot notation on its own was not able to make the code work through various
   // attempts, I have instead used a mix of the two (ONLY in this instance). Understandably bad practice but could not find any other way of making this work
-  chosenCityDetails.chosenCityLatitude = cities[e.target.parentNode.id].cityLatitude;
-  chosenCityDetails.chosenCityLongitude = cities[e.target.parentNode.id].cityLongitude;
-  chosenCityName = cities[e.target.parentNode.id].cityName
-  cityId = e.target.parentNode.id
+  chosenCityDetails.chosenCityLatitude = cities[e.target.closest(".cityCard").id].cityLatitude;
+  chosenCityDetails.chosenCityLongitude = cities[e.target.closest(".cityCard").id].cityLongitude;
+  chosenCityName = cities[e.target.closest(".cityCard").id].cityName
+  cityId = e.target.closest(".cityCard").id
   displayCityInformation();
   initMap();
 
@@ -300,7 +300,8 @@ function onBookingFormInput() {
  * @param {ClickEvent} e - This is information of the event that triggers the function 
 */
 function toggleCityOutline(e) {
-  let selectedCityCard = e.target.parentNode
+  let selectedCityCard = e.target.closest(".cityCard")
+  console.log("Selected city card: " + e.target.closest(".cityCard"))
   let cardOutlinedBoolean = selectedCityCard.classList.contains("cityCardOutlined")
   if (!cardOutlinedBoolean) {
     for (card of cityCards) {

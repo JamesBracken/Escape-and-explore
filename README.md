@@ -24,8 +24,6 @@ The primary goal of NAME is to do BLANK
 
 1. As a USER I want a X
 
-[//]: <> (UX Developer and business goals)
-
 ## Design
 
 
@@ -43,9 +41,6 @@ Description of colors
 - ### Wireframes
 
 
-- [Home page](link) 
-- 
-- 
 
 ## Features
 
@@ -223,7 +218,7 @@ issues with the javascript code working with the bootstrap cards. The image and 
 
 ![Console logs in google chrome to help me locate where the origin of the problem is, and a cannot read properties of a variable error in the console](./assets/images/readme_imgs/city-card-selection.PNG)
 
-To resolve the issue I used the same code but just added the parentNode syntax to the targeting so that I could target the parent regardless of where I clicked in the city cards 
+To resolve the issue I used the same code but just added the *closest* syntax to the targeting so that I could target the parent regardless of where I clicked in the city cards 
 
 ## Deployment & Development
 
