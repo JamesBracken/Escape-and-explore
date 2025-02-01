@@ -218,6 +218,12 @@ This is the corrected one
 
 To resolve this issue I used z index on the navbar to keep it on top of every other element in the webpage
 
+* I changed the selectable item in the city cards on the home page to be the whole card as ooposed to the image, but this caused some
+issues with the javascript code working with the bootstrap cards. The image and title's were able to be selected but the targeting needed to be on the parent instead so that the user could click anywhere on the card.
+
+![Console logs in google chrome to help me locate where the origin of the problem is, and a cannot read properties of a variable error in the console](./assets/images/readme_imgs/city-card-selection.PNG)
+
+To resolve the issue I used the same code but just added the parentNode syntax to the targeting so that I could target the parent regardless of where I clicked in the city cards 
 
 ## Deployment & Development
 
