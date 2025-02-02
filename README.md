@@ -93,13 +93,33 @@ This would answer the need for **user story 10**
 Considering all these added features we have met the targeted **MVP**, with all the added features we can confidently give our users a great experience
 
 
+#### Future potential features
+As the MVP within this website has been met by the pre
 
-<!-- FONTS -->
-- ### Images
+* **Activity display** Alongside the the places to visit feature, we can add the activities display as well. A toggle button can be added to switch back and forth between displaying places to visit and activities within the chosen city. This would answer the need for **user story 6**
 
-- ### Wireframes
+* **Estimated spend** This feature would span across a few of the already added features and potential features. It would display avg spends at certain locations and activities, but also could be added in coordination with a feature of saving cities, places and activities within those cities. Each of these would be consolidated into a *saved* or *wishlist* which would be accessible to the user and display the costs and estimated totals for any given holiday combination. This would answer the need for **user story 7**
+
+* **Newsletter** A newsletter which would be a form can be added to the bottom of the home page to be filled out by users and contacted by ourselves with potential new holidays and deals that we offer. In this way we could help to reach our own missions of keeping in touch with our customer base while helping our users keep updated with the best trips available! This would answer the need for **user story 8**
+
+* **Save / Wishlist** A user will be able to save each city, place within that city and activity to be able to come to these later in a consolidated list. This could work together with the estimated spend feature and help to further drive website sales. This would answer the need for **user story 9**
+
+* **Routing** A user will be able to choose a destination and see airports near themselves and be able to choose from these or if they dont enable permissions then they can manually enter the city of their choice and options will be given. Following this different routes will be displayed from one location to the other. This would answer the need for **user story 11** 
+
+### Structure
+
+This website 
+### Skeleton
+### Surface
+
+- Responsive Design
+- Demographic Based Design
 
 
+
+The primary goal of NAME is to do BLANK
+
+1. As a USER I want a X
 
 ## Features
 
