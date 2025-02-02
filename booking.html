@@ -35,30 +35,29 @@
     </nav>
     <!-- Added the class onto main to be able to check if the booking page is what the user is on -->
     <main id="booking-page">
-        <!-- Consider exchanging this into a heading -->
         <!-- Section containing page introduction and heading -->
-        <section>
+        <header>
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="text-center col-7">
                         <h1>Booking</h1>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <!-- Section containing SPONSOR BS cards -->
-            <div class="container">
-                <!-- Sponsor cards code taken from bootstrap https://getbootstrap.com/docs/5.3/components/card/ -->
-                <div class="row d-flex  justify-content-center">
-                    <div class="col-12 text-center">
+                    <div class="col-12 col-md-10 text-center">
                         <h2>Your ultimate holiday companions</h2>
                         <p>Planning the perfect holiday has never been easier! We've partnered with the best in the
                             business to ensure every aspect of your trip is covered. From finding cozy accommodations
                             and securing reliable travel insurance to discovering top-notch dining experiences, our
                             partners have you covered.</p>
                     </div>
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <!-- Section containing SPONSOR BS cards -->
+            <div class="container">
+                <!-- Sponsor cards code taken from bootstrap https://getbootstrap.com/docs/5.3/components/card/ -->
+                <div class="row d-flex  justify-content-center">
                     <div class="col-12 col-md-6 col-lg-4">
                         <div class="card">
                             <img src="./assets/images/holiday_safe.png" class="card-img-top partnerSponsorCardImg"
@@ -120,7 +119,9 @@
             </div>
         </section>
 
-        <!-- Form -->
+        <!-- Section containing package deals  -->
+        <!-- Package deals are made using bootstrap cards from
+          https://getbootstrap.com/docs/4.0/components/card/ -->
         <section>
             <div class="container">
                 <div class="row justify-content-center ">
@@ -182,10 +183,13 @@
          and tweaked for website needs -->
             <!-- Section containing BS forms -->
             <div class="container">
-                <form id="bookingForm" class="row g-3" method="GET" action="success.html"> <!--   needs-validation -->
+                <form id="bookingForm" class="row g-3" method="GET" action="success.html">
                     <!-- Hidden input placed to take data from which package is selected -->
                     <!-- Value is initialy set to most basic package as a fallback -->
                     <input type="hidden" id="packageInput" value="silver" name="chosenPackage">
+                    <!-- Hidden input place to take data from chosen city -->
+                    <!-- Value is initally set to none to prevent form submission
+                      through custom JS validation -->
                     <input type="hidden" id="cityInput" value="none" name="chosenCity">
                     <div class="container mt-3">
                         <div class="text-center">
@@ -258,85 +262,54 @@
                 </form>
             </div>
         </section>
-
     </main>
 
     <!-- Footer -->
+    <!-- Bootstrap footer used and tweaked for website needs-->
     <footer id="footer">
         <div class="container">
-          <div class="row">
-            <div class="col-12 col-md-6 mt-3">
-              <h3>Contact us here</h3>
-              <hr />
-              <div class="contactsContainer">
-                <p>
-                  <i class="footerContacts fa-sharp fa-solid fa-location-pin"></i>
-                  123 location street, london
-                </p>
-                <p><i class="footerContacts fa-solid fa-phone"></i> 0123456789</p>
-                <p>
-                  <i class="footerContacts fa-solid fa-envelope"></i>
-                  escape&explore@mail.com
-                </p>
-              </div>
+            <div class="row">
+                <div class="col-12 col-md-6 mt-3">
+                    <h3>Contact us here</h3>
+                    <hr />
+                    <div class="contactsContainer">
+                        <p>
+                            <i class="footerContacts fa-sharp fa-solid fa-location-pin"></i>
+                            123 location street, london
+                        </p>
+                        <p><i class="footerContacts fa-solid fa-phone"></i> 0123456789</p>
+                        <p>
+                            <i class="footerContacts fa-solid fa-envelope"></i>
+                            escape&explore@mail.com
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 mt-3">
+                    <h3>Our socials</h3>
+                    <hr />
+                    <div class="justify-content-between socialsContainer d-flex">
+                        <a href="https://www.instagram.com/" target="_blank"
+                            aria-label="Instagram symbol(opens in a new tab)" rel="noopener noreferrer"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://x.com/" target="_blank" aria-label="Twitter symbol(opens in a new tab)"
+                            rel="noopener noreferrer"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/" target="_blank"
+                            aria-label="Facebook symbol(opens in a new tab)" rel="noopener noreferrer"><i
+                                class="fa-brands fa-facebook"></i></a>
+                        <a href="https://github.com/" target="_blank" aria-label="Github symbol(opens in a new tab)"
+                            rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="container"></div>
             </div>
-            <div class="col-12 col-md-6 mt-3">
-              <h3>Our socials</h3>
-              <hr />
-              <div class="justify-content-between socialsContainer d-flex">
-                <a
-                  href="https://www.instagram.com/"
-                  target="_blank"
-                  aria-label="Instagram symbol(opens in a new tab)"
-                  rel="noopener noreferrer"
-                  ><i class="fa-brands fa-instagram"></i
-                ></a>
-                <a
-                  href="https://x.com/"
-                  target="_blank"
-                  aria-label="Twitter symbol(opens in a new tab)"
-                  rel="noopener noreferrer"
-                  ><i class="fa-brands fa-twitter"></i
-                ></a>
-                <a
-                  href="https://www.facebook.com/"
-                  target="_blank"
-                  aria-label="Facebook symbol(opens in a new tab)"
-                  rel="noopener noreferrer"
-                  ><i class="fa-brands fa-facebook"></i
-                ></a>
-                <a
-                  href="https://github.com/"
-                  target="_blank"
-                  aria-label="Github symbol(opens in a new tab)"
-                  rel="noopener noreferrer"
-                  ><i class="fa-brands fa-github"></i
-                ></a>
-              </div>
-            </div>
-            <div class="container"></div>
-          </div>
-  
-          <p class="footerCopyright">
-            &#169;Escape and explore. All rights reserved | Developed by James
-          </p>
+
+            <p class="footerCopyright">
+                &#169;Escape and explore. All rights reserved | Developed by James
+            </p>
         </div>
-      </footer>
-    <!-- Google maps API script -->
-    <script>
-        (g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })({
-            key: "AIzaSyDIiFkaFl_Y3IWokmH7dlP5_8THHfiVWAE",
-            v: "weekly",
-        });
-    </script>
+    </footer>
     <!-- JS Script -->
     <script src="./assets/script.js"></script>
 </body>
 
 </html>
-
-<!-- 
-Meta data
-Add Success page
-
--->
