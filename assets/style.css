@@ -334,7 +334,10 @@ height: 50px; */
     .partnerSponsorCardImg {
         height: 268px;
     }
+}
 
+/* Media devices (Up until 1199px */
+@media screen and (max-width:1199px) {
     .package-card-body {
         min-height:440px;
     }
