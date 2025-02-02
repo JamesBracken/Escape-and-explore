@@ -28,7 +28,7 @@ let cityName;
 let cityId;
 let map;
 // Data for each city
-let cities = { 
+let cities = {
   parisCity: {
     cityName: "Paris",
     cityDescription: "Paris fill content",
@@ -220,9 +220,13 @@ async function displayCityInformation() {
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">${cities[cityId].cityPlacesToVisit[cityCount].place}</h5>
-              <p class="card-text">${cities[cityId].cityPlacesToVisit[cityCount].description}</p>
-              <p class="card-text"><small class="text-body-secondary">Want to find out more about ${cities[cityId].cityPlacesToVisit[cityCount].place}?<a href="${cities[cityId].cityPlacesToVisit[cityCount].findOutMore}" target="_blank">Click here!</a></small></p>
+              <h5 class="card-title">${place.place}</h5>
+              <p class="card-text">${place.description}</p>
+              <p class="card-text"><small class="text-body-secondary">Want to find out more about 
+              ${place.place}?
+              <a 
+              href="${place.findOutMore}"
+               target="_blank">Click here!</a></small></p>
             </div>
           </div>
         </div>
@@ -326,7 +330,7 @@ function toggleCityOutline(e) {
 // Set the map initially to london incase the user declines permission, in this way the map is not placed in the middle of nowhere
 // May have to place this code into a function which will only be invoked once, on page open //////////////////////////////
 
-if(isHomePage) {
+if (isHomePage) {
   if (!isDefaultDataSet) {
     isDefaultDataSet = true;
     chosenCityDetails.chosenCityLatitude = cities.londonCity.cityLatitude
