@@ -280,12 +280,20 @@ height: 50px; */
     color: white
 }
 
-
-
+/* Media devices (mobile, 375px and below */
+@media screen and (max-width:320px) {
+    .places-to-visit-card {
+        max-width: 300px !important;
+    }
+}
 /* Media devices (Mobile, 576px and below) */
 @media screen and (max-width:576px) {
     #success-page {
         top: 37%;
+    }
+
+    .places-to-visit-card {
+        max-width: 350px;
     }
 
     .success-checkmark {

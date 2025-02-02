@@ -209,7 +209,7 @@ async function handleCityClick(e) {
 async function displayCityInformation() {
   let cityCount = 0;
   let cityInformationContainer = document.getElementById("cityInformationContainer");
-  cityInformationContainer.innerHTML = `<h2>${chosenCityName}</h2>
+  cityInformationContainer.innerHTML = `<h2 class="mt-2">${chosenCityName}</h2>
           <h3>Here are some place to visit</h3>`
   for (place of cities[cityId].cityPlacesToVisit) {
     cityInformationContainer.innerHTML += `
