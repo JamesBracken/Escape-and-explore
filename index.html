@@ -2,250 +2,272 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="Escape & Explore is the home for amazing holidays, simply choose a city and we will recommed you the best places to be!">
-  <!-- Font awesome -->
-  <script src="https://kit.fontawesome.com/d51c017cc6.js" crossorigin="anonymous"></script>
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Macondo&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-    rel="stylesheet">
-  <!-- Bootstrap link -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <!-- CSS stylesheet -->
-  <link rel="stylesheet" href="./assets/style.css">
-  <title>Escape & Explore | Home page</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description"
+		content="Escape & Explore is the home for amazing holidays, simply choose a city and we will recommed you the best places to be!">
+	<!-- Font awesome -->
+	<script src="https://kit.fontawesome.com/d51c017cc6.js" crossorigin="anonymous"></script>
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Macondo&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+		rel="stylesheet">
+	<!-- Bootstrap link -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<!-- CSS stylesheet -->
+	<link rel="stylesheet" href="./assets/style.css">
+	<title>Escape & Explore | Home page</title>
 </head>
 
 <body>
-  <!-- Navbar taken from Bootstrap website https://getbootstrap.com/docs/5.3/components/navbar/ -->
-  <nav class="navbar navbar-expand-lg bg-nav ">
-    <div class="container-fluid">
-      <a class="navbar-brand nav-logo" href="./index.html">Escape & Explore</a>
-      <div class="navbar-nav cta-div">
-        <a class="nav-link cta " href="booking.html">Book now!</a>
-      </div>
-    </div>
-  </nav>
+	<!-- Navbar taken from Bootstrap website https://getbootstrap.com/docs/5.3/components/navbar/ -->
+	<nav class="navbar navbar-expand-lg bg-nav ">
+		<div class="container-fluid">
+			<a class="navbar-brand nav-logo" href="./index.html">Escape & Explore</a>
+			<div class="navbar-nav cta-div">
+				<a class="nav-link cta " href="booking.html">Book now!</a>
+			</div>
+		</div>
+	</nav>
 
-  <!-- Header -->
-  <header>
-    <!-- Hero image -->
+	<!-- Header -->
+	<header>
+		<!-- Hero image -->
 
-    <div><img id="heroImg" src="./assets/images/hero_img.jpg" alt=""></div>
+		<div><img id="heroImg" src="./assets/images/hero_img.jpg" alt=""></div>
 
-    <div class="text-center container">
+		<div class="text-center container">
 
-      <div class="row justify-content-center">
-        <h1 class="mt-2">Only the best holidays available</h1>
-        <p class="col-10 col-sm-8">Welcome to our amazing holiday website, bask in the glory of amazing touristic destinations
-          displayed by yours truly.
-          Click on any city image from our fantastic selection and let us do the rest, we show you the best places to
-          be!
-        </p>
-      </div>
+			<div class="row justify-content-center">
+				<h1 class="mt-2">Only the best holidays available</h1>
+				<p class="col-10 col-sm-8">Welcome to our amazing holiday website, bask in the glory of amazing
+					touristic
+					destinations
+					displayed by yours truly.
+					Click on any city image from our fantastic selection and let us do the rest, we show you the best
+					places to
+					be!
+				</p>
+			</div>
 
-    </div>
-  </header>
-  <main id="home-page">
-    <section>
-      <!-- Container to hold BS Cards -->
-      <div id="citySelectionContainer" class="container mb-2">
-        <div class="row justify-content-center ">
-          <!-- City cards code taken from bootstrap https://getbootstrap.com/docs/5.3/components/card/ -->
-          <!-- BS Cards containing each city image and title -->
-          <div id="londonCity" class="card cityCard cityCardOutlined" style="width: 18rem;">
-            <img class="card-img-top cityImage" src="./assets/images/city_london.webp"
-              alt="A picture of the city of london showing iconic building such as the shard and overlooking the rive thames">
-            <div class="card-body cityCardBody">
-              <h3 class="card-title text-center">London</h3>
-            </div>
-          </div>
-          <div id="parisCity" class="card cityCard " style="width: 18rem;">
-            <img class="card-img-top cityImage" src="./assets/images/city_paris.avif"
-              alt="A picture of the city of paris just above a river with the eiffel tower">
-            <div class="card-body cityCardBody">
-              <h3 class="card-title text-center">Paris</h3>
-            </div>
-          </div>
-        </div>
+		</div>
+	</header>
+	<main id="home-page">
+		<section>
+			<!-- Container to hold BS Cards -->
+			<div id="citySelectionContainer" class="container mb-2">
+				<div class="row justify-content-center ">
+					<!-- City cards code taken from bootstrap https://getbootstrap.com/docs/5.3/components/card/ -->
+					<!-- BS Cards containing each city image and title -->
+					<div id="londonCity" class="card cityCard cityCardOutlined" style="width: 18rem;">
+						<img class="card-img-top cityImage" src="./assets/images/city_london.webp"
+							alt="A picture of the city of london showing iconic building such as the shard and overlooking the rive thames">
+						<div class="card-body cityCardBody">
+							<h3 class="card-title text-center">London</h3>
+						</div>
+					</div>
+					<div id="parisCity" class="card cityCard " style="width: 18rem;">
+						<img class="card-img-top cityImage" src="./assets/images/city_paris.avif"
+							alt="A picture of the city of paris just above a river with the eiffel tower">
+						<div class="card-body cityCardBody">
+							<h3 class="card-title text-center">Paris</h3>
+						</div>
+					</div>
+				</div>
 
-      </div>
-      <!-- Div containing map content from Google maps API -->
-      <div id="map"></div>
-    </section>
-    <section>
-      <div class="container">
+			</div>
+			<!-- Div containing map content from Google maps API -->
+			<div id="map"></div>
+		</section>
+		<section>
+			<div class="container">
 
-        <div id="cityInformationContainer" class="row justify-content-center text-center">
-          <h2 class="mt-2">London</h2>
-          <h3>Here are some place to visit</h3>
-          <div class="card mb-3 places-to-visit-card" style="max-width: 740px;">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <img src="./assets/images/london_big_ben.jpg" class="img-fluid rounded-start placesToVisitCardImg h-100"
-                  alt="The big ben and buildings surrounding it">
-              </div>
-              <div class="col-md-8" >
-                <div class="card-body">
-                  <h5 class="card-title">Big Ben</h5>
-                  <p class="card-text">
-                    Big Ben, officially the Elizabeth Tower, is an iconic symbol of London at the Palace of Westminster.
-                    Built in 1859, its towering Gothic design and clock face are globally recognized, offering a classic
-                    view from Westminster Bridge.
-                  </p>
-                  <p class="card-text">
-                    <small class="text-body-secondary">
-                      Want to find out more about Big Ben?
-                      <a href="https://en.wikipedia.org/wiki/Big_Ben" target="_blank">Click here!</a>
-                    </small>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-<!--  style="max-width: 740px;" -->
-          <div class="card mb-3 places-to-visit-card" style="max-width: 740px;">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <img src="./assets/images/british_museum.jpg" class="img-fluid rounded-start placesToVisitCardImg h-100"
-                  alt="The british museum and the dreadful british weather on display for all to see">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">The British Museum</h5>
-                  <p class="card-text">
-                    The British Museum, located in Bloomsbury, is one of the world’s largest museums, showcasing human
-                    history, art, and culture. Opened in 1753, it houses iconic artifacts like the Rosetta Stone and the
-                    Elgin Marbles. With free entry, it offers a fascinating journey through over two million years of
-                    history.
-                  </p>
-                  <p class="card-text">
-                    <small class="text-body-secondary">
-                      Want to find out more about The British Museum?
-                      <a href="https://en.wikipedia.org/wiki/British_Museum" target="_blank">Click here!</a>
-                    </small>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+				<div id="cityInformationContainer" class="row justify-content-center text-center">
+					<h2 class="mt-2">London</h2>
+					<h3>Here are some place to visit</h3>
+					<div class="card mb-3 places-to-visit-card" style="max-width: 740px;">
+						<div class="row g-0">
+							<div class="col-md-4">
+								<img src="./assets/images/london_big_ben.jpg"
+									class="img-fluid rounded-start placesToVisitCardImg h-100"
+									alt="The big ben and buildings surrounding it">
+							</div>
+							<div class="col-md-8">
+								<div class="card-body">
+									<h5 class="card-title">Big Ben</h5>
+									<p class="card-text">
+										Big Ben, officially the Elizabeth Tower, is an iconic symbol of London at the
+										Palace of Westminster.
+										Built in 1859, its towering Gothic design and clock face are globally
+										recognized, offering a classic
+										view from Westminster Bridge.
+									</p>
+									<p class="card-text">
+										<small class="text-body-secondary">
+											Want to find out more about Big Ben?
+											<a href="https://en.wikipedia.org/wiki/Big_Ben" target="_blank">Click
+												here!</a>
+										</small>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--  style="max-width: 740px;" -->
+					<div class="card mb-3 places-to-visit-card" style="max-width: 740px;">
+						<div class="row g-0">
+							<div class="col-md-4">
+								<img src="./assets/images/british_museum.jpg"
+									class="img-fluid rounded-start placesToVisitCardImg h-100"
+									alt="The british museum and the dreadful british weather on display for all to see">
+							</div>
+							<div class="col-md-8">
+								<div class="card-body">
+									<h5 class="card-title">The British Museum</h5>
+									<p class="card-text">
+										The British Museum, located in Bloomsbury, is one of the world’s largest
+										museums, showcasing human
+										history, art, and culture. Opened in 1753, it houses iconic artifacts like the
+										Rosetta Stone and the
+										Elgin Marbles. With free entry, it offers a fascinating journey through over two
+										million years of
+										history.
+									</p>
+									<p class="card-text">
+										<small class="text-body-secondary">
+											Want to find out more about The British Museum?
+											<a href="https://en.wikipedia.org/wiki/British_Museum" target="_blank">Click
+												here!</a>
+										</small>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
 
-          <div class="card mb-3 places-to-visit-card" style="max-width: 740px;">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <img src="./assets/images/tower_of_london.webp"
-                  class="img-fluid rounded-start placesToVisitCardImg h-100"
-                  alt="The tower of london, the thames river out front and surrounded by trees">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Tower of London</h5>
-                  <p class="card-text">
-                    The Tower of London, a historic fortress on the Thames, has been a royal palace, prison, and
-                    treasury since 1066. It’s home to the Crown Jewels and guarded by the Yeoman Warders. Visitors can
-                    explore its medieval structures and learn about its rich and sometimes eerie past.
-                  </p>
-                  <p class="card-text">
-                    <small class="text-body-secondary">
-                      Want to find out more about Tower of London?
-                      <a href="https://en.wikipedia.org/wiki/Tower_of_London" target="_blank">Click here!</a>
-                    </small>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+					<div class="card mb-3 places-to-visit-card" style="max-width: 740px;">
+						<div class="row g-0">
+							<div class="col-md-4">
+								<img src="./assets/images/tower_of_london.webp"
+									class="img-fluid rounded-start placesToVisitCardImg h-100"
+									alt="The tower of london, the thames river out front and surrounded by trees">
+							</div>
+							<div class="col-md-8">
+								<div class="card-body">
+									<h5 class="card-title">Tower of London</h5>
+									<p class="card-text">
+										The Tower of London, a historic fortress on the Thames, has been a royal palace,
+										prison, and
+										treasury since 1066. It’s home to the Crown Jewels and guarded by the Yeoman
+										Warders. Visitors can
+										explore its medieval structures and learn about its rich and sometimes eerie
+										past.
+									</p>
+									<p class="card-text">
+										<small class="text-body-secondary">
+											Want to find out more about Tower of London?
+											<a href="https://en.wikipedia.org/wiki/Tower_of_London"
+												target="_blank">Click here!</a>
+										</small>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
 
-          <div class="card mb-3 places-to-visit-card" style="max-width: 740px;">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <img src="./assets/images/covent_garden.webp" class="img-fluid rounded-start placesToVisitCardImg h-100"
-                  alt="A picture inside covent garden displaying the beauty of the modern building and the christmas balls hanging from the ceiling">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Covent Garden</h5>
-                  <p class="card-text">
-                    Covent Garden, in London’s West End, is a lively district famous for its historic market, boutique
-                    shops, and vibrant street performances. It’s a hub for entertainment, featuring the Royal Opera
-                    House and an array of restaurants and theaters.
-                  </p>
-                  <p class="card-text">
-                    <small class="text-body-secondary">
-                      Want to find out more about Covent Garden?
-                      <a href="https://en.wikipedia.org/wiki/Covent_Garden" target="_blank">Click here!</a>
-                    </small>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row justify-content-center align-items-center">
-            <div class="cta-div cta-bottom col-6 text-center">
-              <a class="nav-link cta" href="booking.html">Book now!</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+					<div class="card mb-3 places-to-visit-card" style="max-width: 740px;">
+						<div class="row g-0">
+							<div class="col-md-4">
+								<img src="./assets/images/covent_garden.webp"
+									class="img-fluid rounded-start placesToVisitCardImg h-100"
+									alt="A picture inside covent garden displaying the beauty of the modern building and the christmas balls hanging from the ceiling">
+							</div>
+							<div class="col-md-8">
+								<div class="card-body">
+									<h5 class="card-title">Covent Garden</h5>
+									<p class="card-text">
+										Covent Garden, in London’s West End, is a lively district famous for its
+										historic market, boutique
+										shops, and vibrant street performances. It’s a hub for entertainment, featuring
+										the Royal Opera
+										House and an array of restaurants and theaters.
+									</p>
+									<p class="card-text">
+										<small class="text-body-secondary">
+											Want to find out more about Covent Garden?
+											<a href="https://en.wikipedia.org/wiki/Covent_Garden" target="_blank">Click
+												here!</a>
+										</small>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row justify-content-center align-items-center">
+						<div class="cta-div cta-bottom col-6 text-center">
+							<a class="nav-link cta" href="booking.html">Book now!</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
 
-  <!-- Footer -->
-  <!-- Bootstrap footer used and tweaked for website needs-->
-  <footer id="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-md-6 mt-3">
-          <h3>Contact us here</h3>
-          <hr>
-          <div class="contactsContainer">
-            <p><i class="footerContacts fa-sharp fa-solid fa-location-pin"></i> 123 location street, london</p>
-            <p><i class="footerContacts fa-solid fa-phone"></i> 0123456789</p>
-            <p><i class="footerContacts fa-solid fa-envelope"></i> escape&explore@mail.com</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 mt-3">
-          <h3>Our socials</h3>
-          <hr>
-          <div class="justify-content-between socialsContainer d-flex">
-            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram symbol(opens in a new tab)"
-              rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://x.com/" target="_blank" aria-label="Twitter symbol(opens in a new tab)"
-              rel="noopener noreferrer"><i class="fa-brands fa-twitter"></i></a>
-            <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook symbol(opens in a new tab)"
-              rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://github.com/" target="_blank" aria-label="Github symbol(opens in a new tab)"
-              rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
-          </div>
-        </div>
-        <div class="container">
-        </div>
-      </div>
+	<!-- Footer -->
+	<!-- Bootstrap footer used and tweaked for website needs-->
+	<footer id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-md-6 mt-3">
+					<h3>Contact us here</h3>
+					<hr>
+					<div class="contactsContainer">
+						<p><i class="footerContacts fa-sharp fa-solid fa-location-pin"></i> 123 location street, london
+						</p>
+						<p><i class="footerContacts fa-solid fa-phone"></i> 0123456789</p>
+						<p><i class="footerContacts fa-solid fa-envelope"></i> escape&explore@mail.com</p>
+					</div>
+				</div>
+				<div class="col-12 col-md-6 mt-3">
+					<h3>Our socials</h3>
+					<hr>
+					<div class="justify-content-between socialsContainer d-flex">
+						<a href="https://www.instagram.com/" target="_blank"
+							aria-label="Instagram symbol(opens in a new tab)" rel="noopener noreferrer"><i
+								class="fa-brands fa-instagram"></i></a>
+						<a href="https://x.com/" target="_blank" aria-label="Twitter symbol(opens in a new tab)"
+							rel="noopener noreferrer"><i class="fa-brands fa-twitter"></i></a>
+						<a href="https://www.facebook.com/" target="_blank"
+							aria-label="Facebook symbol(opens in a new tab)" rel="noopener noreferrer"><i
+								class="fa-brands fa-facebook"></i></a>
+						<a href="https://github.com/" target="_blank" aria-label="Github symbol(opens in a new tab)"
+							rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+					</div>
+				</div>
+				<div class="container">
+				</div>
+			</div>
 
 
-      <p class="footerCopyright">&#169;Escape and explore. All rights reserved | Developed by James</p>
-    </div>
-  </footer>
-  <!-- Google maps API script -->
-  <script>
-    (g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })({
-      key: "AIzaSyDIiFkaFl_Y3IWokmH7dlP5_8THHfiVWAE",
-      v: "weekly",
+			<p class="footerCopyright">&#169;Escape and explore. All rights reserved | Developed by James</p>
+		</div>
+	</footer>
+	<!-- Google maps API script -->
+	<script>
+    (g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() =>			f, ...n)) })({
+      key: "AIzaSyDIiFkaFl_Y3IWok			5_8THHfiVWAE"		     "weekly",
     });
-  </script>
-  <!-- JS Script -->
-  <script src="./assets/script.js"></script>
-  <!-- SweetAlert2 CDN -->
-  <!-- This import is used to show a modal incase the user declines location permissions -->
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	</script>
+	<!-- JS Script -->
+	<script src="./assets/script.js"></script>
+	<!-- SweetAlert2 CDN -->
+	<!-- This import is used to show a modal incase the user declines location permissions -->
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>

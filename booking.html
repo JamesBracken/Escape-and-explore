@@ -27,12 +27,12 @@
     <!-- Nav bar -->
     <nav class="navbar navbar-expand-lg bg-nav ">
         <div class="container-fluid">
-          <a class="navbar-brand nav-logo" href="./index.html">Escape & Explore</a>
-          <div class="navbar-nav cta-div">
-            <a class="nav-link cta " href="booking.html">Book now!</a>
-          </div>
+            <a class="navbar-brand nav-logo" href="./index.html">Escape & Explore</a>
+            <div class="navbar-nav cta-div">
+                <a class="nav-link cta " href="booking.html">Book now!</a>
+            </div>
         </div>
-      </nav>
+    </nav>
     <!-- Added the class onto main to be able to check if the booking page is what the user is on -->
     <main id="booking-page">
         <!-- Consider exchanging this into a heading -->
@@ -127,6 +127,7 @@
                     <div class="text-center">
                         <h2>Package deals</h2>
                         <p>These package deals are applicable to any city of your choice</p>
+                        <p>By default we have the silver package</p>
                     </div>
                     <div class="card text-bg-primary mb-3 silverCard packageCard" style="max-width: 18rem;">
                         <div class="card-header">
@@ -139,7 +140,8 @@
                                 <li>Complementary accommodation fridge items </li>
                             </ul>
                             <div class="row justify-content-center ">
-                                <input id="silver" class="styleButton packageButton button" type="button" value="Select">
+                                <input id="silver" class="styleButton packageButton button" type="button"
+                                    value="Select">
                             </div>
                         </div>
                     </div>
@@ -169,7 +171,8 @@
                                 <li>Private limo to escort you anywhere and everywhere</li>
                             </ul>
                             <div class="row justify-content-center">
-                                <input id="platinum" class="styleButton packageButton button" type="button" value="Select"> 
+                                <input id="platinum" class="styleButton packageButton button" type="button"
+                                    value="Select">
                             </div>
                         </div>
                     </div>
@@ -182,7 +185,8 @@
                 <form id="bookingForm" class="row g-3" method="GET" action="success.html"> <!--   needs-validation -->
                     <!-- Hidden input placed to take data from which package is selected -->
                     <!-- Value is initialy set to most basic package as a fallback -->
-                    <input type="hidden" id="packageInput" value="silver" name="chosenPackage" >
+                    <input type="hidden" id="packageInput" value="silver" name="chosenPackage">
+                    <input type="hidden" id="cityInput" value="none" name="chosenCity">
                     <div class="container mt-3">
                         <div class="text-center">
                             <h2>Where shall we be taking you this time?</h2>
@@ -194,6 +198,9 @@
                             <div class="col-4 text-center">
                                 <input class="cityButton button" value="London" type="button">
                             </div>
+                        </div>
+                        <div class="justify-content-center">
+                            <p id="cityError" class="text-center redText inactiveError">Please select a city</p>
                         </div>
                     </div>
                     <div class="text-center">
@@ -226,7 +233,8 @@
                     </div>
                     <div class="col-md-4">
                         <label for="email" class="form-label">Confirm Email Address</label>
-                        <input type="email" class="form-control" id="confirmEmail" name="confirm-email-address" required>
+                        <input type="email" class="form-control" id="confirmEmail" name="confirm-email-address"
+                            required>
                         <div>
                             <p id="confirmEmailFeedback" class="formFeedback redText inactiveError">Please input
                                 matching emails</p>
@@ -234,7 +242,8 @@
                     </div>
                     <div class="col-12">
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="terms-and-conditions" name="terms-and-conditions" required>
+                            <input class="form-check-input" type="checkbox" id="terms-and-conditions"
+                                name="terms-and-conditions" required>
                             <label class="form-check-label" for="invalidCheck">
                                 Agree to terms and conditions
                             </label>

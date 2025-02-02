@@ -3,7 +3,8 @@ API_KEY = "AIzaSyB4fcJiibwlX8tcRe5dNnllSifqBCKqeqA";
 API_URL = "";
 
 // GLOBAL VARIABLES
-// Constant variable
+// Constant variables
+const cityErrorMessage = document.getElementById("cityError")
 const emailFeedback = document.getElementById("emailFeedback");
 const confirmEmailFeedback = document.getElementById("confirmEmailFeedback")
 const emailInput = document.getElementById("email");
@@ -15,8 +16,7 @@ const cityButtons = document.getElementsByClassName("cityButton")
 const cityCards = document.getElementsByClassName("cityCard")
 const bookingFormEmailInputs = [confirmEmailInput, emailInput]
 const packageInput = document.getElementById("packageInput")
-// User Geolocation, gets users current location
-// When website is opened, the below code prompts the user to give the website location permissions
+const cityInput = document.getElementById("cityInput")
 
 // Let variables
 let isHomePage = document.querySelector("main").id == "home-page"
@@ -134,9 +134,13 @@ let chosenCityDetails = {
 };
 
 // EVENT LISTENERS 
+
+// User Geolocation, gets users current location
+// When website is opened, the below code prompts the user to give the website location permissions
 document.addEventListener("DOMContentLoaded", (event) => {
   navigator.geolocation.getCurrentPosition(userDetails.successCallBack, userDetails.errorCallBack)
 });
+
 for (card of cityCards) {
   card.addEventListener("click", handleCityClick)
 };
@@ -254,13 +258,11 @@ function toggleSelectedPackageCardButton(e) {
     targetedElement.classList += " styleButtonActive"
   } else if (isElementActive === true) {
     targetedElement.classList.remove("styleButtonActive")
-    console.log("removing active class")
     chosenPackage = defaultPackage;
     // packageInput.setAttribute("value", defaultPackage)
   }
   // Setting hidden input data to propagate chosen package to backend 
   packageInput.setAttribute("value", chosenPackage)
-  console.log(chosenPackage)
 
 }
 
@@ -273,13 +275,17 @@ function toggleSelectedCityButton(e) {
   let isElementActive = targetedElement.classList.contains("cityActive")
   targetedElement.classList.remove("cityActive")
   if (isElementActive === false) {
+    cityErrorMessage.classList.add("inactiveError")
     for (button of cityButtons) {
       button.classList.remove("cityActive")
+      cityInput.value = e.target.value
     }
     targetedElement.classList += " cityActive"
   } else if (isElementActive === true) {
     targetedElement.classList.remove("cityActive")
+    cityInput.value = "none"
   }
+
 }
 
 /** Adds a red border to the email and confirm email inputs and adds an error below each
@@ -287,6 +293,7 @@ function toggleSelectedCityButton(e) {
  * @param {Submit} e - This is information of the event that triggers the function 
  */
 function onBookingFormSubmit(e) {
+  let isCityInput = cityInput.value !== "none"
   if (!isEmailMatching) {
     e.preventDefault()
     for (let input of bookingFormEmailInputs) {
@@ -295,6 +302,12 @@ function onBookingFormSubmit(e) {
     for (let feedback of bookingFormEmailFeedbacks) {
       feedback.classList.remove("inactiveError")
     }
+  }
+  if (!isCityInput) {
+    console.log("Preventing form submit, city is not input")
+    cityErrorMessage.classList.remove("inactiveError")
+    e.preventDefault()
+    console.log(isCityInput)
   }
 }
 /** Removes the red border and error message once email and confirm email inputs are matching  
