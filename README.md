@@ -12,9 +12,6 @@ Welcome to Escape & Explore, we offer amazing deals on holidays to multiple citi
 - [User Experience (UX)]()
 
 ## UX
----
-- Responsive Design
-- Demographic Based Design
 
 ### Strategy
 
@@ -53,6 +50,48 @@ I made my MVP through rating each user stories on a Must have, Should have and c
 3. Increase awareness of our brand through great customer experiences, social media exposure and giving a good user experience
 
 There is an emphasis on two points for our company making this website, driving customer growth and translating this into sales, and working collaboratively with our sponsors to drive customers their way as well as their customers to us. Making sure we have a good user experience within our website will help customers enjoy their experience which will help to gain repeat customers and increase our sales in the long term. 
+### Scope
+
+Using an agile approach I made sure that we focused on making our MVP(Minimum viable product) first before focusing on any other features and thinking about additions to the website.
+
+#### Features
+
+
+* **City Selection** A display of our offers of city destinations which we have, in just the click of a button we show you exactly where this is with using our Google maps javascript API and dynamically display the best places within these cities to visit. An outline is placed on the selected city and all the needed information is output below the cards.
+
+This feature answers the need for **user story 1**
+![ The cities of london and paris displayed in bootstrap cards](./assets/images/readme_imgs/features/city-selection-cards.PNG)
+
+* **Google map API** To display the location of each city we use the google maps javascript API. On the click of any city the map dynamically updates to the location of the selected destination. We can't all be aware of where every destination is so we added a marker for the user's location if they give us permission. With the user marker and the city marker it helps a user understand where their destination is in relation to themselves, and helps them to make the best decision for their holiday.
+
+This feature answers the need for **user story 2**
+![A screenshot of the google maps displaying london with a marker on it and another marker displaying the user location](./assets/images/readme_imgs/features/google-maps-javascript-api.PNG)
+
+* **Home page** To assist each user in being able to pick the perfect destination for themselves and their families we make sure they get a look into every detail. We dynamically display and update images, the location and give some detailed descriptions of the locations. If a user would like to look a bit further into any given location we have direct links for each place, leading to a wikipedia page.
+
+This feature answers the need for **user story 3**
+![Showing a selection of cities, a google map of the selected city and palces to visit in the selected city with descriptions](./assets/images/readme_imgs/features/city-map-places.PNG)
+
+* **Places to visit** We dynamically display with every city popular destinations which each user can visit on their trip to each city. This includes images, the place title, detailed descriptions and a link for further information of each place.
+
+This feature answers the need for **user story 4**
+![Bootstrap cards displaying images of popular tourist destinations, a title, a description and links](./assets/images/readme_imgs/features/places-to-visit.PNG)
+
+* **CTA** To make sure our users can easily navigate to the booking page our booking page buttons are always visible on the page and we can find the both on the navbar and at the bottom of the page after users are able to go through all the information on the page.
+The Booking form is also very easily filled in and is followed by a success page to let a user know that they have successfully made their booking  
+
+This answers the need for **user story 5**
+![A picture of our call to action button which is a red background and white text](./assets/images/readme_imgs/features/nav-cta.PNG)
+![A picture of our call to action button which is a red background and white text](./assets/images/readme_imgs/features/home-bottom-of-page-cta.PNG)
+
+* **User locations** If user locations are permitted the user is able to see themselves on the map, this helps user decide the best holiday for themselves depending on how far they are willing to travel. If a user declines to share their location this will not affect the functionality or experience on the website. This would only remove the marker displayed and give an alert to the user regarding this. 
+
+This would answer the need for **user story 10**
+![Google maps showing two markers , one to represent the destination and one to represent the user location](./assets/images/readme_imgs/features/google-maps-javascript-api.PNG)
+![An alert informing the customer about minor reduction of functionality on the website if location permissions are denied](./assets/images/readme_imgs/features/alert-message.PNG)
+
+Considering all these added features we have met the targeted **MVP**, with all the added features we can confidently give our users a great experience
+
 
 
 <!-- FONTS -->
