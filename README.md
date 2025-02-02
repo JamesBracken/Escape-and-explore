@@ -1,12 +1,15 @@
 # Escape & Explore
 
 
-## Introduction
-Welcome to BLANK, PAGE OPENING INTRO
+## About
+
+Welcome to Escape & Explore, we offer amazing deals on holidays to multiple cities world-wide. For each city we display so great places to go, and give you the whole package. From accommocation, to transport, food and everything you could possibly need! Book your visit now! 
 <!-- Must include what the project is for, why it exists and who it is intended for -->
 <!-- Describe the projects purpose and the target audience -->
 ![Different sized screens on different devices showing what my website looks like on each](LINK)
 
+## Table of contents
+- [User Experience (UX)]()
 
 ## UX
 ---
