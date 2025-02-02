@@ -29,6 +29,7 @@ let cityName;
 let cityId;
 let map;
 // Data for each city
+
 let cities = {
   parisCity: {
     cityName: "Paris",
@@ -226,6 +227,12 @@ if (isBookingPage) {
 // Code to initialise, add and update google maps API
 /* Copy pasted from google official documentation and then tweaked to suit
 the websites needs url https://developers.google.com/maps/documentation/javascript/load-maps-js-api?_gl=1*1u5062j*_up*MQ..*_ga*MTc1NzYyMDgxOC4xNzM2MDA2NjIy*_ga_NRWSTWS78N*MTczNjAwNjYyMi4xLjEuMTczNjAwNjYyMi4wLjAuMA.. */
+/** This creates a map and sets the location of where it is centred on,
+ it also places a marker on the location you give it and also sets a marker
+ on the user location if permissions are allowed. This does not take
+ any parameters but instead is dynamically changed elsewhere in the code.
+ * 
+ */
 async function initMap() {
   if (mapIsPresent !== null) {
     const { Map } = await google.maps.importLibrary("maps");
@@ -267,8 +274,11 @@ async function initMap() {
   }
 }
 
-/* On the click of each city, displayed details such as map location,
-map marker, city name, city description, city places to visit are updated */
+/**On the click of each city, displayed details such as map location,
+map marker, city name, city description, city places to visit are updated
+ * @param {Click} e - This is information of the event that triggers the
+ function
+ */
 async function handleCityClick(e) {
   /* Dot notation is used across this script code, in this instance however dot 
   notation on its own was not able to make the code work through various
@@ -283,7 +293,11 @@ async function handleCityClick(e) {
   displayCityInformation();
   initMap();
 }
-
+/**This function displays the places to visit on the home page below the map.
+This loops iterates 4 times to create cards of places to visit.  
+This pulls data from the cities variable.
+ * No parameters
+ */
 async function displayCityInformation() {
   let cityCount = 0;
   let cityInformationContainer = document.getElementById(
@@ -320,10 +334,9 @@ async function displayCityInformation() {
 
 /** Adds the styleButtonActive class
  *
- * @param {Click} e - This is information of the event that triggers the\
+ * @param {Click} e - This is information of the event that triggers the
  function
  */
-
 function toggleSelectedPackageCardButton(e) {
   let defaultPackage = "silver";
   let chosenPackage = e.target.id;
@@ -392,7 +405,7 @@ function onBookingFormSubmit(e) {
 }
 /** Removes the red border and error message once email and confirm email inputs
 are matching
- *
+ * No parameters
  */
 function onBookingFormInput() {
   isEmailMatching = emailInput.value === confirmEmailInput.value;
@@ -429,7 +442,7 @@ other categories */
 /* Set the map initially to london incase the user declines permission, 
 in this way the map is not placed in the middle of nowhere
  May have to place this code into a function which will only be invoked once,
- on page open //////////////////////////////
+ on page open
 */
 
 if (isHomePage) {
