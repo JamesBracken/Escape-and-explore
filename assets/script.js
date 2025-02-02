@@ -263,7 +263,6 @@ function toggleSelectedPackageCardButton(e) {
   }
   // Setting hidden input data to propagate chosen package to backend 
   packageInput.setAttribute("value", chosenPackage)
-
 }
 
 /** Adds the cityActive class if it is not present, removes it if it is present and removes the class from elements other than the selected one, if it is found.
