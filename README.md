@@ -94,7 +94,6 @@ Considering all these added features we have met the targeted **MVP**, with all 
 
 
 #### Future potential features
-As the MVP within this website has been met by the pre
 
 * **Activity display** Alongside the the places to visit feature, we can add the activities display as well. A toggle button can be added to switch back and forth between displaying places to visit and activities within the chosen city. This would answer the need for **user story 6**
 
@@ -107,6 +106,20 @@ As the MVP within this website has been met by the pre
 * **Routing** A user will be able to choose a destination and see airports near themselves and be able to choose from these or if they dont enable permissions then they can manually enter the city of their choice and options will be given. Following this different routes will be displayed from one location to the other. This would answer the need for **user story 11** 
 
 ### Structure
+
+This website has been structured with the following in mind across all pages
+
+* This website was built with information hierarchy in mind, there is a single h1 heading per page which should give an idea of the page on its own. This is then followed by smaller headings which make sub-categories of different sections on the page and paragraphs within these, mostly used for writing descriptions.
+
+* The home page sports potential cities for users to choose from and displays these on the map when selected and ideal visits within these cities.
+
+* A homepage complete with a navbar which links to the home page and the booking page so you can navigate to and from these pages anywhere on the site. 
+
+* A footer which displays our contact information for people to easily reach us and clickable social media links to bring the user to our social media accounts.
+
+* Buttons that stand out on the page which help to achieve the main website goals which is translating a user into a customer and giving exposure to our partners.
+
+* The look and feel of the Navigation bar, Footer and buttons across all pages are exactly the same or almost the same to give consistency to the website.
 
 This website 
 ### Skeleton
