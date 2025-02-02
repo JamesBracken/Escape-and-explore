@@ -216,7 +216,7 @@ async function displayCityInformation() {
       <div class="card mb-3" style="max-width: 740px;">
         <div class="row g-0">
           <div class="col-md-4">
-            <img src="${cities[cityId].cityPlacesToVisit[cityCount].image}" class="img-fluid rounded-start placesToVisitCardImg h-100" alt="${cities[cityId].cityPlacesToVisit[cityCount.alt]}">
+            <img src="${place.image}" class="img-fluid rounded-start placesToVisitCardImg h-100" alt="${place.alt}">
           </div>
           <div class="col-md-8">
             <div class="card-body">
