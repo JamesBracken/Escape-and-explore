@@ -1,6 +1,7 @@
 /* Global styles */
-/* Page width is different accross some elements and nav is pushing out farther than other elements, this is stopping that  */
-html {
+/* Page width is different accross some elements and nav is pushing out farther
+   than other elements, this is stopping that  */
+   html {
     /*  */
     overflow-x: hidden;
 }
@@ -17,7 +18,8 @@ body {
     max-width: 1800px;
     margin-left: auto;
     margin-right: auto;
-    /* Page width is different accross some elements and nav is pushing out farther than other elements, this is stopping that  */
+    /* Page width is different accross some elements and nav is pushing out
+    farther than other elements, this is stopping that  */
     overflow-x: hidden;
 }
 
@@ -52,7 +54,9 @@ img {
 }
 
 div .card:hover {
-    box-shadow: 1px 1px rgba(104, 95, 95, 0.37), -1px 0 rgba(104, 95, 95, 0.37);
+    box-shadow:
+        1px 1px rgba(104, 95, 95, 0.37),
+        -1px 0 rgba(104, 95, 95, 0.37);
     transition: box-shadow 0.4s ease-in-out;
 }
 
@@ -61,9 +65,10 @@ div .card:hover {
 .cta:hover,
 .button:hover {
     color: rgb(175, 175, 175) !important;
-    transition: color .3s ease-in-out;
+    transition: color 0.3s ease-in-out;
 }
-/* Navbar */
+
+/* Nav */
 nav {
     padding: 3px 0 3px 0 !important;
     /* Keeps the nav constantly visible */
@@ -80,7 +85,7 @@ nav {
 }
 
 .bg-nav {
-    background-color: #0F1525;
+    background-color: #0f1525;
 }
 
 .cta-div {
@@ -106,7 +111,7 @@ nav {
     padding: 10px 5px 10px 5px;
 }
 
-/* Main styles */
+/* Home page Main styles */
 
 /* Hero image */
 #heroImg {
@@ -123,7 +128,6 @@ div .card {
 }
 
 /* City card images */
-
 .cityImage {
     min-width: 100%;
     height: 190px;
@@ -134,10 +138,8 @@ div .card {
 }
 
 .cityCardOutlined {
-    outline: #0F1525 solid 2px;
+    outline: #0f1525 solid 2px;
 }
-
-/* Places to visit cards */
 
 /* Partners sponsor cards */
 
@@ -151,33 +153,19 @@ div .card {
     height: 400px;
 }
 
+/* Booking page Main */
 /* Package deal cards */
 
 .silverCard {
-    background-color: #6D87F0 !important;
+    background-color: #6d87f0 !important;
 }
 
 .goldCard {
-    background-color: #4251D8 !important;
+    background-color: #4251d8 !important;
 }
 
 .platinumCard {
     background-color: #000084 !important;
-}
-
-/* To be deleted to make code more reusable */
-
-.styleButton {
-    text-underline-offset: none;
-    /* width: 120px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    background-color: #c23311;
-    color: aliceblue;
-    border: none;
-    padding: 5px;
-    font-weight: bold;
-    border-radius: 5px; */
 }
 
 .packageButton {
@@ -198,33 +186,13 @@ div .card {
 /*  */
 /* Form styles */
 
-/* Button style for choosing a city */
-
-/* Old city button styles 
- border-radius: 300px;
-width: 150px;
-height: 50px; */
-
-/* To be deleted to make code more reusable */
-.cityButton {
-    text-underline-offset: none;
-    /* width: 120px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    background-color: #c23311;
-    color: aliceblue;
-    border: none;
-    padding: 5px;
-    font-weight: bold;
-    border-radius: 5px; */
-}
-
 .cityActive {
     background-color: #ff3300;
     border: 1px black solid;
 }
 
-/* This toggles form input errors on and off by making them visible or invisible */
+/* This toggles form input errors on and off by making them visible or 
+invisible */
 .inactiveError {
     visibility: hidden;
 }
@@ -251,11 +219,12 @@ height: 50px; */
     padding-bottom: 10px;
     color: lightgreen;
 }
+
 /* Footer styles */
 
 #footer {
     background-color: #212529;
-    color: #FFFFFF;
+    color: #ffffff;
 
     /* To push the footer down to the bottom of the page */
     margin-top: auto;
@@ -270,24 +239,24 @@ height: 50px; */
 
 .footerContacts {
     font-size: 20px;
-    color: white
+    color: white;
 }
 
 /* Media devices (mobile, 375px and below */
-@media screen and (max-width:375px) {
+@media screen and (max-width: 375px) {
     .places-to-visit-card {
         max-width: 300px !important;
     }
 }
 
 /* Media devices (376px and up */
-@media screen and (min-width:376px) {
+@media screen and (min-width: 376px) {
     .places-to-visit-card {
         max-width: 350px !important;
     }
 }
 /* Media devices (Mobile, 576px and below) */
-@media screen and (max-width:576px) {
+@media screen and (max-width: 576px) {
     #success-page {
         top: 37%;
     }
@@ -317,11 +286,11 @@ height: 50px; */
     }
 }
 
-@media  screen and (min-width: 577px) {
+@media screen and (min-width: 577px) {
     .places-to-visit-card {
         max-width: 440px !important;
     }
-    
+
     /* .placesToVisitCardImg {
         max-height: 300px !important;
     } */
@@ -344,16 +313,8 @@ height: 50px; */
 }
 
 /* Media devices (Up until 1199px */
-@media screen and (max-width:1199px) {
+@media screen and (max-width: 1199px) {
     .package-card-body {
-        min-height:440px;
+        min-height: 440px;
     }
 }
-
-/* Cards */
-/* Grids, margin between cards, images full width  */
-/* 
-
-
-
-*/
