@@ -46,11 +46,11 @@ img {
     margin-bottom: 10px;
     background-color: #c23311;
     color: aliceblue;
-    border: none;
     padding: 5px;
     font-weight: bold;
     border-radius: 5px;
     text-decoration: none;
+    border: 1px solid #c23311;
 }
 
 div .card:hover {
@@ -127,7 +127,6 @@ nav {
 }
 
 /* City image cards */
-
 div .card {
     margin: 5px;
     padding: 0px;
@@ -148,7 +147,6 @@ div .card {
 }
 
 /* Partners sponsor cards */
-
 .partnerSponsorCardImg {
     max-height: 268px;
 }
@@ -160,8 +158,8 @@ div .card {
 }
 
 /* Booking page Main */
-/* Package deal cards */
 
+/* Package deal cards */
 .silverCard {
     background-color: #6d87f0 !important;
 }
@@ -181,7 +179,7 @@ div .card {
 }
 
 .styleButtonActive {
-    background-color: #ff3300;
+    background-color: #ff4719;
     border: 1px solid black;
 }
 
@@ -193,7 +191,7 @@ div .card {
 /* Form styles */
 
 .cityActive {
-    background-color: #ff3300;
+    background-color: #ff4719;
     border: 1px black solid;
 }
 
@@ -217,7 +215,6 @@ invisible */
     top: 50%;
     transform: translate(-50%, -50%);
     left: 50%;
-    /* height: 20em; */
 }
 
 .success-checkmark {
