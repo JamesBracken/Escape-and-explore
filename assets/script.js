@@ -28,7 +28,7 @@ let cityName;
 let cityId;
 let map;
 // Data for each city
-let cities = {
+let cities = { 
   parisCity: {
     cityName: "Paris",
     cityDescription: "Paris fill content",
@@ -104,8 +104,8 @@ let userDetails = {
   successCallBack: (position) => {
     userDetails.currentUserLongitude = position.coords.longitude;
     userDetails.currentUserLatitude = position.coords.latitude;
-    chosenCityDetails.chosenCityLatitude = userDetails.currentUserLatitude;
-    chosenCityDetails.chosenCityLongitude = userDetails.currentUserLongitude;
+    chosenCityDetails.chosenCityLatitude = cities.londonCity.cityLatitude;
+    chosenCityDetails.chosenCityLongitude = cities.londonCity.cityLongitude;
     locationAllowed = true;
     initMap();
   },
@@ -114,7 +114,6 @@ let userDetails = {
     locationAllowed = false;
     // If check is added to prevent alert on other pages
     if (isHomePage) {
-      console.log("This is the home page: " + isHomePage)
       Swal.fire({
         icon: "error",
         title: "Oops...",
@@ -128,6 +127,8 @@ let userDetails = {
 // On click of a city or on approval of user location permissions this will update the chosen cities position attributes
 // On update of these attributes google maps API location is updated 
 let chosenCityDetails = {
+  // chosenCityLatitude: userDetails.currentUserLatitude,
+  // chosenCityLongitude: userDetails.currentUserLongitude,
   chosenCityLatitude: userDetails.currentUserLatitude,
   chosenCityLongitude: userDetails.currentUserLongitude,
 };
@@ -196,14 +197,13 @@ async function initMap() {
 // On the click of each city, displayed details such as map location, map marker, city name, city description, city places to visit are updated
 async function handleCityClick(e) {
   // Dot notation is used across this script code, in this instance however dot notation on its own was not able to make the code work through various
-  // attempts, I have instead used a mix of the two (ONLY in this instance). Understandably bad practice but could not find any other way of making this work
+  // attempts, I have instead used a mix of the two. Understandably bad practice but could not find any other way of making this work
   chosenCityDetails.chosenCityLatitude = cities[e.target.closest(".cityCard").id].cityLatitude;
   chosenCityDetails.chosenCityLongitude = cities[e.target.closest(".cityCard").id].cityLongitude;
   chosenCityName = cities[e.target.closest(".cityCard").id].cityName
   cityId = e.target.closest(".cityCard").id
   displayCityInformation();
   initMap();
-
 };
 
 async function displayCityInformation() {
@@ -307,7 +307,6 @@ function onBookingFormInput() {
 */
 function toggleCityOutline(e) {
   let selectedCityCard = e.target.closest(".cityCard")
-  console.log("Selected city card: " + e.target.closest(".cityCard"))
   let cardOutlinedBoolean = selectedCityCard.classList.contains("cityCardOutlined")
   if (!cardOutlinedBoolean) {
     for (card of cityCards) {
@@ -321,10 +320,11 @@ function toggleCityOutline(e) {
 // Set the map initially to london incase the user declines permission, in this way the map is not placed in the middle of nowhere
 // May have to place this code into a function which will only be invoked once, on page open //////////////////////////////
 
-
-if (!isDefaultDataSet) {
-  isDefaultDataSet = true;
-  chosenCityDetails.chosenCityLatitude = cities.londonCity.cityLatitude
-  chosenCityDetails.chosenCityLongitude = cities.londonCity.cityLongitude
-  initMap()
+if(isHomePage) {
+  if (!isDefaultDataSet) {
+    isDefaultDataSet = true;
+    chosenCityDetails.chosenCityLatitude = cities.londonCity.cityLatitude
+    chosenCityDetails.chosenCityLongitude = cities.londonCity.cityLongitude
+    initMap()
+  }
 }
