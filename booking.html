@@ -263,10 +263,65 @@
 
     <!-- Footer -->
     <footer id="footer">
-        <div>
-            <h2>content</h2>
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-6 mt-3">
+              <h3>Contact us here</h3>
+              <hr />
+              <div class="contactsContainer">
+                <p>
+                  <i class="footerContacts fa-sharp fa-solid fa-location-pin"></i>
+                  123 location street, london
+                </p>
+                <p><i class="footerContacts fa-solid fa-phone"></i> 0123456789</p>
+                <p>
+                  <i class="footerContacts fa-solid fa-envelope"></i>
+                  escape&explore@mail.com
+                </p>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 mt-3">
+              <h3>Our socials</h3>
+              <hr />
+              <div class="justify-content-between socialsContainer d-flex">
+                <a
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  aria-label="Instagram symbol(opens in a new tab)"
+                  rel="noopener noreferrer"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+                <a
+                  href="https://x.com/"
+                  target="_blank"
+                  aria-label="Twitter symbol(opens in a new tab)"
+                  rel="noopener noreferrer"
+                  ><i class="fa-brands fa-twitter"></i
+                ></a>
+                <a
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  aria-label="Facebook symbol(opens in a new tab)"
+                  rel="noopener noreferrer"
+                  ><i class="fa-brands fa-facebook"></i
+                ></a>
+                <a
+                  href="https://github.com/"
+                  target="_blank"
+                  aria-label="Github symbol(opens in a new tab)"
+                  rel="noopener noreferrer"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+              </div>
+            </div>
+            <div class="container"></div>
+          </div>
+  
+          <p class="footerCopyright">
+            &#169;Escape and explore. All rights reserved | Developed by James
+          </p>
         </div>
-    </footer>
+      </footer>
     <!-- Google maps API script -->
     <script>
         (g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })({
