@@ -238,6 +238,7 @@ async function displayCityInformation() {
  */
 
 function toggleSelectedPackageCardButton(e) {
+  let defaultPackage = "silver";
   let chosenPackage = e.target.id
   let targetedElement = e.target;
   let isElementActive = targetedElement.classList.contains("styleButtonActive")
@@ -249,9 +250,14 @@ function toggleSelectedPackageCardButton(e) {
     targetedElement.classList += " styleButtonActive"
   } else if (isElementActive === true) {
     targetedElement.classList.remove("styleButtonActive")
+    console.log("removing active class")
+    chosenPackage = defaultPackage;
+    // packageInput.setAttribute("value", defaultPackage)
   }
   // Setting hidden input data to propagate chosen package to backend 
   packageInput.setAttribute("value", chosenPackage)
+  console.log(chosenPackage)
+
 }
 
 /** Adds the cityActive class if it is not present, removes it if it is present and removes the class from elements other than the selected one, if it is found.
