@@ -4,13 +4,18 @@ body {
     font-family: Roboto, Arial;
     min-height: 100vh;
     background-color: #fbfaf3;
-
     /* To push the footer down to the bottom of the page */
     display: flex;
     flex-direction: column;
-
     /* keeps the hero body fully visible, otherwise the nav covers some of it */
     padding-top: 58px;
+    max-width: 1800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main {
+    width: inherit;
 }
 
 img {
@@ -55,7 +60,7 @@ nav {
     position: fixed !important;
     top: 0;
     width: 100%;
-
+    max-width: 1800px;
     z-index: 10;
 }
 
@@ -77,6 +82,7 @@ nav {
     padding: 0 5px 0 5px;
     border-radius: 5px;
     margin-bottom: 5px;
+    margin-right: 20px;
 }
 
 .cta {
@@ -89,6 +95,7 @@ nav {
 #heroImg {
     width: 100%;
     height: 75vh;
+    max-height: 700px;
 }
 
 /* City image cards */
