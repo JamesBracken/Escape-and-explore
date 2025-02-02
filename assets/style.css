@@ -50,17 +50,18 @@ img {
     text-decoration: none;
 }
 
-.button:hover {
-    background-color: #ff3300;
-}
-
 div .card:hover {
     box-shadow: 1px 1px rgba(104, 95, 95, 0.37), -1px 0 rgba(104, 95, 95, 0.37);
-    /* box-shadow: 1px 1px 1px 1px rgba(29, 27, 27, 0.37);
-    box-shadow: 3px 3px 3px 3px rgba(29, 27, 27, 0.37); */
     transition: box-shadow 0.4s ease-in-out;
 }
 
+/* On hover of link, element changes color */
+.fa-brands:hover,
+.cta:hover,
+.button:hover {
+    color: rgb(175, 175, 175) !important;
+    transition: color .3s ease-in-out;
+}
 /* Navbar */
 nav {
     padding: 3px 0 3px 0 !important;
@@ -267,6 +268,7 @@ height: 50px; */
     margin-top: auto;
 }
 
+/* Social media links in the footer */
 .fa-brands {
     font-size: 40px;
     margin: 9px;
@@ -277,6 +279,8 @@ height: 50px; */
     font-size: 20px;
     color: white
 }
+
+
 
 /* Media devices (Mobile, 576px and below) */
 @media screen and (max-width:576px) {
