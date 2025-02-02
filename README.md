@@ -16,26 +16,43 @@ Welcome to Escape & Explore, we offer amazing deals on holidays to multiple citi
 - Responsive Design
 - Demographic Based Design
 
-### User Stories
-#### Site Owner Goals
+### Strategy
 
+The website is targeting the primary stakeholders within the market which are **Young adults wanting to go on new adventures and have new experiences** and
+**Adults with families**. As we are in the information age, people are able to find information about basically anything, we constantly see pictures, movies, documentaries about immaculate places and the younger generation (Young adults) specifically have the want and the means(Meaning money ofcourse) to do so. More senior adults with families have a simillar thirst for adventure and the want for new experiences too, but through research I have found that they mostly crave the occasional holiday to get a rest from work, they find a lot of respite in the fact they can leave their normal day to day lives and live the dream for a week or two.
 
-The primary goal of NAME is to do BLANK
+#### Primary user stories
 
-#### User Goals
+1. As a website user, I would like to be able to select or search for different cities so I can choose my next holiday destination
 
+2. As a website user, I would like to be able to see my selected city on a map so I can understand the distance travelled and choose if it is right for me
 
-1. As a USER I want a X
+3. As a website user, I would like to be able to get an insight of my potential destinations through images, descriptions and understanding where I have to travel
 
-## Design
+4. As a young adult, I would like to have a display of recommended places to visit in each destination to help me to cater each holiday to my own needs
 
+5. As a user, I would like to be able to easily navigate to the booking area where I can create and finalise my next holiday plan
 
-- ### Color Scheme
+6. As a busy parent, I would like to be able to have a selection of activities for my children and I so we can spend some family time together
 
-![Description](link)
+7. As a busy parent, strapped for cash I would like to be able to see the potential costs incurred for activities or visits
 
-Description of colors
-- ### Typography
+8. As a user, I would like to be able to signup for a newsletter so that I can see updated deals and new holiday destinations
+
+9. As a user, I would like to save holiday destinations so I can come back to them at another time
+
+10. As a user, I would like to be able to see both where I am and where my potential destination is at the same time
+
+11. As a user, I would like to be able to see where destinations are in correlation to my current location
+
+I made my MVP through rating each user stories on a Must have, Should have and could have basis. Stories 1-5 are **Must have**, stories 6-8 are **Should have** and stories 9-11 are **Could have**. I prioritised making all the must have's first to make sure my website is ready in time with all the important functions.
+
+#### Primary strategic aims for the website
+1. Increase foot traffic into our company's website and translate these visits into paying customers
+2. Work with our partners to increase their exposure and drive sales on their website wherein we receive a commission on each sale.
+3. Increase awareness of our brand through great customer experiences, social media exposure and giving a good user experience
+
+There is an emphasis on two points for our company making this website, driving customer growth and translating this into sales, and working collaboratively with our sponsors to drive customers their way as well as their customers to us. Making sure we have a good user experience within our website will help customers enjoy their experience which will help to gain repeat customers and increase our sales in the long term. 
 
 
 <!-- FONTS -->
