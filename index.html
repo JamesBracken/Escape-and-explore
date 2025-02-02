@@ -48,9 +48,7 @@
     <!-- Header -->
     <header>
       <!-- Hero image -->
-
       <div><img id="heroImg" src="./assets/images/hero_img.jpg" alt="" /></div>
-
       <div class="text-center container">
         <div class="row justify-content-center">
           <h1 class="mt-2">Only the best holidays available</h1>
@@ -63,13 +61,14 @@
         </div>
       </div>
     </header>
+
     <main id="home-page">
       <section>
         <!-- Container to hold BS Cards -->
         <div id="citySelectionContainer" class="container mb-2">
           <div class="row justify-content-center">
             <!-- City cards code taken from bootstrap 
-			https://getbootstrap.com/docs/5.3/components/card/ -->
+						https://getbootstrap.com/docs/5.3/components/card/ -->
             <!-- BS Cards containing each city image and title -->
             <div
               id="londonCity"
@@ -102,6 +101,8 @@
         <!-- Div containing map content from Google maps API -->
         <div id="map"></div>
       </section>
+			<!-- Cities displayed in BS cards from
+			 https://getbootstrap.com/docs/4.0/components/card/ -->
       <section>
         <div class="container">
           <div
@@ -113,6 +114,8 @@
             <div
               class="card mb-3 places-to-visit-card"
             >
+						<!-- Places to visit cards taken from Bootstrap 
+						 https://getbootstrap.com/docs/4.0/components/card/ -->
               <div class="row g-0">
                 <div class="col-md-4">
                   <img
@@ -345,12 +348,3 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>
-
-<!-- TO DO LIST -->
-<!-- 
-Add CTA bottom after city descriptions
-Add newsletter or feedback form
-Metadata 
-make the page scroll to the map on click of a city
-Create 404 page / non existent
--->
