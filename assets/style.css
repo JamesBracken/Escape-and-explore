@@ -282,9 +282,16 @@ height: 50px; */
 }
 
 /* Media devices (mobile, 375px and below */
-@media screen and (max-width:320px) {
+@media screen and (max-width:375px) {
     .places-to-visit-card {
         max-width: 300px !important;
+    }
+}
+
+/* Media devices (376px and up */
+@media screen and (min-width:376px) {
+    .places-to-visit-card {
+        max-width: 350px !important;
     }
 }
 /* Media devices (Mobile, 576px and below) */
@@ -295,10 +302,6 @@ height: 50px; */
 
     .partnerSponsorCardImg {
         max-height: 188px;
-    }
-
-    .places-to-visit-card {
-        max-width: 350px;
     }
 
     .success-checkmark {
@@ -322,10 +325,22 @@ height: 50px; */
     }
 }
 
+@media  screen and (min-width: 577px) {
+    .places-to-visit-card {
+        max-width: 440px !important;
+    }
+    
+    /* .placesToVisitCardImg {
+        max-height: 300px !important;
+    } */
+}
 /* Media devices (tablets, 768px and up) */
 @media screen and (min-width: 768px) {
     .partnerSponsorCardImg {
         height: 200px;
+    }
+    .places-to-visit-card {
+        max-width: 720px !important;
     }
 }
 
