@@ -302,6 +302,21 @@ The performance capped at 89, this is apparently due to the speed index. Upon fu
 
 ### Manual testing
 
+Responsiveness
+|Screen Size|Device Type|Viewport Width|Pass/Fail|
+|-----------|-----------|--------------|---------|
+|Mobile|Smartphone|375px|✅Pass|
+|Tablet|Tablet |768px|✅Pass|
+|Laptop|Small Laptop/Desktop|1024px|✅Pass|
+
+Browser testing
+|Browser|Not Functioning|Partial Functioning|Full Functioning|
+|-------|---------------|-------------------|----------------|
+|<i class="fab fa-chrome"></i>Google Chrome| | |✅Pass|
+|<i class="fab fa-firefox-browser"></i>Mozilla Firefox| | |✅Pass|
+|<i class="fab fa-edge"></i>Microsoft Edge| | |✅Pass|
+|<i class="fab fa-opera"></i>Opera| | |✅Pass|
+
 Navbar
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
@@ -332,66 +347,66 @@ City selection(Home page)
 |City select card section|On selection of a different city a previously selected city outline must be removed|Different city is selected|Outline is removed|✅|
 |City cards|On Selection of a city the city is outlined|City is selected|City is outlined|✅|
 |Places to visit|On selection of a city, places within the chosen city are displayed|City is selected|Places are displayed|✅|
-|Places to visit|When cards are rendered the image displays correctly|Select different cities and check image rendering|||
-|Places to visit|On selection of a city, each cards title is displayed correcty and is accurate|Check each displayed place title|||
-|Places to visit|On selection of a city, each cards description is displayed correctly and is accurate|Check each displayed description|||
-|Places to visit|On selection of a city, each card displays a link so that the user can find out more information about each place|Check each card is displaying a link|||
-|Places to visit|On click of a places anchor link, a new tab is opened which will give the user more information about the chosen place|Click all links|||
-|Places to visit|Each card is displayed responsively so that users on different devices can see this properly|Screen resize|||
-|CTA at the bottom of the home page|CTA is additionally displayed at the bottom of the page under the displayed places to visit|Scroll to bottom of the home page|||
-|CTA at the bottom of the home page|On click the user is brought to our booking page|Button clicked|||
+|Places to visit|When cards are rendered the image displays correctly|Select different cities and check image rendering|Images display correctly|✅|
+|Places to visit|On selection of a city, each place to visit card title is displayed correcty and is accurate|Check each displayed place title|Titles are correct|✅|
+|Places to visit|On selection of a city, each cards description is displayed correctly and is accurate|Check each displayed description|Descriptions are displayed corrects|✅|
+|Places to visit|On selection of a city, each card displays a link so that the user can find out more information about each place|Check each card is displaying a link|links are displayed correctly|✅|
+|Places to visit|On click of a places anchor link, a new tab is opened which will give the user more information about the chosen place|Click all links|Links work correctly|✅|
+|Places to visit|Each card is displayed responsively so that users on different devices can see this properly|Screen resize|Appears normally |✅|
+|CTA at the bottom of the home page|CTA is additionally displayed at the bottom of the page under the displayed places to visit|Scroll to bottom of the home page|Appears normally|✅|
+|CTA at the bottom of the home page|On click the user is brought to our booking page|Button clicked|Button works|✅|
 
 Partner sponsorships(Booking page)
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 |---------|-------------------|-------------------|--------|-----------|
-|Cards responsiveness|On screen resize the cards are displayed well|Screen resize|||
-|Cards image|Each cards image displays well, and on most screen sizes|Screen resize|||
-|Cards links|Links of each cards opens a new tab leading to the correct partner websites|Links clicked|||
+|Cards responsiveness|On screen resize the cards are displayed well|Screen resize|Cards are responsive|✅|
+|Cards image|Each cards image displays well, and on most screen sizes|Screen resize|Images are responsive|✅|
+|Cards links|Links of each cards opens a new tab leading to the correct partner websites|Links clicked|Links open correctly|✅|
 
 Package deals
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 |---------|-------------------|-------------------|--------|-----------|
-|Select buttons |On hover the buttons change color|Button hover|||
-|Select buttons|If not selected a clicked button will change color|Button clicked|||
-|Select buttons|On select of any button the hidden input found in the booking form reflects the selected package deal||||
-|Select buttons|On deselect of a button the color reverts back to the original color|Deselect button|||
-|Select buttons|On deselect of a button the value of the hidden input reverts back to the default value of silver|Deselect button|||
-|Select buttons|If a package was selected and another is clicked, the initially selected button reverts back to the original color|Select one package, then select another|||
-|Package deal input|By default the hidden input in the booking form for package deals value is set to silver|Reload page and check hidden input value|||
+|Select buttons |On hover the text changes color|Button hover|Text changes color|✅|
+|Select buttons|If not selected a clicked button will change color|Button clicked|Button changes color|✅|
+|Select buttons|On select of any button the hidden input found in the booking form reflects the selected package deal|Press a button and check input|Value reflects correct button pressed|✅|
+|Select buttons|On deselect of a button the color reverts back to the original color|Deselect button|Color reverts|✅|
+|Select buttons|On deselect of a button the value of the hidden input reverts back to the default value of silver|Deselect button|Value reverts|✅|
+|Select buttons|If a package was selected and another is clicked, the initially selected button reverts back to the original color|Select one package, then select another|Button reverts|✅|
+|Package deal input|By default the hidden input in the booking form for package deals value is set to silver|Reload page and check hidden input value|Input is set to silver|✅|
 
 City selection
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 |---------|-------------------|-------------------|--------|-----------|
-|Select buttons|On select of a city, the button changes color|Button clicked|||
-|Select buttons|On select of a city, the hidden city input found in the booking form |Click a city|||
-|Select buttons|On deselect of a city the color of the city reverts back to the original|Deselect button|||
-|Select buttons|On deselect of a city the hidden input value of this city in the booking form is removed|Deselect city|||
-|Select buttons|If a city is selected and another city button is clicked, the previously selected city color reverts back to the original|Select a city then select a different one|||
-|Select buttons|If a city is selected and another city button is clicked, the hidden input value in the booking form changes to this new value|Select a city then select another|||
+|Select buttons|On select of a city, the button changes color|Button clicked|Color changes|✅|
+|Select buttons|On select of a city, the hidden city input found in the booking form changes to the clicked city|Click a city|City changes|✅|
+|Select buttons|On deselect of a city the color of the city reverts back to the original|Deselect button|Color reverts|✅|
+|Select buttons|On deselect of a city the hidden input value of this city in the booking form is removed|Deselect city|value reverts back to none|✅|
+|Select buttons|If a city is selected and another city button is clicked, the previously selected city color reverts back to the original|Select a city then select a different one|Color reverts|✅|
+|Select buttons|If a city is selected and another city button is clicked, the hidden input value in the booking form changes to this new value|Select a city then select another|Value changes correctly|✅|
 
 Booking form
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 |---------|-------------------|-------------------|--------|-----------|
-|HTML validation|If any of the visible form inputs are incorrectly filled and the form is submitted HTML validation displays errors|Incorrectly fill out the form or leave blank and submit|||
-|JS validation|If the emails input do not match, custom JS validation kicks in and displays a red error||||
-|JS validation|If the emails input do not match, the form inputs turn red|Input different emails and submit|||
-|JS validation|If the emails input did not match and then the emails are corrected to match, the error messages displayed are removed|Input different emails, submit the form, then make the emails match|||
-|JS validation|If the emails input did not match and then the emails are corrected to match, the red borders around the email inputs revert back to normal|Input different emails, submit the form, then make the emails match|||
-|Form submit|If the form is correctly filled out and submitted, the success page opens and the user is given a message informing them they have successfully booked their holiday|Form filled out and submitted|||
-|Form responsiveness|Form is responsive across multiple screen sizes|Screen resize|||
+|HTML validation|If any of the visible form inputs are incorrectly filled and the form is submitted HTML validation displays errors|Incorrectly fill out the form or leave blank and submit|Errors display|✅|
+|JS validation|If the emails inputs do not match, custom JS validation kicks in and displays a red error|different values input|Errors display|✅|
+|JS validation|If the emails input do not match, the form inputs turn red|Input different emails and submit|Input borders change color|✅|
+|JS validation|If the emails input did not match and then the emails are corrected to match, the error messages displayed are removed|Input different emails, submit the form, then make the emails match|Errors go away|✅|
+|JS validation|If the emails input did not match and then the emails are corrected to match, the red borders around the email inputs revert back to normal|Input different emails, submit the form, then make the emails match|Red borders disappear|✅|
+|Form submit|If the form is correctly filled out and submitted, the success page opens and the user is given a message informing them they have successfully booked their holiday|Form filled out and submitted|Success page opens|✅|
+|Form responsiveness|Form is responsive across multiple screen sizes|Screen resize|Form is responsive|✅|
 
 Footer
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 |---------|-------------------|-------------------|--------|-----------|
-|Footer contacts|Contacts displays responsively so that it is properly visible for different devices|Screen resize|||
-|Footer socials|Contacts displays responsively so that it is properly visible for different devices|Screen resize|||
-|Footer socials|On hover of each icon it changes color|Hover over icon|||
-|Footer socials|On click of each icon it opens a new tab which is the corresponds to the icon clicked||||
+|Footer contacts|Contacts displays responsively so that it is properly visible for different devices|Screen resize|Displayed responsively|✅|
+|Footer socials|Socials displays responsively so that it is properly visible for different devices|Screen resize|Displayed responsively|✅|
+|Footer socials|On hover of each icon it changes color|Hover over icon|Icon changes color|✅|
+|Footer socials|On click of each icon it opens a new tab which is the corresponds to the icon clicked|Icon clicked|New tab opens with correct links|✅|
 
 
 
@@ -399,19 +414,19 @@ Success page
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 |---------|-------------------|-------------------|--------|-----------|
-|Success page responsiveness|The success page displays well across different screen sizes|Screen resize|||
-|Success page|The page is displayed on correctly filling out the booking form and submitting|Correctly fill out the form and submit|||
-|Home button|The user is able to easily locate the home button, which redirects the user back to the home page without using the browser back buttons|Click the home button|||
+|Success page responsiveness|The success page displays well across different screen sizes|Screen resize|Page displays correctly|✅|
+|Success page|The page is displayed on correctly filling out the booking form and submitting|Correctly fill out the form and submit|Page displays|✅|
+|Home button|The user is able to easily locate the home button, which redirects the user back to the home page without using the browser back buttons|Click the home button|Redirected to home page|✅|
 
 
 404 page
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 |---------|-------------------|-------------------|--------|-----------|
-|404 page|On type of an non-existent/incorrect link, click of an incorrect link, the user is led to the 404 page|Type in an incorrect link|||
-|Home button|Without using the browser back buttons, the user is able to navigate back to the home page of the website using the home button displayed|Click home button|||
+|404 page|On type of an non-existent/incorrect link, click of an incorrect link, the user is led to the 404 page|Type in an incorrect link|404 page displays|✅|
+|Home button|Without using the browser back buttons, the user is able to navigate back to the home page of the website using the home button displayed|Click home button|Redirects to home page|✅|
 
-### Notes of errors, bugs, issues and incomplete items
+### Bugs during development
 
 * During development of the booking page I noticed an error in the console showing
 
