@@ -233,6 +233,15 @@ In addition to HTML validation in our form we also have Javascript doing validat
 
 ## Testing
 
+Throughout the build phase I used the console in chrome developer tools to ensure there are not any arrors popping up from features being developed. I also used this for debugging incase of any problems, this was very useful specifically for the javascript aspect of this project.
+
+Manual testing is the chosen method of testing in this project, we do this to identify any defects within our code and website, when these are identified they must be fixed before release. This is accomplished by a user or a person simulating a user manually going through components of the site ensuiring everything functions as it should. Early testing is critical and testing while coding, making sure errors are not present during development will save significant time and undue stress later in the project. Projects should be deployed early or mid project and not at the end, often during deployment bugs are found and should never be left to the end. We also have to keep in mind that you cannot check for every single bug, sometimes bugs will be found after release of the project.
+
+Automated testing like using JEST has not been implemented in this project. The principles of automated testing are very simillar to manual testing in the points of early testing, early deployment, defect-detection focus, the absence of errors fallacy and that not every bug can be checked for. I have however run my code through validators to check my HTML, CSS and website accessibility.
+
+* Features answering User goals
+Within the UX > Scope section, each feature has comments answering how each goal is answered by these
+
 
 Navbar
 
