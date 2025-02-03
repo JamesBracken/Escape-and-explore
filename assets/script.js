@@ -1,8 +1,3 @@
-// I am aware that sensitive information such as API keys should not be on 
-// display, this one however would be visible even in the HTML.
-API_KEY = "AIzaSyB4fcJiibwlX8tcRe5dNnllSifqBCKqeqA";
-API_URL = "";
-
 // GLOBAL VARIABLES
 // Constant variables
 const cityErrorMessage = document.getElementById("cityError");
@@ -20,6 +15,7 @@ const packageInput = document.getElementById("packageInput");
 const cityInput = document.getElementById("cityInput");
 
 // Let variables
+let chosenCityName = "";
 let isHomePage = document.querySelector("main").id == "home-page";
 let isBookingPage = document.querySelector("main").id == "booking-page";
 let isDefaultDataSet = false;
@@ -29,7 +25,6 @@ let cityName;
 let cityId;
 let map;
 // Data for each city
-
 let cities = {
   parisCity: {
     cityName: "Paris",
@@ -147,7 +142,7 @@ let cities = {
 			modern building and the christmas balls hanging from the ceiling",
       },
     ],
-  },
+  }
 };
 // Full user details
 let userDetails = {
@@ -216,7 +211,7 @@ for (card of cityCards) {
 }
 
 if (isBookingPage) {
-  let isEmailMatching = emailInput.value === confirmEmailInput.value;
+
   for (let input of bookingFormEmailInputs) {
     input.addEventListener("input", onBookingFormInput);
   }
@@ -225,8 +220,11 @@ if (isBookingPage) {
 
 // FUNCTIONS
 // Code to initialise, add and update google maps API
-/* Copy pasted from google official documentation and then tweaked to suit
-the websites needs url https://developers.google.com/maps/documentation/javascript/load-maps-js-api?_gl=1*1u5062j*_up*MQ..*_ga*MTc1NzYyMDgxOC4xNzM2MDA2NjIy*_ga_NRWSTWS78N*MTczNjAwNjYyMi4xLjEuMTczNjAwNjYyMi4wLjAuMA.. */
+/* This function is asynchronous and waits for the loading of the google maps
+JS API library prior to full execution, this is to prevent other parts of the 
+script waiting for this to load. Copy pasted from google official documentation
+ and then tweaked to suit the websites needs 
+ url https://developers.google.com/maps/documentation/javascript/load-maps-js-api?_gl=1*1u5062j*_up*MQ..*_ga*MTc1NzYyMDgxOC4xNzM2MDA2NjIy*_ga_NRWSTWS78N*MTczNjAwNjYyMi4xLjEuMTczNjAwNjYyMi4wLjAuMA.. */
 /** This creates a map and sets the location of where it is centred on,
  it also places a marker on the location you give it and also sets a marker
  on the user location if permissions are allowed. This does not take
@@ -239,7 +237,7 @@ async function initMap() {
     const { AdvancedMarkerElement, PinElement } =
       await google.maps.importLibrary("marker");
     const userPin = new PinElement({
-      background: "#FBBC04",
+      background: "#FBBC04"
     });
 
     map = new Map(document.getElementById("map"), {
@@ -248,7 +246,7 @@ async function initMap() {
         lat: chosenCityDetails.chosenCityLatitude,
         lng: chosenCityDetails.chosenCityLongitude,
       },
-      mapId: "DEMO_MAP_ID",
+      mapId: "DEMO_MAP_ID"
     });
 
     const marker = new AdvancedMarkerElement({
@@ -257,7 +255,7 @@ async function initMap() {
         lat: chosenCityDetails.chosenCityLatitude,
         lng: chosenCityDetails.chosenCityLongitude,
       },
-      title: cityName,
+      title: cityName
     });
 
     if (locationAllowed) {
@@ -268,7 +266,7 @@ async function initMap() {
           lng: userDetails.currentUserLongitude,
         },
         title: "You :)",
-        content: userPin.element,
+        content: userPin.element
       });
     }
   }
@@ -279,7 +277,7 @@ map marker, city name, city description, city places to visit are updated
  * @param {Click} e - This is information of the event that triggers the
  function
  */
-async function handleCityClick(e) {
+function handleCityClick(e) {
   /* Dot notation is used across this script code, in this instance however dot 
   notation on its own was not able to make the code work through various
    attempts, I have instead used a mix of the two. Understandably bad practice 
@@ -298,8 +296,8 @@ This loops iterates 4 times to create cards of places to visit.
 This pulls data from the cities variable.
  * No parameters
  */
-async function displayCityInformation() {
-  let cityCount = 0;
+function displayCityInformation() {
+  // let cityCount = 0;
   let cityInformationContainer = document.getElementById(
     "cityInformationContainer",
   );
@@ -328,7 +326,6 @@ async function displayCityInformation() {
         </div>
       </div>
       `;
-    cityCount++;
   }
 }
 
@@ -351,7 +348,6 @@ function toggleSelectedPackageCardButton(e) {
   } else if (isElementActive === true) {
     targetedElement.classList.remove("styleButtonActive");
     chosenPackage = defaultPackage;
-    // packageInput.setAttribute("value", defaultPackage)
   }
   // Setting hidden input data to propagate chosen package to backend
   packageInput.setAttribute("value", chosenPackage);
@@ -386,6 +382,7 @@ function toggleSelectedCityButton(e) {
 function
  */
 function onBookingFormSubmit(e) {
+  let isEmailMatching = emailInput.value === confirmEmailInput.value;
   let isCityInput = cityInput.value !== "none";
   if (!isEmailMatching) {
     e.preventDefault();
@@ -406,7 +403,7 @@ are matching
  * No parameters
  */
 function onBookingFormInput() {
-  isEmailMatching = emailInput.value === confirmEmailInput.value;
+  let isEmailMatching = emailInput.value === confirmEmailInput.value;
   if (isEmailMatching) {
     for (let input of bookingFormEmailInputs) {
       input.classList.remove("redBorder");
