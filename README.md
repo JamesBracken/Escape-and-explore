@@ -144,7 +144,17 @@ I decided to use black, white, a baby powder background and red to draw attentio
 
 [Coolors](https://coolors.co/) was used to create my color palette.
 
+![Color palette of white, baby powder black and red](./assets/images/readme_imgs/color-palette.PNG)
 
+
+#### Images
+
+For all the images used in the website we used [Unsplash](https://unsplash.com/)
+and [Pixabay](https://pixabay.com/). These websites offered a greate amount of non-copyrighted images which are available to be used by the public. Each image was chosen for the bright colors and amazing looking architecture which is 2 very large components of what attracts people to different destinations.
+
+Where necessary images have been passed through [TinyJPG](https://tinyjpg.com/) to imrpove webpage performance in load times.
+- Responsive Design
+- Demographic Based Design
 
 The primary goal of NAME is to do BLANK
 
