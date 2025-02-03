@@ -8,8 +8,42 @@ Welcome to Escape & Explore, we offer amazing deals on holidays to multiple citi
 ![A picture of my website home page on different screen sizes](./assets/images/readme_imgs/home-introduction-responsiveness.PNG)
 
 ## Table of contents
-- [User Experience (UX)]()
-
+- [User Experience (UX)](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file#ux)
+  - [Strategy](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file#strategy)
+    - [Primary user stories](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file#primary-user-stories)
+    - [Primary strategic aims for the website](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file#primary-strategic-aims-for-the-website)
+  - [Scope](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file#scope)
+    - [Features](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file#features)
+    - [Future potential features](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file#future-potential-features)
+  - [Structure](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file#structure)
+  - [Skeleton](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file#skeleton)
+  - [Surface](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file#surface)
+    - [Colour](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file#colour)
+    - [Images](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file#images)
+- [Features](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file#features-1)
+  - [Global features](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file#global-features)
+  - [Javascript specific features](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file#javascript-specific-features)
+    - [City selection](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file#city-selection)
+    - [Maps API](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file#maps-api)
+    - [Places to visit](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file#places-to-visit)
+    - [Package deals select & City select](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file#package-deals-select--city-select)
+    - [JS validation](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file#js-validation)
+- [Technologies](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file#technologies)
+  - [Programming languages](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file#programming-languages)
+  - [Applications used](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file#applications-used)
+- [Testing](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file#testing)
+  - [Automated testing vs manual testing](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file#automated-testing-vs-manual-testing)
+  - [Validators](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file#validators)
+  - [Manual testing](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file#manual-testing)
+  - [Bugs found during development](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file#bugs-during-development)
+- [Deployment & Development](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file#deployment--development)
+  - [Deployment](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file#deployment)
+  - [Local Development](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file#local-development)
+  - [Environmental variables & scripts](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file#environmental-variables--scripts)
+- [Credits](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file#credits)
+  - [Code used](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file#code-used)
+- [Development life cycle](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file#development-life-cycle)
+    
 ## UX
 
 ### Strategy
@@ -235,6 +269,7 @@ In addition to HTML validation in our form we also have Javascript doing validat
 
 ## Testing
 
+### Automated testing vs manual testing
 Throughout the build phase I used the console in chrome developer tools to ensure there are not any arrors popping up from features being developed. I also used this for debugging incase of any problems, this was very useful specifically for the javascript aspect of this project.
 
 Manual testing is the chosen method of testing in this project, we do this to identify any defects within our code and website, when these are identified they must be fixed before release. This is accomplished by a user or a person simulating a user manually going through components of the site ensuiring everything functions as it should. Early testing is critical and testing while coding, making sure errors are not present during development will save significant time and undue stress later in the project. Projects should be deployed early or mid project and not at the end, often during deployment bugs are found and should never be left to the end. We also have to keep in mind that you cannot check for every single bug, sometimes bugs will be found after release of the project.
@@ -426,7 +461,7 @@ Success page
 |404 page|On type of an non-existent/incorrect link, click of an incorrect link, the user is led to the 404 page|Type in an incorrect link|404 page displays|✅|
 |Home button|Without using the browser back buttons, the user is able to navigate back to the home page of the website using the home button displayed|Click home button|Redirects to home page|✅|
 
-### Bugs during development
+### Bugs found during development
 
 * During development of the booking page I noticed an error in the console showing
 
@@ -558,7 +593,7 @@ async function initMap() {
 
 - [Bootstrap cards](https://getbootstrap.com/docs/4.0/components/card/)
 
-### Tutorials
+* Tutorials
 
 - [CI README.md guide](https://www.youtube.com/watch?v=l1DE7L-4eKQ)
 
