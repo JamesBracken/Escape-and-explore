@@ -397,10 +397,8 @@ function onBookingFormSubmit(e) {
     }
   }
   if (!isCityInput) {
-    console.log("Preventing form submit, city is not input");
     cityErrorMessage.classList.remove("inactiveError");
     e.preventDefault();
-    console.log(isCityInput);
   }
 }
 /** Removes the red border and error message once email and confirm email inputs
