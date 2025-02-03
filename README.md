@@ -212,19 +212,24 @@ In addition to HTML validation in our form we also have Javascript doing validat
 
 ## Technologies
 
-#### Programming Languages
-* [Name](https://link.com/)
-* 
-* 
+### Programming Languages
+* [HTML5](https://en.wikipedia.org/wiki/HTML5)
+* [CSS3](https://en.wikipedia.org/wiki/CSS)
+* [Javascript](https://en.wikipedia.org/wiki/JavaScript)
 
-#### Applications Used
+### Applications used
 
-1. [Name](https://link.com/) - Description
-2. 
-3. 
-4. 
-5. 
-6. 
+1. [Visual studio code](https://code.visualstudio.com/) - My personal IDE of choice
+2. [Figma](https://figma.com/) - Used for my wireframes 
+3. [Github](https://github.com/) - Site deployment and allows others to see my site
+4. [Am I responsive](https://ui.dev/amiresponsive) - Shows my site on multiple screen sizes
+5. [Google fonts](https://fonts.google.com/)- To import my fonts
+6. [Tiny Img](https://tinyjpg.com/) - To optimize my images
+7. [Google sheets](https://en.wikipedia.org/wiki/Google_Sheets) - To create my gantt chart and display how to project was developed
+8. [W3Schools](https://www.w3schools.com/) - For syntax information
+9. [MDN](https://developer.mozilla.org/en-US/) - For syntax information
+10. [Pixabay](https://pixabay.com/) - For images
+11. [Unsplah](https://unsplash.com/) - For images
 
 ## Testing
 
