@@ -136,8 +136,13 @@ Links for these are below
 
 ### Surface
 
-- Responsive Design
-- Demographic Based Design
+Considering the importance of accessibility in todays world I built the website with good contrast ratio in mind across all elements.
+
+#### Colour
+
+I decided to use black, white, a baby powder background and red to draw attention to buttons. Researching I found that light, bright and fun color like yellow and white are quite consistently found across the large majority of holiday websites. This is the keep the focus on the content of the website and to give the user a fun feel for the holiday which is exactly what we want.
+
+[Coolors](https://coolors.co/) was used to create my color palette.
 
 
 
