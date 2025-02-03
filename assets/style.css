@@ -160,18 +160,9 @@ div .card {
 /* Booking page Main */
 
 /* Package deal cards */
-.silverCard {
-    background-color: #6d87f0 !important;
-}
-
-.goldCard {
+.blueCard {
     background-color: #4251d8 !important;
 }
-
-.platinumCard {
-    background-color: #000084 !important;
-}
-
 .packageButton {
     position: absolute;
     bottom: 0;

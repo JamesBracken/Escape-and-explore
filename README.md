@@ -268,7 +268,17 @@ Success page validations are all good, images provided instead for this as url n
 No problems on CSS validation 
 
 [No error messages on css validation page](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjamesbracken.github.io%2FEscape-and-explore%2Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+
+* WAVE
+
 * Lighthouse
+
+Home page
+
+Initialy running my lighthouse testing I got a low score of 75 on performance, mainly due to the hero img taking up performance points,
+I further optimised this without sacrificing quality and managed to push the performance up to 96 points!
+
+![Lighthouse testing of my home page](./assets/images/readme_imgs/testing/home-lighthouse.PNG)
 
 ### Manual testing
 
