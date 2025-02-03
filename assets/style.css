@@ -246,9 +246,13 @@ invisible */
 }
 
 /* Media devices (mobile, 375px and below */
-@media screen and (max-width: 375px) {
+/* @media screen and (min-width: 320px) {
     .places-to-visit-card {
         max-width: 300px !important;
+    }
+
+    .package-card-body {
+        max-height: 390px !important;
     }
 }
 
@@ -274,6 +278,9 @@ invisible */
         color: lightgreen;
     }
 
+    .package-card-body {
+        max-height: 410px !important;
+    }
     .success-home-btn {
         background-color: #c23311;
         height: 37px;
@@ -293,10 +300,6 @@ invisible */
     .places-to-visit-card {
         max-width: 440px !important;
     }
-
-    /* .placesToVisitCardImg {
-        max-height: 300px !important;
-    } */
 }
 /* Media devices (tablets, 768px and up) */
 @media screen and (min-width: 768px) {
@@ -305,6 +308,9 @@ invisible */
     }
     .places-to-visit-card {
         max-width: 720px !important;
+    }
+    .package-card-body {
+        min-height: 410px;
     }
 }
 
@@ -315,9 +321,9 @@ invisible */
     }
 }
 
-/* Media devices (Up until 1199px */
-@media screen and (max-width: 1199px) {
+/* Media devices (Up until 1400px */
+@media screen and (min-width: 1400px) {
     .package-card-body {
-        min-height: 440px;
+        min-height: 350px !important;
     }
-}
+} 
