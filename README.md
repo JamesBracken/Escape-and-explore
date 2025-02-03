@@ -271,14 +271,34 @@ No problems on CSS validation
 
 * WAVE
 
+Home page
+
+[Home page wave test](https://wave.webaim.org/report#/https://jamesbracken.github.io/Escape-and-explore/index.html)
+
+Booking page
+
+[Booking page wave test](https://wave.webaim.org/report#/https://jamesbracken.github.io/Escape-and-explore/booking.html)
+
+
 * Lighthouse
 
 Home page
 
 Initialy running my lighthouse testing I got a low score of 75 on performance, mainly due to the hero img taking up performance points,
-I further optimised this without sacrificing quality and managed to push the performance up to 96 points!
+I further optimised this without sacrificing quality and managed to push the performance up to 96 points! Best practices is lower because of requesting user location.
 
 ![Lighthouse testing of my home page](./assets/images/readme_imgs/testing/home-lighthouse.PNG)
+
+Booking page
+
+Good scores
+
+![Lighthouse testing of my booking page](./assets/images/readme_imgs/testing/booking-lighthouse.PNG)
+
+Success page
+The performance capped at 89, this is apparently due to the speed index. Upon further inspection, this is due to the imports of the CDN's which I cannot remove as these give the styles on the website so I will leave this alone. All other score reduction have simillar reasons for me not being able to improve them.
+
+![Lighthouse testing of my success page](./assets/images/readme_imgs/testing/success-lighthouse.PNG)
 
 ### Manual testing
 
