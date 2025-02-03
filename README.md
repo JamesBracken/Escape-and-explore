@@ -306,32 +306,32 @@ Navbar
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 |---------|-------------------|-------------------|--------|-----------|
-|Navbar is fully responsive|Navbar adjusts well for different device sizes|Adjust screen size|||
-|Company logo|On click this leads you to the home page|Logo is clicked|||
-|CTA button|On click this leads you to the booking page|Booking button clicked|||
+|Navbar is fully responsive|Navbar adjusts well for different device sizes|Adjust screen size|Navbar is fully responsive, at the small extremes however elements shift around, shouldn't be any impact to any users|✅|
+|Company logo|On click this leads you to the home page|Logo is clicked|Leads to home page|✅|
+|CTA button|On click this leads you to the booking page|Booking button clicked|Leads to booking page|✅|
 
 Home page
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 |---------|-------------------|-------------------|--------|-----------|
-|Hero image|On screen resize the image still displays well|Screen resize|||
-|Map|On allow of location permission the map displays the users location with a gold marker|Location permissions are allowed|||
-|Alert|On decline of location permission a modal is displayed displaying a message|Location permissions denied|||
+|Hero image|On screen resize the image still displays well|Screen resize|Image displays correctly|✅|
+|Map|On allow of location permission the map displays the users location with a gold marker|Location permissions are allowed|Marker is displayed on the map|✅|
+|Alert|On decline of location permission a modal is displayed displaying a message|Location permissions denied|Alert is displayed on page load|✅|
 
 City selection(Home page)
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 |---------|-------------------|-------------------|--------|-----------|
-|Map|On selection of a city the map is moved to be centred to that city and previous city marker is removed|City selected|||
-|Map|On page load the map is loaded and displayed|Page reload|||
-|Map|On page load the map is set to a default city which is London|Page reload|||
-|City cards|On screen resize the city cards display well |Screen resize|||
-|City cards|On hover of each city card a shadow appears surrounding the card|Mouse hover over city card|||
-|City cards|On page load the London city card is set as the default city displayed and is outlined|Page reload|||
-|City cards|The selected city title is responsively displayed under the map||||
-|City selecardsction|On selection of a different city a previously selected city outline must be removed|Different city is selected|||
-|City cards|On Selection of a city the city is outlined|City is selected|||
-|Places to visit|On selection of a city, places within the chosen city are displayed|City is selected|||
+|Map|On selection of a city the map is moved to be centred to that city and previous city marker is removed|City selected|Map is centred on selected city and marker is placed, previous one removed|✅|
+|Map|On page load the map is loaded and displayed|Page reload|Map is displayed|✅|
+|Map|On page load the map is set to a default city which is London|Page reload|London city is displayed on inital page load|✅|
+|City cards|On screen resize the city cards display well |Screen resize|City cards are responsive and display normally across different screen sizes|✅|
+|City cards|On hover of each city card a shadow appears surrounding the card|Mouse hover over city card except ofcourse the outlined one|Shadow appears|✅|
+|City cards|On page load the London city card is set as the default city displayed and is outlined|Page reload|London city displayed initially|✅|
+|City cards|The selected city title is responsively displayed under the map|Select different cities and check title|Title is correct|✅|
+|City select card section|On selection of a different city a previously selected city outline must be removed|Different city is selected|Outline is removed|✅|
+|City cards|On Selection of a city the city is outlined|City is selected|City is outlined|✅|
+|Places to visit|On selection of a city, places within the chosen city are displayed|City is selected|Places are displayed|✅|
 |Places to visit|When cards are rendered the image displays correctly|Select different cities and check image rendering|||
 |Places to visit|On selection of a city, each cards title is displayed correcty and is accurate|Check each displayed place title|||
 |Places to visit|On selection of a city, each cards description is displayed correctly and is accurate|Check each displayed description|||
