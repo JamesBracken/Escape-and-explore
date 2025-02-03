@@ -141,6 +141,7 @@ Considering the importance of accessibility in todays world I built the website 
 #### Colour
 
 I decided to use black, white, a baby powder background and red to draw attention to buttons. Researching I found that light, bright and fun color like yellow and white are quite consistently found across the large majority of holiday websites. This is the keep the focus on the content of the website and to give the user a fun feel for the holiday which is exactly what we want.
+I decided to use black, white, a baby powder background and red to draw attention to buttons. Researching I found that light, bright and fun color like yellow and white are quite consistently found across the large majority of holiday websites. This is the keep the focus on the content of the website and to give the user a fun feel for the holiday which is exactly what the majority of our demographic target customers base want!
 
 [Coolors](https://coolors.co/) was used to create my color palette.
 
@@ -157,10 +158,32 @@ Where necessary images have been passed through [TinyJPG](https://tinyjpg.com/) 
 - Demographic Based Design
 
 The primary goal of NAME is to do BLANK
+## Features
 
 1. As a USER I want a X
+### Global features
 
 ## Features
+* Nav
+ The navigation sporting the company logo which can be clicked to lead the user back home and the CTA (call to action) button for our booking page. The navbar is found across all pages at all times as it is fixed to the top of the page to make sure users can easily and intuitively navigate across the site.
+
+ ![Navigation bar with company logo and booking call to action button](./assets/images/readme_imgs/features/nav.PNG)
+
+* Buttons
+All buttons across the site have the same design to ensure consistency across the site, on the home page the buttons are used to encourage and bring attention towards themselves and get customers to the booking page
+
+![Call to action button for the booking page](./assets/images/readme_imgs/features/nav-cta.PNG)
+
+* Bootstrap cards 
+BS cards were used to streamline and ease the process of repetitively displaying information for our users 
+![Sample of a bootstrap card with a picture of food and description](./assets/images/readme_imgs/features/package-card-bs-sample.PNG)
+![Sample of a bootstrap card with a picture of big ben and description](./assets/images/readme_imgs/features/places-to-visit-BS-sample.PNG)
+
+* Footer
+Our footer is used to display our contact information, should any customer want to get in contact with us by any means. Social media links are displayed and on click lead the user to our pages.
+
+![Our footer containing contact information and social media icons](./assets/images/readme_imgs/features/footer.PNG)
+
 
 ### Existing Features
 
