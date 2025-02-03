@@ -140,7 +140,6 @@ Considering the importance of accessibility in todays world I built the website 
 
 #### Colour
 
-I decided to use black, white, a baby powder background and red to draw attention to buttons. Researching I found that light, bright and fun color like yellow and white are quite consistently found across the large majority of holiday websites. This is the keep the focus on the content of the website and to give the user a fun feel for the holiday which is exactly what we want.
 I decided to use black, white, a baby powder background and red to draw attention to buttons. Researching I found that light, bright and fun color like yellow and white are quite consistently found across the large majority of holiday websites. This is the keep the focus on the content of the website and to give the user a fun feel for the holiday which is exactly what the majority of our demographic target customers base want!
 
 [Coolors](https://coolors.co/) was used to create my color palette.
@@ -154,16 +153,11 @@ For all the images used in the website we used [Unsplash](https://unsplash.com/)
 and [Pixabay](https://pixabay.com/). These websites offered a greate amount of non-copyrighted images which are available to be used by the public. Each image was chosen for the bright colors and amazing looking architecture which is 2 very large components of what attracts people to different destinations.
 
 Where necessary images have been passed through [TinyJPG](https://tinyjpg.com/) to imrpove webpage performance in load times.
-- Responsive Design
-- Demographic Based Design
 
-The primary goal of NAME is to do BLANK
 ## Features
 
-1. As a USER I want a X
 ### Global features
 
-## Features
 * Nav
  The navigation sporting the company logo which can be clicked to lead the user back home and the CTA (call to action) button for our booking page. The navbar is found across all pages at all times as it is fixed to the top of the page to make sure users can easily and intuitively navigate across the site.
 
@@ -184,8 +178,30 @@ Our footer is used to display our contact information, should any customer want 
 
 ![Our footer containing contact information and social media icons](./assets/images/readme_imgs/features/footer.PNG)
 
+### Javascript specific features
+This website was built with significant javascript functionality in mind
 
-### Existing Features
+#### City selection
+When any city is selected this dynamically changes the map and the places to visit sections on the home page. This also dynamically sets custom CSS styles to the selected city.
+
+![Bootstrap cards containing city image and name](./assets/images/readme_imgs/features/city-selection-cards.PNG)
+
+#### Maps API
+The map is updated to any city which is selected, this is powered by Google's API technology.
+![Google maps api displaying the city of london](./assets/images/readme_imgs/features/google-maps-javascript-api.PNG)
+
+#### Places to visit
+On select of a city the places to visit is displayed, an image, title description and a link is all dynamically updated. If a package is not selected this is by default set to silver.
+![Bootstrap cards with cities and descriptions](./assets/images/readme_imgs/features/places-to-visit.PNG)
+
+#### Package deals select & City select
+In the booking page the selection of different package deals and a city is both done through javascript. This dynamically updates the value of a hidden input in the form so that it can propagate the passed data to the back-end. If a city is not selected however Javascript form validation kicks in and displays an error, this will also prevent form submission.
+![City selection and BS cards with package deals](./assets/images/readme_imgs/features/booking-package-deals-and-city-selection.PNG)
+
+#### JS validation
+In addition to HTML validation in our form we also have Javascript doing validation for the cities to make sure an option is selected and to make sure emails given are matching.
+
+![City selection and personal details form input](./assets/images/readme_imgs/features/js-form-validation.PNG)
 
 ### Further Possible Implementations
 
@@ -430,7 +446,7 @@ This webpage does not require any additional environmental variables or scripts,
 ## Credits
 ### Code Used
 
-* For the initMap function I copy pasted this from the google maps javascript API documentation and then tweaked the code to make the code dynamically update
+* For the initMap function I copy pasted this from the [google maps javascript API](https://developers.google.com/maps/documentation/javascript?_gl=1*1jc5oj6*_up*MQ..*_ga*MTQyODU0OTAzMi4xNzM1NTcwNjY5*_ga_NRWSTWS78N*MTczNTU3MDY2OC4xLjAuMTczNTU3MDY2OC4wLjAuMA..) documentation and then tweaked the code to make it dynamically update
 to the users actions, code is below 
 
 async function initMap() {
@@ -451,11 +467,13 @@ async function initMap() {
   });
 }
 
-initMap();
+- [Bootstrap form in booking page](https://getbootstrap.com/docs/5.3/forms/validation/)
+
+- [Bootstrap cards](https://getbootstrap.com/docs/4.0/components/card/)
+
 ### Acknowledgements / Tutorials
 
 #### Tutorials
 - [CI README.md guide](https://www.youtube.com/watch?v=l1DE7L-4eKQ)
 
-#### Used code
-- [Bootstrap form in booking page](https://getbootstrap.com/docs/5.3/forms/validation/)
+
