@@ -185,6 +185,8 @@ To assist in the mission of driving foot traffic into the website we had SEO(Sea
 
 Incase of any problems with incorrectly input links or broken links we have a 404 page to give users the error feedback and help them navigate back to the home page
 
+![404 error page](./assets/images/readme_imgs/features/404-page.PNG)
+
 ### Javascript specific features
 This website was built with significant javascript functionality in mind
 
@@ -242,6 +244,33 @@ Automated testing like using JEST has not been implemented in this project. The 
 * Features answering User goals
 Within the UX > Scope section, each feature has comments answering how each goal is answered by these
 
+### Validators
+
+* HTML Validation 
+
+No warnings or errors in my code, just some info messages which can be safely ignored
+
+Home page
+[Home page link for my code passing through HTML validation](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjamesbracken.github.io%2FEscape-and-explore%2F)
+
+Booking page
+
+![For attribute error ](./assets/images/readme_imgs/testing/booking-html-validator.PNG)
+A single error showed up wich was easily fixed
+
+[Booking page link for my code passing through HTML validation](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjamesbracken.github.io%2FEscape-and-explore%2Fbooking.html)
+
+Success page validations are all good, images provided instead for this as url not working
+
+![Success page with no errors in the validator](./assets/images/readme_imgs/testing/success-html-validator.PNG)
+* CSS Validation
+
+No problems on CSS validation 
+
+[No error messages on css validation page](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjamesbracken.github.io%2FEscape-and-explore%2Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+* Lighthouse
+
+### Manual testing
 
 Navbar
 
@@ -351,13 +380,6 @@ Success page
 |---------|-------------------|-------------------|--------|-----------|
 |404 page|On type of an non-existent/incorrect link, click of an incorrect link, the user is led to the 404 page|Type in an incorrect link|||
 |Home button|Without using the browser back buttons, the user is able to navigate back to the home page of the website using the home button displayed|Click home button|||
-
-
-### HTML Validator
-
-### CSS Validator
-
-### Lighthouse
 
 ### Notes of errors, bugs, issues and incomplete items
 

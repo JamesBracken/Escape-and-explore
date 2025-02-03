@@ -1,7 +1,7 @@
 /* Global styles */
 /* Page width is different accross some elements and nav is pushing out farther
    than other elements, this is stopping that  */
-   html {
+html {
     /*  */
     overflow-x: hidden;
 }
@@ -201,8 +201,9 @@ invisible */
     visibility: hidden;
 }
 
-/* Success page */
-#success-main {
+/* Success page & 404 Error page */
+#success-main,
+#error-main {
     position: absolute;
     top: 52px;
     bottom: 252.59px;
@@ -221,6 +222,12 @@ invisible */
     font-size: 100px;
     padding-bottom: 10px;
     color: lightgreen;
+}
+
+.fa-x {
+    font-size: 100px;
+    padding-bottom: 0;
+    color: red;
 }
 
 /* Footer styles */
@@ -262,6 +269,7 @@ invisible */
         max-width: 350px !important;
     }
 }
+
 /* Media devices (Mobile, 576px and below) */
 @media screen and (max-width: 576px) {
     #success-page {
@@ -278,9 +286,16 @@ invisible */
         color: lightgreen;
     }
 
+    .fa-x {
+        font-size: 40px;
+        padding-bottom: 0;
+        color: red;
+    }
+
     .package-card-body {
         max-height: 410px !important;
     }
+
     .success-home-btn {
         background-color: #c23311;
         height: 37px;
@@ -288,7 +303,8 @@ invisible */
         padding-top: 0;
     }
 
-    #success-main {
+    #success-main,
+    #error-main {
         position: absolute;
         top: 52px;
         bottom: 327px;
@@ -301,14 +317,17 @@ invisible */
         max-width: 440px !important;
     }
 }
+
 /* Media devices (tablets, 768px and up) */
 @media screen and (min-width: 768px) {
     .partnerSponsorCardImg {
         height: 200px;
     }
+
     .places-to-visit-card {
         max-width: 720px !important;
     }
+
     .package-card-body {
         min-height: 410px;
     }
@@ -326,4 +345,4 @@ invisible */
     .package-card-body {
         min-height: 350px !important;
     }
-} 
+}
