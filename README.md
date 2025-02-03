@@ -4,9 +4,8 @@
 ## About
 
 Welcome to Escape & Explore, we offer amazing deals on holidays to multiple cities world-wide. For each city we display so great places to go, and give you the whole package. From accommocation, to transport, food and everything you could possibly need! Book your visit now! 
-<!-- Must include what the project is for, why it exists and who it is intended for -->
-<!-- Describe the projects purpose and the target audience -->
-![Different sized screens on different devices showing what my website looks like on each](LINK)
+
+![A picture of my website home page on different screen sizes](./assets/images/readme_imgs/home-introduction-responsiveness.PNG)
 
 ## Table of contents
 - [User Experience (UX)]()
@@ -178,6 +177,14 @@ Our footer is used to display our contact information, should any customer want 
 
 ![Our footer containing contact information and social media icons](./assets/images/readme_imgs/features/footer.PNG)
 
+* Meta data
+
+To assist in the mission of driving foot traffic into the website we had SEO(Search engine optimization) in mind. We added meta data to every page of the site providing good data for search engines to display our website.
+
+* Redirection
+
+Incase of any problems with incorrectly input links or broken links we have a 404 page to give users the error feedback and help them navigate back to the home page
+
 ### Javascript specific features
 This website was built with significant javascript functionality in mind
 
@@ -202,8 +209,6 @@ In the booking page the selection of different package deals and a city is both 
 In addition to HTML validation in our form we also have Javascript doing validation for the cities to make sure an option is selected and to make sure emails given are matching.
 
 ![City selection and personal details form input](./assets/images/readme_imgs/features/js-form-validation.PNG)
-
-### Further Possible Implementations
 
 ## Technologies
 
@@ -444,6 +449,7 @@ This webpage does not require any additional environmental variables or scripts,
 
 
 ## Credits
+
 ### Code Used
 
 * For the initMap function I copy pasted this from the [google maps javascript API](https://developers.google.com/maps/documentation/javascript?_gl=1*1jc5oj6*_up*MQ..*_ga*MTQyODU0OTAzMi4xNzM1NTcwNjY5*_ga_NRWSTWS78N*MTczNTU3MDY2OC4xLjAuMTczNTU3MDY2OC4wLjAuMA..) documentation and then tweaked the code to make it dynamically update
