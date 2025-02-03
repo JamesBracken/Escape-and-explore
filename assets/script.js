@@ -322,7 +322,7 @@ async function displayCityInformation() {
               ${place.place}?
               <a 
               href="${place.findOutMore}"
-               target="_blank">Wikipedia link</a></small></p>
+               target="_blank">Click here!</a></small></p>
             </div>
           </div>
         </div>
