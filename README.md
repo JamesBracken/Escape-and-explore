@@ -3,7 +3,7 @@
 
 ## About
 
-Welcome to Escape & Explore, we offer amazing deals on holidays to multiple cities world-wide. For each city we display so great places to go, and give you the whole package. From accommocation, to transport, food and everything you could possibly need! Book your visit now! 
+Welcome to Escape & Explore, we offer amazing deals on holidays to multiple cities world-wide. For each city we display some great places to go, and give you the whole package. From accommocation, to transport, food and everything you could possibly need! Book your visit now! 
 
 ![A picture of my website home page on different screen sizes](./assets/images/readme_imgs/home-introduction-responsiveness.PNG)
 
@@ -164,7 +164,9 @@ Key to the website being accessible to members of the publick is it being respon
 Links for these are below
 
 [Home page](https://www.figma.com/design/qrtbFGiOTw3PbmsQwOob1q/Milestone-project-2?node-id=0-1)
+
 [Booking page](https://www.figma.com/design/qrtbFGiOTw3PbmsQwOob1q/Milestone-project-2?node-id=26-52)
+
 [Success and Error pages](https://www.figma.com/design/qrtbFGiOTw3PbmsQwOob1q/Milestone-project-2?node-id=100-2)
 
 ### Surface
@@ -239,6 +241,7 @@ On select of a city the places to visit is displayed, an image, title descriptio
 
 #### Package deals select & City select
 In the booking page the selection of different package deals and a city is both done through javascript. This dynamically updates the value of a hidden input in the form so that it can propagate the passed data to the back-end. If a city is not selected however Javascript form validation kicks in and displays an error, this will also prevent form submission.
+
 ![City selection and BS cards with package deals](./assets/images/readme_imgs/features/booking-package-deals-and-city-selection.PNG)
 
 #### JS validation
@@ -334,6 +337,31 @@ Success page
 The performance capped at 89, this is apparently due to the speed index. Upon further inspection, this is due to the imports of the CDN's which I cannot remove as these give the styles on the website so I will leave this alone. All other score reduction have simillar reasons for me not being able to improve them.
 
 ![Lighthouse testing of my success page](./assets/images/readme_imgs/testing/success-lighthouse.PNG)
+
+
+* ESLint
+
+I decided to use [ESLint](https://eslint.org/) to validate my code, after initially passing my code through the linter I had the following errors
+
+![Erros shown in VS code terminal](./assets/images/readme_imgs/testing/eslint-initial.PNG)
+
+I went through all the errors, diagnosed them and resolved what was necessary and possible. After all the fixes I implemented I had the below errors left.
+
+![Errors shown in VS code terminal, less than previous](./assets/images/readme_imgs/testing/eslint-after.PNG)
+
+API key's and API URL is resolved by deleting the variables as I didnt use them in my script in this iteration of the project.
+The isEmailMatching variable was move from being a global variable to being function scoped in the 2 functions where it is used.
+cityCount was a variable used in the earlier iterations of the project but was phased out of use for simpler methods and therefore removed.
+chosenCityName variable was changed to being defined as an empty string so it is never declared as undefined.
+
+Unresolved errors the below were unresolved as these were not counted as detrimental to the performance or functionality of the website and are not counted as issues. They also ofcourse do not cause any problems outside of showing up as errors through the linter.
+
+Duplicate keys 'cityDescription' are in separate nested objects being parisCity and londonCity therefore are fine having the same keys
+The variables card, place, button are in "for of" loops which tend to get flagged purely because the linters dont like them after researching about this, these can be safely ignored
+The variable google and swal are imported from libraries, therefore are flagged up as undefined this can be ignored.
+The marker and marker2 displays as non used variables, they are declared in the initmap function but used outside of this function therefore display as unused variables however are in fact used. 
+
+Overall the errors left are minor and dont pose any issues therefore are left as is
 
 ### Manual testing
 
