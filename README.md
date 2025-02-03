@@ -558,9 +558,16 @@ async function initMap() {
 
 - [Bootstrap cards](https://getbootstrap.com/docs/4.0/components/card/)
 
-### Acknowledgements / Tutorials
+### Tutorials
 
-#### Tutorials
 - [CI README.md guide](https://www.youtube.com/watch?v=l1DE7L-4eKQ)
 
+## Development life cycle
 
+I tracked the development of the project through a gantt chart I made using google sheets. The dates on the top, tasks on the left and green representing when the task was being worked on.
+
+![Gantt chart](./assets/images/readme_imgs/gantt-chart.PNG)
+
+To effectively do tasks and perform them in a consistent, efficient and organised manner I used the backlog project board in Github projects. The project is linked to my github page and you can find it [Here](https://github.com/users/JamesBracken/projects/6). I also attached a screenshot below as a quick reference.
+
+![Screenshot of my backlog project planning board on github](./assets/images/readme_imgs/backlog-board.PNG)
