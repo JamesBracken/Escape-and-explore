@@ -53,7 +53,7 @@ img {
     border: 1px solid #c23311;
 }
 
-div .card:hover {
+.cityCardBody:hover {
     box-shadow:
         1px 1px rgba(104, 95, 95, 0.37),
         -1px 0 rgba(104, 95, 95, 0.37);
