@@ -123,6 +123,17 @@ This website has been structured with the following in mind across all pages
 
 This website 
 ### Skeleton
+
+Key to the website being accessible to members of the publick is it being responsive. To ensure we are able to build the website in a well structured format across different sized devices we created wireframes so we can create the general layout prior to writing any code. This would save time at a later date when actually coding. We built the website with a mobile first approach considering majority of internet traffic comes through mobile devices. Wireframes were built to answer this need and we used [Figma](https://www.figma.com/) to do this. Bearing in mind where the majority of users are in the categories of different screen sizes and the time constraints of this project we have built the website to be best on small mobile devices(320px+), medium tablet devices(576+) and the average sized monitor user(992px - 1200px). The website still displays well on very large screens of 1200px+ but is capped at the extremely large screens(The body has been limited to 1800px which still accommodates large screens well).
+
+
+
+Links for these are below
+
+[Home page](https://www.figma.com/design/qrtbFGiOTw3PbmsQwOob1q/Milestone-project-2?node-id=0-1)
+[Booking page](https://www.figma.com/design/qrtbFGiOTw3PbmsQwOob1q/Milestone-project-2?node-id=26-52)
+[Success and Error pages](https://www.figma.com/design/qrtbFGiOTw3PbmsQwOob1q/Milestone-project-2?node-id=100-2)
+
 ### Surface
 
 - Responsive Design
