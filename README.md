@@ -13,7 +13,7 @@ Welcome to Escape & Explore, we offer amazing deals on holidays to multiple citi
     - [Primary user stories](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file#primary-user-stories)
     - [Primary strategic aims for the website](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file#primary-strategic-aims-for-the-website)
   - [Scope](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file#scope)
-    - [Features](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file#features)
+    - [Features(user goals answered here)](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file#features)
     - [Future potential features](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file#future-potential-features)
   - [Structure](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file#structure)
   - [Skeleton](https://github.com/JamesBracken/Escape-and-explore?tab=readme-ov-file#skeleton)
