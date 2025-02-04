@@ -559,7 +559,9 @@ To clone a repository follow these steps
 
 4.Open your terminal in your IDE/code editor of choice then change the current working directory to the location you would like to use for the cloned directory
 
-5.type "git clone" into the terminal and paste the link you copied in the third step the press Enter
+5.Type "git clone" into the terminal and paste the link you copied in the third step then press Enter
+
+6.To install the dependencies you can run **npm install** in your IDE(integrated development environment) terminal, the dependencies you need are listed in the package.json and package-lock.json files
 
 **Commiting and Pushing Changes**
 
