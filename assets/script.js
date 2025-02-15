@@ -185,7 +185,7 @@ let chosenCityDetails = {
 // EVENT LISTENERS
 
 // User Geolocation, gets users current location
-/* When website is opened, the below code prompts the user to give the website\
+/* When website is opened, the below code prompts the user to give the website
 location permissions */
 document.addEventListener("DOMContentLoaded", () => {
   navigator.geolocation.getCurrentPosition(
@@ -398,8 +398,8 @@ function onBookingFormSubmit(e) {
     e.preventDefault();
   }
 }
-/** Removes the red border and error message once email and confirm email inputs
-are matching
+/** Removes the red border and error message once email and confirm email 
+ inputs are matching
  * No parameters
  */
 function onBookingFormInput() {

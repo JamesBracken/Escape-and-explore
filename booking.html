@@ -1,332 +1,470 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Escape & Explore booking page, create your holiday booking now! Choose from our amazing varied selection.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Escape & Explore booking page, create your holiday 
+        booking now! Choose from our amazing varied selection."
+    />
     <!-- Font awesome -->
-    <script src="https://kit.fontawesome.com/d51c017cc6.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/d51c017cc6.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Macondo&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Macondo&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <!-- Bootstrap link -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
     <!-- CSS stylesheet -->
-    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/style.css" />
     <title>Escape & Explore | Booking page</title>
-</head>
+  </head>
 
-<body>
-    <!-- Navbar taken from Bootstrap website https://getbootstrap.com/docs/5.3/components/navbar/ -->
+  <body>
+    <!-- Navbar taken from Bootstrap website 
+	https://getbootstrap.com/docs/5.3/components/navbar/ -->
     <!-- Nav bar -->
-    <nav class="navbar navbar-expand-lg bg-nav ">
-        <div class="container-fluid">
-            <a class="navbar-brand nav-logo" href="./index.html">Escape & Explore</a>
-            <div class="navbar-nav cta-div">
-                <a class="nav-link cta " href="booking.html">Book now!</a>
-            </div>
+    <nav class="navbar navbar-expand-lg bg-nav">
+      <div class="container-fluid">
+        <a class="navbar-brand nav-logo" href="./index.html">
+          Escape & Explore</a
+        >
+        <div class="navbar-nav cta-div">
+          <a class="nav-link cta" href="booking.html">Book now!</a>
         </div>
+      </div>
     </nav>
-    <!-- Added the class onto main to be able to check if the booking page is what the user is on -->
+    <!-- Added the class onto main to be able to check if the booking page
+      is what the user is on -->
     <main id="booking-page">
-        <!-- Section containing page introduction and heading -->
-        <header>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="text-center col-7">
-                        <h1>Booking</h1>
-                    </div>
-                    <div class="col-12 col-md-10 text-center">
-                        <h2>Your ultimate holiday companions</h2>
-                        <p>Planning the perfect holiday has never been easier! We've partnered with the best in the
-                            business to ensure every aspect of your trip is covered. From finding cozy accommodations
-                            and securing reliable travel insurance to discovering top-notch dining experiences, our
-                            partners have you covered.</p>
-                    </div>
-                </div>
+      <!-- Section containing page introduction and heading -->
+      <header>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="text-center col-7">
+              <h1>Booking</h1>
             </div>
-        </header>
-
-        <section>
-            <!-- Section containing SPONSOR BS cards -->
-            <div class="container">
-                <!-- Sponsor cards code taken from bootstrap https://getbootstrap.com/docs/5.3/components/card/ -->
-                <div class="row d-flex  justify-content-center">
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card">
-                            <img src="./assets/images/holiday_safe.png" class="card-img-top partnerSponsorCardImg"
-                                alt="Holiday safe banner">
-                            <div class="card-body package-card-body">
-                                <h3>Holiday safe</h3>
-                                <p class="card-text">Holiday Safe is an award-winning travel insurance provider offering
-                                    tailored plans for all types of travelers. Their comprehensive policies cover trip
-                                    cancellations, medical emergencies, lost luggage, travel delays, and more, ensuring
-                                    you're fully protected during your holiday. With 24/7 emergency assistance and a
-                                    reputation for reliable service, Holiday Safe gives you the peace of mind to enjoy
-                                    your
-                                    travels without worry.</p>
-                                <a href="https://www.holidaysafe.co.uk/?gad_source=1&gclid=CjwKCAiA-Oi7BhA1EiwA2rIu25h-gr37jLWirV9IiQrM40wKj5JZSwmLMRPcvs1JeJ-hPbv7OmqTiBoCFEwQAvD_BwE"
-                                    target="_blank">Link to their website</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card">
-                            <img src="./assets/images/dine_finder.webp" class="card-img-top partnerSponsorCardImg"
-                                alt="A seleciton of delicious meals and drinks">
-                            <div class="card-body package-card-body">
-                                <h3>Dine Finder</h3>
-                                <p class="card-text">Dine Finder is your ultimate guide to discovering top restaurants
-                                    and
-                                    culinary delights at your destination. With a comprehensive database of dining
-                                    options,
-                                    you can explore diverse menus, read trusted reviews, and reserve tables all in one
-                                    place. Whether you’re craving authentic local cuisine, elegant fine dining, or
-                                    hidden
-                                    gems off the beaten path, they help you find the perfect spot to indulge in
-                                    memorable food experiences that enhance your holiday.</p>
-                                <a href="https://www.yeschat.ai/gpts-2OToA4ZNWl-DineFinder" target="_blank">Link to
-                                    their website</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card">
-                            <img src="./assets/images/cozy_stays.webp" class="card-img-top partnerSponsorCardImg"
-                                alt="Beautiful cozy apartment buildings">
-                            <div class="card-body package-card-body">
-                                <h3>Cozy stays</h3>
-                                <p class="card-text">Cozy Stays partners with the finest accommodations worldwide to
-                                    provide
-                                    travelers with a seamless booking experience. From charming boutique hotels and
-                                    luxurious resorts to budget-friendly vacation rentals, Cozy Stays ensures comfort
-                                    and
-                                    quality for every journey. With exclusive deals, flexible options, and insider tips
-                                    on
-                                    local attractions, Cozy Stays transforms your stay into an unforgettable experience.
-                                </p>
-                                <a href="https://www.cozystays.co.uk/" target="_blank">Link to their website</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-12 col-md-10 text-center">
+              <h2>Your ultimate holiday companions</h2>
+              <p>
+                Planning the perfect holiday has never been easier! We've
+                partnered with the best in the business to ensure every aspect
+                of your trip is covered. From finding cozy accommodations and
+                securing reliable travel insurance to discovering top-notch
+                dining experiences, our partners have you covered.
+              </p>
             </div>
-        </section>
+          </div>
+        </div>
+      </header>
 
-        <!-- Section containing package deals  -->
-         <!-- Package deals are made using bootstrap cards from
+      <section>
+        <!-- Section containing SPONSOR BS cards -->
+        <div class="container">
+          <!-- Sponsor cards code taken from bootstrap 
+		  https://getbootstrap.com/docs/5.3/components/card/ -->
+          <div class="row d-flex justify-content-center">
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card">
+                <img
+                  src="./assets/images/holiday_safe.png"
+                  class="card-img-top partnerSponsorCardImg"
+                  alt="Holiday safe banner"
+                />
+                <div class="card-body package-card-body">
+                  <h3>Holiday safe</h3>
+                  <p class="card-text">
+                    Holiday Safe is an award-winning travel insurance provider
+                    offering tailored plans for all types of travelers. Their
+                    comprehensive policies cover trip cancellations, medical
+                    emergencies, lost luggage, travel delays, and more, ensuring
+                    you're fully protected during your holiday. With 24/7
+                    emergency assistance and a reputation for reliable service,
+                    Holiday Safe gives you the peace of mind to enjoy your
+                    travels without worry.
+                  </p>
+                  <a
+                    href="https://www.holidaysafe.co.uk/?gad_source=1&gclid=CjwKCAiA-Oi7BhA1EiwA2rIu25h-gr37jLWirV9IiQrM40wKj5JZSwmLMRPcvs1JeJ-hPbv7OmqTiBoCFEwQAvD_BwE"
+                    target="_blank"
+                    >Link to their website</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card">
+                <img
+                  src="./assets/images/dine_finder.webp"
+                  class="card-img-top partnerSponsorCardImg"
+                  alt="A seleciton of delicious meals and 
+                                drinks"
+                />
+                <div class="card-body package-card-body">
+                  <h3>Dine Finder</h3>
+                  <p class="card-text">
+                    Dine Finder is your ultimate guide to discovering top
+                    restaurants and culinary delights at your destination. With
+                    a comprehensive database of dining options, you can explore
+                    diverse menus, read trusted reviews, and reserve tables all
+                    in one place. Whether you’re craving authentic local
+                    cuisine, elegant fine dining, or hidden gems off the beaten
+                    path, they help you find the perfect spot to indulge in
+                    memorable food experiences that enhance your holiday.
+                  </p>
+                  <a
+                    href="https://www.yeschat.ai/gpts-2OToA4ZNWl-DineFinder"
+                    target="_blank"
+                    >Link to their website</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card">
+                <img
+                  src="./assets/images/cozy_stays.webp"
+                  class="card-img-top partnerSponsorCardImg"
+                  alt="Beautiful cozy apartment buildings"
+                />
+                <div class="card-body package-card-body">
+                  <h3>Cozy stays</h3>
+                  <p class="card-text">
+                    Cozy Stays partners with the finest accommodations worldwide
+                    to provide travelers with a seamless booking experience.
+                    From charming boutique hotels and luxurious resorts to
+                    budget-friendly vacation rentals, Cozy Stays ensures comfort
+                    and quality for every journey. With exclusive deals,
+                    flexible options, and insider tips onlocal attractions, Cozy
+                    Stays transforms your stay into an unforgettable experience.
+                  </p>
+                  <a href="https://www.cozystays.co.uk/" target="_blank"
+                    >Link to their website</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section containing package deals  -->
+      <!-- Package deals are made using bootstrap cards from
           https://getbootstrap.com/docs/4.0/components/card/ -->
-        <section>
-            <div class="container">
-                <div class="row justify-content-center ">
-                    <div class="text-center">
-                        <h2>Package deals</h2>
-                        <p>These package deals are applicable to any city of your choice</p>
-                        <p>By default we have the silver package</p>
-                    </div>
-                    <div class="card text-bg-primary mb-3 blueCard packageCard" style="max-width: 18rem;">
-                        <div class="card-header">
-                            <h3 class="card-title">Silver</h3>
-                        </div>
-                        <div class="card-body">
-                            <ul>
-                                <li>3 day stay in 2+ star accommodation</li>
-                                <li>Free daily breakfast meals</li>
-                                <li>Complementary accommodation fridge items </li>
-                            </ul>
-                            <div class="row justify-content-center ">
-                                <input id="silver" class="packageButton styleButton button" type="button"
-                                    value="Select">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card text-bg-primary mb-3 blueCard packageCard" style="max-width: 18rem;">
-                        <div class="card-header">
-                            <h3 class="card-title">Gold</h3>
-                        </div>
-                        <div class="card-body">
-                            <ul>
-                                <li>5 day stay in 3+ star accommodation</li>
-                                <li>3 inclusive meals per day everyday</li>
-                                <li>Transport to and from the airport</li>
-                            </ul>
-                            <div class="row justify-content-center ">
-                                <input id="gold" class="packageButton styleButton button" type="button" value="Select">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card text-bg-primary mb-3 blueCard packageCard" style="max-width: 18rem;">
-                        <div class="card-header">
-                            <h3 class="card-title">Platinum</h3>
-                        </div>
-                        <div class="card-body">
-                            <ul>
-                                <li>7 day stay in 5 star accommodation</li>
-                                <li>Fine dining meals all inclusive</li>
-                                <li>Private limo to escort you anywhere and everywhere</li>
-                            </ul>
-                            <div class="row justify-content-center">
-                                <input id="platinum" class="packageButton styleButton button" type="button"
-                                    value="Select">
-                            </div>
-                        </div>
-                    </div>
+      <section>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="text-center">
+              <h2>Package deals</h2>
+              <p>
+                These package deals are applicable to any city of your choice
+              </p>
+              <p>By default we have the silver package</p>
+            </div>
+            <div
+              class="card text-bg-primary mb-3 blueCard packageCard"
+              style="max-width: 18rem"
+            >
+              <div class="card-header">
+                <h3 class="card-title">Silver</h3>
+              </div>
+              <div class="card-body">
+                <ul>
+                  <li>3 day stay in 2+ star accommodation</li>
+                  <li>Free daily breakfast meals</li>
+                  <li>Complementary accommodation fridge items</li>
+                </ul>
+                <div class="row justify-content-center">
+                  <input
+                    id="silver"
+                    class="packageButton styleButton button"
+                    type="button"
+                    value="Select"
+                  />
                 </div>
+              </div>
             </div>
-            <!-- BS form taken from https://getbootstrap.com/docs/5.3/forms/validation/
+            <div
+              class="card text-bg-primary mb-3 blueCard packageCard"
+              style="max-width: 18rem"
+            >
+              <div class="card-header">
+                <h3 class="card-title">Gold</h3>
+              </div>
+              <div class="card-body">
+                <ul>
+                  <li>5 day stay in 3+ star accommodation</li>
+                  <li>3 inclusive meals per day everyday</li>
+                  <li>Transport to and from the airport</li>
+                </ul>
+                <div class="row justify-content-center">
+                  <input
+                    id="gold"
+                    class="packageButton styleButton button"
+                    type="button"
+                    value="Select"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="card text-bg-primary mb-3 blueCard packageCard"
+              style="max-width: 18rem"
+            >
+              <div class="card-header">
+                <h3 class="card-title">Platinum</h3>
+              </div>
+              <div class="card-body">
+                <ul>
+                  <li>7 day stay in 5 star accommodation</li>
+                  <li>Fine dining meals all inclusive</li>
+                  <li>Private limo to escort you anywhere and everywhere</li>
+                </ul>
+                <div class="row justify-content-center">
+                  <input
+                    id="platinum"
+                    class="packageButton styleButton button"
+                    type="button"
+                    value="Select"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- BS form taken from https://getbootstrap.com/docs/5.3/forms/validation/
          and tweaked for website needs -->
-            <!-- Section containing BS forms -->
-            <div class="container">
-                <form id="bookingForm" class="row g-3" method="GET" action="success.html">
-                    <!-- Hidden input placed to take data from which package is selected -->
-                    <!-- Value is initialy set to most basic package as a fallback -->
-                    <input type="hidden" id="packageInput" value="silver" name="chosenPackage">
-                    <!-- Hidden input place to take data from chosen city -->
-                     <!-- Value is initally set to none to prevent form submission
-                      through custom JS validation -->
-                    <input type="hidden" id="cityInput" value="none" name="chosenCity">
-                    <div class="container mt-3">
-                        <div class="text-center">
-                            <h2>Where shall we be taking you this time?</h2>
-                        </div>
-                        <div class="row justify-content-center align-items-center ">
-                            <div class="col-4 text-center">
-                                <input class="cityButton button" value="Paris" type="button">
-                            </div>
-                            <div class="col-4 text-center">
-                                <input class="cityButton button" value="London" type="button">
-                            </div>
-                        </div>
-                        <div class="justify-content-center">
-                            <p id="cityError" class="text-center redText inactiveError">Please select a city</p>
-                        </div>
-                    </div>
-                    <div class="text-center">
-                        <h2>Personal details</h2>
-                        <hr>
-                    </div>
-                    <div class="col-md-4">
-                        <label for="firstName" class="form-label">First name</label>
-                        <input type="text" class="form-control" id="firstName" name="last-name" required>
-                        <div>
-                            <p id="firstNameEmptyFeedback" class="formFeedback redText inactiveError">Please add a first
-                                name</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <label for="lastName" class="form-label">Last name</label>
-                        <input type="text" class="form-control" id="lastName" name="last-name" required>
-                        <div>
-                            <p id="lastNameEmptyFeedback" class="formFeedback redText inactiveError">Please add a last
-                                name</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <label for="email" class="form-label">Email Address</label>
-                        <input type="email" class="form-control" id="email" name="email-address" required>
-                        <div>
-                            <p id="emailFeedback" class="formFeedback redText inactiveError">Please input matching
-                                emails</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <label for="confirmEmail" class="form-label">Confirm Email Address</label>
-                        <input type="email" class="form-control" id="confirmEmail" name="confirm-email-address"
-                            required>
-                        <div>
-                            <p id="confirmEmailFeedback" class="formFeedback redText inactiveError">Please input
-                                matching emails</p>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="terms-and-conditions"
-                                name="terms-and-conditions" required>
-                            <label class="form-check-label" for="terms-and-conditions">
-                                Agree to terms and conditions
-                            </label>
-                            <div id="conditionsFeedback">
-                                <p class="formFeedback"></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <button class="btn-primary button" type="submit">Submit form</button>
-                    </div>
-                </form>
+        <!-- Section containing BS forms -->
+        <div class="container">
+          <form
+            id="bookingForm"
+            class="row g-3"
+            method="GET"
+            action="success.html"
+          >
+            <!-- Hidden input placed to take data from which package is 
+			selected -->
+            <!-- Value is initialy set to most basic package as a fallback -->
+            <input
+              type="hidden"
+              id="packageInput"
+              value="silver"
+              name="chosenPackage"
+            />
+            <!-- Hidden input place to take data from chosen city -->
+            <!-- Value is initally set to none to prevent form submission
+            through custom JS validation -->
+            <input
+              type="hidden"
+              id="cityInput"
+              value="none"
+              name="chosenCity"
+            />
+            <div class="container mt-3">
+              <div class="text-center">
+                <h2>Where shall we be taking you this time?</h2>
+              </div>
+              <div class="row justify-content-center align-items-center">
+                <div class="col-4 text-center">
+                  <input
+                    class="cityButton button"
+                    value="Paris"
+                    type="button"
+                  />
+                </div>
+                <div class="col-4 text-center">
+                  <input
+                    class="cityButton button"
+                    value="London"
+                    type="button"
+                  />
+                </div>
+              </div>
+              <div class="justify-content-center">
+                <p id="cityError" class="text-center redText inactiveError">
+                  Please select a city
+                </p>
+              </div>
             </div>
-        </section>
+            <div class="text-center">
+              <h2>Personal details</h2>
+              <hr />
+            </div>
+            <div class="col-md-4">
+              <label for="firstName" class="form-label">First name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="firstName"
+                name="last-name"
+                required
+              />
+              <div>
+                <p
+                  id="firstNameEmptyFeedback"
+                  class="formFeedback redText inactiveError"
+                >
+                  Please add a first name
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="lastName" class="form-label">Last name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="lastName"
+                name="last-name"
+                required
+              />
+              <div>
+                <p
+                  id="lastNameEmptyFeedback"
+                  class="formFeedback redText inactiveError"
+                >
+                  Please add a last name
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="email" class="form-label">Email Address</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email-address"
+                required
+              />
+              <div>
+                <p
+                  id="emailFeedback"
+                  class="formFeedback redText inactiveError"
+                >
+                  Please input matching emails
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="confirmEmail" class="form-label"
+                >Confirm Email Address</label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="confirmEmail"
+                name="confirm-email-address"
+                required
+              />
+              <div>
+                <p
+                  id="confirmEmailFeedback"
+                  class="formFeedback redText inactiveError"
+                >
+                  Please input matching emails
+                </p>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="terms-and-conditions"
+                  name="terms-and-conditions"
+                  required
+                />
+                <label class="form-check-label" for="terms-and-conditions">
+                  Agree to terms and conditions
+                </label>
+                <div id="conditionsFeedback">
+                  <p class="formFeedback"></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <button class="btn-primary button" type="submit">
+                Submit form
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
     <!-- Bootstrap footer used and tweaked for website needs-->
     <footer id="footer">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 col-md-6 mt-3">
-              <h3>Contact us here</h3>
-              <hr />
-              <div class="contactsContainer">
-                <p>
-                  <i class="footerContacts fa-sharp fa-solid fa-location-pin"></i>
-                  123 location street, london
-                </p>
-                <p><i class="footerContacts fa-solid fa-phone"></i> 0123456789</p>
-                <p>
-                  <i class="footerContacts fa-solid fa-envelope"></i>
-                  escape&explore@mail.com
-                </p>
-              </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 mt-3">
+            <h3>Contact us here</h3>
+            <hr />
+            <div class="contactsContainer">
+              <p>
+                <i class="footerContacts fa-sharp fa-solid fa-location-pin"></i>
+                123 location street, london
+              </p>
+              <p><i class="footerContacts fa-solid fa-phone"></i> 0123456789</p>
+              <p>
+                <i class="footerContacts fa-solid fa-envelope"></i>
+                escape&explore@mail.com
+              </p>
             </div>
-            <div class="col-12 col-md-6 mt-3">
-              <h3>Our socials</h3>
-              <hr />
-              <div class="justify-content-between socialsContainer d-flex">
-                <a
-                  href="https://www.instagram.com/"
-                  target="_blank"
-                  aria-label="Instagram symbol(opens in a new tab)"
-                  rel="noopener noreferrer"
-                  ><i class="fa-brands fa-instagram"></i
-                ></a>
-                <a
-                  href="https://x.com/"
-                  target="_blank"
-                  aria-label="Twitter symbol(opens in a new tab)"
-                  rel="noopener noreferrer"
-                  ><i class="fa-brands fa-twitter"></i
-                ></a>
-                <a
-                  href="https://www.facebook.com/"
-                  target="_blank"
-                  aria-label="Facebook symbol(opens in a new tab)"
-                  rel="noopener noreferrer"
-                  ><i class="fa-brands fa-facebook"></i
-                ></a>
-                <a
-                  href="https://github.com/"
-                  target="_blank"
-                  aria-label="Github symbol(opens in a new tab)"
-                  rel="noopener noreferrer"
-                  ><i class="fa-brands fa-github"></i
-                ></a>
-              </div>
-            </div>
-            <div class="container"></div>
           </div>
-  
-          <p class="footerCopyright">
-            &#169;Escape and explore. All rights reserved | Developed by James
-          </p>
+          <div class="col-12 col-md-6 mt-3">
+            <h3>Our socials</h3>
+            <hr />
+            <div class="justify-content-between socialsContainer d-flex">
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                aria-label="Instagram symbol(opens in a new tab)"
+                rel="noopener noreferrer"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a
+                href="https://x.com/"
+                target="_blank"
+                aria-label="Twitter symbol(opens in a new tab)"
+                rel="noopener noreferrer"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                aria-label="Facebook symbol(opens in a new tab)"
+                rel="noopener noreferrer"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a
+                href="https://github.com/"
+                target="_blank"
+                aria-label="Github symbol(opens in a new tab)"
+                rel="noopener noreferrer"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </div>
+          </div>
+          <div class="container"></div>
         </div>
-      </footer>
+
+        <p class="footerCopyright">
+          &#169;Escape and explore. All rights reserved | Developed by James
+        </p>
+      </div>
+    </footer>
     <!-- JS Script -->
     <script src="./assets/script.js"></script>
-</body>
+  </body>
 </html>
