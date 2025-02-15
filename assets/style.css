@@ -25,6 +25,7 @@ body {
 
 main {
     width: inherit;
+    padding: 5px;
 }
 
 img {
@@ -128,7 +129,7 @@ nav {
 
 /* City image cards */
 div .card {
-    margin: 5px;
+    margin: 5px !important;
     padding: 0px;
 }
 
