@@ -250,12 +250,25 @@ invisible */
     }
 } */
 
-/* Media devices (376px and up */
+/* Media devices (376px and up) */
 @media screen and (min-width: 376px) {
     .places-to-visit-card {
         max-width: 350px !important;
     }
 }
+
+/* Media devices ( 425px and below ) */
+@media screen and (max-width: 425px) {
+    body {
+        /* To stop elements touching the sides */
+        padding:10px
+    }
+    nav {
+        /* Body padding puts the nav off centre, this re-centres the fixed nav  */
+        margin: -10px
+    }
+}
+    
 
 /* Media devices (Mobile, 576px and below) */
 @media screen and (max-width: 576px) {
