@@ -374,7 +374,7 @@ function toggleSelectedCityButton(e) {
     cityInput.value = "none";
   }
 }
-
+a
 /** Adds a red border to the email and confirm email inputs and adds an error 
  *below each
  *
