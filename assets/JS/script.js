@@ -194,7 +194,7 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 });
 
-for (card of cityCards) {
+for (let card of cityCards) {
   card.addEventListener("click", handleCityClick);
 }
 
@@ -206,7 +206,7 @@ for (let button of cityButtons) {
   button.addEventListener("click", toggleSelectedCityButton);
 }
 
-for (card of cityCards) {
+for (let card of cityCards) {
   card.addEventListener("click", toggleCityOutline);
 }
 
@@ -303,7 +303,7 @@ function displayCityInformation() {
   );
   cityInformationContainer.innerHTML = `<h2 class="mt-2">${chosenCityName}</h2>
           <h3>Here are some place to visit</h3>`;
-  for (place of cities[cityId].cityPlacesToVisit) {
+  for (let place of cities[cityId].cityPlacesToVisit) {
     cityInformationContainer.innerHTML += `
       <div class="card mb-3" style="max-width: 740px;">
         <div class="row g-0">
@@ -341,7 +341,7 @@ function toggleSelectedPackageCardButton(e) {
   let isElementActive = targetedElement.classList.contains("styleButtonActive");
   targetedElement.classList.remove("styleButtonActive");
   if (isElementActive === false) {
-    for (button of styleButtons) {
+    for (let button of styleButtons) {
       button.classList.remove("styleButtonActive");
     }
     targetedElement.classList += " styleButtonActive";
@@ -364,7 +364,7 @@ function toggleSelectedCityButton(e) {
   targetedElement.classList.remove("cityActive");
   if (isElementActive === false) {
     cityErrorMessage.classList.add("inactiveError");
-    for (button of cityButtons) {
+    for (let button of cityButtons) {
       button.classList.remove("cityActive");
       cityInput.value = e.target.value;
     }
@@ -424,7 +424,7 @@ function toggleCityOutline(e) {
   let cardOutlinedBoolean =
     selectedCityCard.classList.contains("cityCardOutlined");
   if (!cardOutlinedBoolean) {
-    for (card of cityCards) {
+    for (let card of cityCards) {
       card.classList.remove("cityCardOutlined");
       selectedCityCard.classList.add("cityCardOutlined");
     }
