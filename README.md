@@ -3,6 +3,8 @@
 
 ## About
 
+I developed this website early in my development journey using HTML, CSS and JS only. I will me migrating this to be a react application in the near future.
+
 Welcome to Escape & Explore, we offer amazing deals on holidays to multiple cities world-wide. For each city we display some great places to go, and give you the whole package. From accommocation, to transport, food and everything you could possibly need! Book your visit now! 
 
 ![A picture of my website home page on different screen sizes](./assets/images/readme_imgs/home-introduction-responsiveness.PNG)
@@ -94,6 +96,7 @@ Using an agile approach I made sure that we focused on making our MVP(Minimum vi
 
 This feature answers the need for **user story 1**
 ![ The cities of london and paris displayed in bootstrap cards](./assets/images/readme_imgs/features/city-selection-cards.PNG)
+
 
 * **Google map API** To display the location of each city we use the google maps javascript API. On the click of any city the map dynamically updates to the location of the selected destination. We can't all be aware of where every destination is so we added a marker for the user's location if they give us permission. With the user marker and the city marker it helps a user understand where their destination is in relation to themselves, and helps them to make the best decision for their holiday.
 
@@ -387,7 +390,7 @@ Navbar
 |Navbar is fully responsive|Navbar adjusts well for different device sizes|Adjust screen size|Navbar is fully responsive, at the small extremes however elements shift around, shouldn't be any impact to any users|✅|
 |Company logo|On click this leads you to the home page|Logo is clicked|Leads to home page|✅|
 |CTA button|On click this leads you to the booking page|Booking button clicked|Leads to booking page|✅|
-
+  
 Home page
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
